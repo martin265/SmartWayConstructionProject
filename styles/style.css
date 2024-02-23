@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ================ css for the side navigation will be here =========== */
+/* ============== using other fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@100;300;400&display=swap');
+
+.main-content-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.side-navigation-area {
+    overflow-y: auto;
+    height: 100vh;
+    width: 15%;
+    position: fixed;
+}
+
+.content-area {
+    width: calc(100% - 15%);
+    flex: 1;
+    padding-left: 15%; /* Add left padding to accommodate the fixed sidebar */
+}
+
+@media only screen and (max-width: 768px) {
+    .side-navigation-area {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+    .content-area {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* ================ css for the sidebar navigation links */
+.side-navigation-panel {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.side-navigation-panel .navigation-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.side-navigation-area .navigation-item a{
+    text-decoration: none;
+    color: #212121;
+    font-size: 18px;
+    padding-top: 25px;
+    text-transform: capitalize;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.side-navigation-area .navigation-item i {
+    padding-top: 20px;
+    font-size: 20px;
+    color: #0050C1;
+}
+
+/* ======== the hover effect for the links ======= */
+.side-navigation-area .navigation-item a:hover{
+    color: #311B92;
+}
+
+/* =================== css for the job details panel ===============  */
+.main-content-container .content-area .job-details-panel {
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    height: auto;
+    border-radius: 9px;
+    margin-top: 10px;
+}
+
+.main-content-container .content-area .job-details-panel .job-details-panel-title h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
+}
+
+
+/* ==================== CSS FOR THE JOB DETAILS FORM ============ */
+.main-content-container .content-area .all-job-details-form {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
