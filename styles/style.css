@@ -54,13 +54,13 @@
     text-decoration: none;
     color: #212121;
     font-size: 18px;
-    padding-top: 25px;
+    padding-top: 19px;
     text-transform: capitalize;
     font-family: 'Manrope', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 .side-navigation-area .navigation-item i {
-    padding-top: 20px;
+    padding-top: 18px;
     font-size: 20px;
     color: #0050C1;
 }
