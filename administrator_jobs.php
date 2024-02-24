@@ -1,5 +1,53 @@
 <?php
 
+// validating the input fields here ============== //
+function validateInputFields($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+
+    return $data;
+}
+
+// ========== the array for the all the errors ========= //
+$all_errors = array(
+    "job_title"=>"",
+    "job_type"=>"",
+    "job_email"=>"",
+    "job_phone_number"=>"",
+    "qualification"=>"",
+    "technical_skills"=>"",
+    "benefits"=>"",
+    "location"=>"",
+    "job_description"=>"",
+    "application_instructions"=>"",
+    "job_start_date"=>"",
+    "application_deadline"=>""
+);
+// ================= getting inputs from the form here =============== //
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $job_title = validateInputFields($_POST["job_title"]);
+    $job_type = validateInputFields($_POST["job_type"]);
+    $job_email = validateInputFields($_POST["job_email"]);
+    $job_phone_number = validateInputFields($_POST["job_phone_number"]);
+    $qualification = validateInputFields($_POST["qualification"]);
+    $technical_skills = validateInputFields($_POST["technical_skills"]);
+    $benefits = validateInputFields($_POST["benefits"]);
+    $location = validateInputFields($_POST["location"]);
+    $job_description = validateInputFields($_POST["job_description"]);
+    $application_instructions = validateInputFields($_POST["application_instructions"]);
+    $job_start_date = validateInputFields($_POST["job_start_date"]);
+    $application_deadline = validateInputFields($_POST["application_deadline"]);
+
+    // ============= checking if the fields are empty here =========== //
+    if (isset($_POST["save_details"])) {
+        if (empty($_POST["job_title"])) {
+            $all_errors["job_title"] = "please fill in the blanks please";
+        }
+    }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +81,10 @@
                                             <div class="input-group">
                                                 <input type="text" name="job_title" class="form-control form-control-lg" id="ForJobTitle">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["job_title"]); ?>
+                                            </div>
                                         </div>
 
                                         <div class="col"> 
@@ -64,7 +116,7 @@
                                     <!-- ================= for technical skills and qualifications -->
                                     <div class="row mt-3">
                                         <div class="col">
-                                            <label for="" class="fw-bold">Select Qualification</label>
+                                            <label for="" class="ps-2 fw-bold">Select Qualification</label>
                                             <select name="qualification" id="" class="form-control form-control-lg">
                                                 <option value="Certificate">Certificate</option>
                                                 <option value="Diploma">Diploma</option>
@@ -75,8 +127,8 @@
 
                                         <!-- ================== // ====================== // -->
                                         <div class="col">
-                                            <label for="" class="fw-bold">Select Technical skill</label>
-                                            <select name="qualification" id="" class="form-control form-control-lg">
+                                            <label for="" class="ps-2 fw-bold">Select Technical skill</label>
+                                            <select name="technical_skills" id="" class="form-control form-control-lg">
                                                 <option value="Construction Management">Construction Management</option>
                                                 <option value="Civil Engineering">Civil Engineering</option>
                                                 <option value="Archtectural Design">Archtectural Design</option>
@@ -88,7 +140,7 @@
                                     <!-- ================= for location and benefits -->
                                     <div class="row mt-3">
                                         <div class="col">
-                                            <label for="" class="fw-bold">Select Job benefits</label>
+                                            <label for="" class="ps-2 fw-bold">Select Job benefits</label>
                                             <select name="benefits" id="" class="form-control form-control-lg">
                                                 <option value="Health Insurance">Health Insurance</option>
                                                 <option value="Retirement Plans">Retirement Plans</option>
@@ -98,7 +150,7 @@
 
                                         <!-- ================== // ====================== // -->
                                         <div class="col">
-                                            <label for="" class="fw-bold">Job Location</label>
+                                            <label for="" class="ps-2 fw-bold">Job Location</label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control form-control-lg" name="location">
                                             </div>
@@ -108,7 +160,7 @@
                                     <!-- ============ for job description and application instructions -->
                                     <div class="row mt-3">
                                         <div class="col">
-                                            <label for="" class="fw-bold">Enter Job Description</label>
+                                            <label for="" class="ps-2 fw-bold">Enter Job Description</label>
                                             <textarea name="job_description" id="" cols="30" rows="5" class="form-control form-control-lg">
 
                                             </textarea>
@@ -116,7 +168,7 @@
 
                                         <!-- ================== // ====================== // -->
                                         <div class="col">
-                                            <label for="" class="fw-bold">Enter Application Instructions</label>
+                                            <label for="" class="ps-2 fw-bold">Enter Application Instructions</label>
                                             <textarea name="application_instructions" id="" cols="30" rows="5" class="form-control form-control-lg">
 
                                             </textarea>
@@ -138,6 +190,14 @@
                                                 <input type="text" name="application_deadline" class="form-control form-control-lg" id="ApplicationDeadlineDate" value="12-02-2024">
                                             </div>
                                         </div>
+                                    </div>
+
+
+                                    <!-- ============= for the button to save the details here ======== -->
+                                    <div class="save-details-button">
+                                        <button type="submit" class="btn btn-primary btn-lg mb-4" name="save_details">
+                                            <i class="bi bi-save me-2"></i> Save Job Details
+                                        </button>
                                     </div>
                                 </form>
                             </div>

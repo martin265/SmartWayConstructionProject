@@ -93,3 +93,15 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.main-content-container .content-area .save-details-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.main-content-container .content-area .all-job-details-form .error-message {
+    color: red;
+    font-weight: bolder;
+    padding-left: 10px;
+}
