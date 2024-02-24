@@ -39,7 +39,7 @@
             <!-- the navigation items for the navigation will be here -->
             <div class="navigation-item">
                 <i class="bi bi-ui-checks-grid"></i>
-                <a href="">home</a>
+                <a href="administrator_index.php">home</a>
             </div>
 
             <!-- the navigation item for the jobs section -->
