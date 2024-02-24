@@ -84,6 +84,61 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <!-- ================= for location and benefits -->
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <label for="" class="fw-bold">Select Job benefits</label>
+                                            <select name="benefits" id="" class="form-control form-control-lg">
+                                                <option value="Health Insurance">Health Insurance</option>
+                                                <option value="Retirement Plans">Retirement Plans</option>
+                                                <option value="Professional and Development Opportunitie">Professional and Development Opportunitie</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- ================== // ====================== // -->
+                                        <div class="col">
+                                            <label for="" class="fw-bold">Job Location</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-lg" name="location">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- ============ for job description and application instructions -->
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <label for="" class="fw-bold">Enter Job Description</label>
+                                            <textarea name="job_description" id="" cols="30" rows="5" class="form-control form-control-lg">
+
+                                            </textarea>
+                                        </div>
+
+                                        <!-- ================== // ====================== // -->
+                                        <div class="col">
+                                            <label for="" class="fw-bold">Enter Application Instructions</label>
+                                            <textarea name="application_instructions" id="" cols="30" rows="5" class="form-control form-control-lg">
+
+                                            </textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- for the job start date and application date line here -->
+                                    <div class="row mt-3 mb-5">
+                                        <div class="col">
+                                            <label for="ForJobEmail" class="ps-2 fw-bold">Job Start Date</label>
+                                            <div class="input-group">
+                                                <input type="text" name="job_start_date" class="form-control form-control-lg" id="ApplicationStartDate" value="12-02-2024">
+                                            </div>
+                                        </div>
+
+                                        <div class="col"> 
+                                            <label for="ForJobPhonenumber" class="ps-2 fw-bold">Application Deadline</label>
+                                            <div class="input-group">
+                                                <input type="text" name="application_deadline" class="form-control form-control-lg" id="ApplicationDeadlineDate" value="12-02-2024">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -92,5 +147,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Your Datepicker Initialization Script -->
+    <script type="text/javascript">
+        // ============getting the signature date here
+        $(document).ready(function () {
+            // Initialize the datepicker
+            $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+            $('#ApplicationDeadlineDate').datepicker({
+                autoclose: true
+            });
+        });
+        // ============= the code for the input validations ===============//
+        $(document).ready(function () {
+            // Initialize the datepicker
+            $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+            $('#ApplicationStartDate').datepicker({
+                autoclose: true
+            });
+        });
+    </script>
 </body>
 </html>
