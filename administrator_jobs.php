@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             );
             // ======== calling the function here ==== //
             $job->saveJobDetails($conn);
-            $success_message = "records here";
+            $success_message = "records saved successfully";
         }
 
     }
