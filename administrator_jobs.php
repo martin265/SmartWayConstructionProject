@@ -98,6 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error_message = "the form still has some errors";
         }
         else {
+            // creating an object for the model here //
+            
             $success_message = "records here";
         }
 
