@@ -41,9 +41,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // ============= checking if the fields are empty here =========== //
     if (isset($_POST["save_details"])) {
+        // ======== validating the input fields here ============ //
         if (empty($_POST["job_title"])) {
             $all_errors["job_title"] = "please fill in the blanks please";
         }
+        else {
+            if (!preg_match("/^[a-zA-Z -']*$/", $job_title)) {
+                $all_errors["job_title"] = "enter valid characters for the job title";
+            }
+        }
+
+        // ======== validating the input fields here ============ //
+        if (empty($_POST["job_type"])) {
+            $all_errors["job_type"] = "please fill in the blanks please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z -']*$/", $job_type)) {
+                $all_errors["job_type"] = "enter valid characters for the job type please";
+            }
+        }
+
+        // ======== validating the input fields here ============ //
+        if (empty($_POST["job_email"])) {
+            $all_errors["job_email"] = "please fill in the blanks please";
+        }
+        else {
+            if(!filter_var($job_email, FILTER_VALIDATE_EMAIL)) {
+                $all_errors["job_email"] = "enter valid email";
+            }
+        }
+
+        // ======== validating the input fields here ============ //
+        if (empty($_POST["job_phone_number"])) {
+            $all_errors["job_phone_number"] = "please fill in the blanks please";
+        }
+        else {
+            if (preg_match("/^[a-zA-Z -']*$/", $job_phone_number)) {
+                $all_errors["job_phone_number"] = "enter valid numbers";
+            }
+        }
+
+        // ======== validating the input fields here ============ //
+        if (empty($_POST["location"])) {
+            $all_errors["location"] = "please fill in the blanks please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z -']*$/", $location)) {
+                $all_errors["location"] = "your location should be letters only";
+            }
+        }
+
+        // inserting the records here ======== //
+        if (array_filter($all_errors)) {
+            $error_message = "the form still has some errors";
+        }
+        else {
+            $success_message = "records here";
+        }
+
     }
 
 }
@@ -73,6 +128,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <!-- ============= the section for the form to add the job details -->
 
+                            <div class="success-message-panel">
+                                <?php if (isset($success_message)) : ?>
+                                    <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                        <?php echo $success_message; ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("successAlert").style.display = "none";
+                                        }, 5000);
+                                    </script>
+                                    <?php elseif (isset($error_message)) : ?>
+                                        <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                            <?php echo($error_message); ?>
+                                        </div>
+                                        <script>
+                                            // Automatically dismiss the success alert after 5 seconds
+                                            setTimeout(function() {
+                                                document.getElementById("errorAlert").style.display = "none";
+                                            }, 5000);
+                                        </script>
+                                <?php endif; ?>
+                            </div>
+
                             <div class="all-job-details-form">
                                 <form action="administrator_jobs.php" method="POST">
                                     <div class="row">
@@ -92,6 +171,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="job_type" class="form-control form-control-lg" id="ForJobType">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["job_type"]); ?>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -103,12 +186,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="email" name="job_email" class="form-control form-control-lg" id="ForJobEmail" placeholder="@example.com...">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["job_email"]); ?>
+                                            </div>
                                         </div>
 
                                         <div class="col"> 
                                             <label for="ForJobPhonenumber" class="ps-2 fw-bold">Job Phone Number</label>
                                             <div class="input-group">
                                                 <input type="text" name="job_phone_number" class="form-control form-control-lg" id="ForJobPhonenumber">
+                                            </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["job_phone_number"]); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -154,6 +245,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" class="form-control form-control-lg" name="location">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["location"]); ?>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -182,12 +277,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="job_start_date" class="form-control form-control-lg" id="ApplicationStartDate" value="12-02-2024">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["job_start_date"]); ?>
+                                            </div>
                                         </div>
 
                                         <div class="col"> 
                                             <label for="ForJobPhonenumber" class="ps-2 fw-bold">Application Deadline</label>
                                             <div class="input-group">
                                                 <input type="text" name="application_deadline" class="form-control form-control-lg" id="ApplicationDeadlineDate" value="12-02-2024">
+                                            </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["application_deadline"]); ?>
                                             </div>
                                         </div>
                                     </div>
