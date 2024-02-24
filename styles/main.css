@@ -5,6 +5,13 @@
     padding: 0%;
 }
 
+/* ================ css for the side navigation will be here =========== */
+/* ============== using other fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@100;300;400&display=swap');
+
+
 /* ========== css for the navigation bar */
 .top-navigation-bar {
     width: 100%;
@@ -13,4 +20,28 @@
 
 .top-navigation-bar ul {
     list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+.top-navigation-bar ul li {
+    padding: 25px 10px;
+}
+.top-navigation-bar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ========= css for the landing page will be here ======== */
+.landing-page {
+    background: url("assets/images/pexels-chevanon-photography-1335971.jpg");
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
