@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* ========== css for the navigation bar */
+.top-navigation-bar {
+    width: 100%;
+    background: linear-gradient(to left, #0078D9, #0050C1);
+}
+
+.top-navigation-bar ul {
+    list-style-type: none;
+}

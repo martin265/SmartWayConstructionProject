@@ -38,7 +38,11 @@
 </head>
 <body>
     <div class="top-navigation-bar">
-        
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">check jobs</a></li>
+            <li><a href="">interviews</a></li>
+        </ul>
     </div>
 </body>
 </html>

@@ -9,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="main-navigation-bar">
+        <?php include("templates/header.php"); ?>
+    </div>
 </body>
 </html>
