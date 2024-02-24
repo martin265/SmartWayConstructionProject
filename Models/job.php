@@ -42,7 +42,7 @@ class Job{
                 qualification, technical_skills, benefits, location, 
                 job_description, application_instructions, job_start_date,
                 application_deadline
-            ) VLUES (?,?,?,?,?,?,?,?,?,?,?,?)"
+            ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"
         );
         // binding the parameters here == //
         $sqlCommand->bind_param(
@@ -62,7 +62,7 @@ class Job{
         );
 
         // =========== running the query here ======= //
-        $sqlCommand->excute();
+        $sqlCommand->execute();
         
     }
 }
