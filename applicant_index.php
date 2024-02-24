@@ -15,7 +15,7 @@
 
     <!-- ============ the backgrounf image for the website will be here ======== -->
     <div class="landing-page">
-        <img src="assets/images/pexels-chevanon-photography-1335971.jpg" alt="">
+        
     </div>
     
 </body>
