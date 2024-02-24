@@ -32,6 +32,7 @@
     <script defer src="styles/style.js"></script>
 
     <script defer src="assets/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+    
 </head>
 <body>
     <section>
