@@ -40,9 +40,29 @@ class Job{
             "INSERT INTO JobDetails (
                 job_title, job_type, job_email, job_phone_number,
                 qualification, technical_skills, benefits, location, 
-                job_description, application_instructions, job_start_date
-            ) VLUES ()"
+                job_description, application_instructions, job_start_date,
+                application_deadline
+            ) VLUES (?,?,?,?,?,?,?,?,?,?,?,?)"
         );
+        // binding the parameters here == //
+        $sqlCommand->bind_param(
+            "ssssssssssss",
+            $this->job_title,
+            $this->job_type,
+            $this->job_email,
+            $this->job_phone_number,
+            $this->qualification,
+            $this->technical_skills,
+            $this->benefits,
+            $this->location,
+            $this->job_description,
+            $this->application_instructions,
+            $this->job_start_date,
+            $this->application_deadline,
+        );
+
+        // =========== running the query here ======= //
+        $sqlCommand->excute();
         
     }
 }

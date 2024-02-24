@@ -1,4 +1,6 @@
 <?php
+// including the model here ====//
+include("Models/job.php");
 
 // validating the input fields here ============== //
 function validateInputFields($data) {
