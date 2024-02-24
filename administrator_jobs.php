@@ -99,7 +99,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             // creating an object for the model here //
-            
+            $job = new Job(
+                $job_title,
+                $job_type,
+                $job_email,
+                $job_phone_number,
+                $qualification,
+                $technical_skills,
+                $benefits,
+                $location,
+                $job_description,
+                $application_instructions,
+                $job_start_date,
+                $application_deadline,
+            );
+            // ======== calling the function here ==== //
+            $job->saveJobDetails($conn);
             $success_message = "records here";
         }
 
