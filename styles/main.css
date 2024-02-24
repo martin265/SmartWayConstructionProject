@@ -39,7 +39,7 @@
 /* ========= css for the landing page will be here ======== */
 .landing-page {
     background: url("assets/images/pexels-chevanon-photography-1335971.jpg");
-    height: 50%;
+    height: 100vh; /* Adjusted to use 100% of the viewport height */
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
