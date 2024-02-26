@@ -115,7 +115,7 @@
 
 /* ============== css for the interview questions will be here ======== */
 .main-content-container .content-area .interview-questions-panel {
-    height: 500px;
+    height: auto;
     width: 100%;
     background: linear-gradient(to left, #eeeeee, #eeeeee);
     margin-top: 10px;
