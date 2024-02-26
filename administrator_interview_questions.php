@@ -1,5 +1,5 @@
 <?php
-
+include("Models/Question.php");
 // validating the questions here ======= //
 // validating the input fields here ============== //
 function validateInputFields($data) {
