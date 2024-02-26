@@ -142,7 +142,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $all_errors["question_10"] = "all questions should be letters please";
             }
         }
-
+        
+        // ========== checking if the form has errors =========== //
+        if (array_filter($all_errors)) {
+            $error_message = "the form appears to have some errors";
+        }
+        else {
+            print("success");
+        }
     }
 
 }
@@ -170,6 +177,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="interview-questions-panel">
                             <div class="interview-questions-panel-title">
                                 <h1>interview questions</h1>
+                            </div>
+
+                            <!-- =========== the error message will be shown here ======== -->
+                            <div class="success-message-panel">
+                                <?php if (isset($success_message)) : ?>
+                                    <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                        <?php echo $success_message; ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("successAlert").style.display = "none";
+                                        }, 5000);
+                                    </script>
+                                    <?php elseif (isset($error_message)) : ?>
+                                        <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                            <?php echo($error_message); ?>
+                                        </div>
+                                        <script>
+                                            // Automatically dismiss the success alert after 5 seconds
+                                            setTimeout(function() {
+                                                document.getElementById("errorAlert").style.display = "none";
+                                            }, 5000);
+                                        </script>
+                                <?php endif; ?>
                             </div>
 
                             <!-- =============== main panel for the questions here ========= -->

@@ -120,6 +120,7 @@
     background: linear-gradient(to left, #eeeeee, #eeeeee);
     margin-top: 10px;
     border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .main-content-container .content-area .interview-questions-panel-title h1 {
@@ -140,4 +141,10 @@
     color: red;
     font-weight: bolder;
     padding-left: 10px;
+}
+
+.main-content-container .content-area .interview-questions-panel .success-message-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
