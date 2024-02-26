@@ -135,3 +135,9 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.main-content-container .content-area .interview-questions-panel-form .error-message {
+    color: red;
+    font-weight: bolder;
+    padding-left: 10px;
+}

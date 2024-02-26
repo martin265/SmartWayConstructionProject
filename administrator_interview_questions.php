@@ -44,12 +44,105 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $all_errors["question_1"] = "add the question before you proceed please";
         }
         else {
-            if (preg_match("/^[a-zA-Z-' ]*$/", $question_1)) {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_1)) {
                 $all_errors["question_1"] = "all questions should be letters please";
             }
         }
 
-        
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_2"])) {
+            $all_errors["question_2"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_2)) {
+                $all_errors["question_2"] = "all questions should be letters please";
+            }
+        }
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_3"])) {
+            $all_errors["question_3"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_3)) {
+                $all_errors["question_3"] = "all questions should be letters please";
+            }
+        }
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_4"])) {
+            $all_errors["question_4"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_4)) {
+                $all_errors["question_4"] = "all questions should be letters please";
+            }
+        }
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_5"])) {
+            $all_errors["question_5"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_5)) {
+                $all_errors["question_5"] = "all questions should be letters please";
+            }
+        }
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_6"])) {
+            $all_errors["question_6"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_6)) {
+                $all_errors["question_6"] = "all questions should be letters please";
+            }
+        }
+
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_7"])) {
+            $all_errors["question_7"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_7)) {
+                $all_errors["question_7"] = "all questions should be letters please";
+            }
+        }
+
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_8"])) {
+            $all_errors["question_8"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_8)) {
+                $all_errors["question_8"] = "all questions should be letters please";
+            }
+        }
+
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_9"])) {
+            $all_errors["question_9"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_9)) {
+                $all_errors["question_9"] = "all questions should be letters please";
+            }
+        }
+
+
+        // ============ the other validations will be here ================ //
+        if (empty($_POST["question_10"])) {
+            $all_errors["question_10"] = "add the question before you proceed please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $question_10)) {
+                $all_errors["question_10"] = "all questions should be letters please";
+            }
+        }
+
     }
 
 }
@@ -82,12 +175,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <!-- =============== main panel for the questions here ========= -->
                             <div class="interview-questions-panel-form">
                                 <form action="administrator_interview_questions.php" method="POST">
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 1</label>
                                             <div class="input-group">
                                                 <input type="text" name="question_1" class="form-control form-control-lg">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_1"]); ?> 
+                                            </div>
+
                                         </div>
 
                                         <div class="col">
@@ -95,15 +193,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="question_2" class="form-control form-control-lg">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_2"]); ?> 
+                                            </div>
                                         </div>
                                     </div>
 
                                     <!-- ===================== the other row for the question will be here ====== -->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 3</label>
                                             <div class="input-group">
                                                 <input type="text" name="question_3" class="form-control form-control-lg">
+                                            </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_3"]); ?> 
                                             </div>
                                         </div>
 
@@ -112,16 +218,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="question_4" class="form-control form-control-lg">
                                             </div>
+
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_4"]); ?> 
+                                            </div>
                                         </div>
                                     </div>
 
 
                                     <!-- ===================== the other row for the question will be here ====== -->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 5</label>
                                             <div class="input-group">
                                                 <input type="text" name="question_5" class="form-control form-control-lg">
+                                            </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_5"]); ?> 
                                             </div>
                                         </div>
 
@@ -130,15 +243,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="question_6" class="form-control form-control-lg">
                                             </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_6"]); ?> 
+                                            </div>
                                         </div>
                                     </div>
 
                                     <!-- ===================== the other row for the question will be here ====== -->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 7</label>
                                             <div class="input-group">
-                                                <input type="text" name="question_8" class="form-control form-control-lg">
+                                                <input type="text" name="question_7" class="form-control form-control-lg">
+                                            </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_7"]); ?> 
                                             </div>
                                         </div>
 
@@ -147,15 +266,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="input-group">
                                                 <input type="text" name="question_8" class="form-control form-control-lg">
                                             </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_8"]); ?> 
+                                            </div>
                                         </div>
                                     </div>
 
                                     <!-- ===================== the other row for the question will be here ====== -->
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col">
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 9</label>
                                             <div class="input-group">
                                                 <input type="text" name="question_9" class="form-control form-control-lg">
+                                            </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_9"]); ?> 
                                             </div>
                                         </div>
 
@@ -163,6 +288,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <label for="ForQuestion1" class="fw-bold ps-2">Question 10</label>
                                             <div class="input-group">
                                                 <input type="text" name="question_10" class="form-control form-control-lg">
+                                            </div>
+                                            <div class="error-message">
+                                                <?php echo($all_errors["question_10"]); ?> 
                                             </div>
                                         </div>
                                     </div>
