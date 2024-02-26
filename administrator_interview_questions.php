@@ -149,18 +149,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             // saving the questions details here ======== //
-            $question_1 = isset($_POST["question_1"]) ? mysqli_real_escape_string($_POST["question_1"]) : "";
-            $question_2 = isset($_POST["question_2"]) ? mysqli_real_escape_string($_POST["question_2"]) : "";
-            $question_3 = isset($_POST["question_3"]) ? mysqli_real_escape_string($_POST["question_3"]) : "";
-            $question_4 = isset($_POST["question_4"]) ? mysqli_real_escape_string($_POST["question_4"]) : "";
-            $question_5 = isset($_POST["question_5"]) ? mysqli_real_escape_string($_POST["question_5"]) : "";
-            $question_6 = isset($_POST["question_6"]) ? mysqli_real_escape_string($_POST["question_6"]) : "";
-            $question_7 = isset($_POST["question_7"]) ? mysqli_real_escape_string($_POST["question_7"]) : "";
-            $question_8 = isset($_POST["question_8"]) ? mysqli_real_escape_string($_POST["question_8"]) : "";
-            $question_9 = isset($_POST["question_9"]) ? mysqli_real_escape_string($_POST["question_9"]) : "";
-            $question_10 = isset($_POST["question_10"]) ? mysqli_real_escape_string($_POST["question_10"]) : "";
-
-
+            $question_1 = isset($_POST["question_1"]) ? mysqli_real_escape_string($conn, $_POST["question_1"]) : "";
+            $question_2 = isset($_POST["question_2"]) ? mysqli_real_escape_string($conn, $_POST["question_2"]) : "";
+            $question_3 = isset($_POST["question_3"]) ? mysqli_real_escape_string($conn, $_POST["question_3"]) : "";
+            $question_4 = isset($_POST["question_4"]) ? mysqli_real_escape_string($conn, $_POST["question_4"]) : "";
+            $question_5 = isset($_POST["question_5"]) ? mysqli_real_escape_string($conn, $_POST["question_5"]) : "";
+            $question_6 = isset($_POST["question_6"]) ? mysqli_real_escape_string($conn, $_POST["question_6"]) : "";
+            $question_7 = isset($_POST["question_7"]) ? mysqli_real_escape_string($conn, $_POST["question_7"]) : "";
+            $question_8 = isset($_POST["question_8"]) ? mysqli_real_escape_string($conn, $_POST["question_8"]) : "";
+            $question_9 = isset($_POST["question_9"]) ? mysqli_real_escape_string($conn, $_POST["question_9"]) : "";
+            $question_10 = isset($_POST["question_10"]) ? mysqli_real_escape_string($conn, $_POST["question_10"]) : "";
+            // ============== creating the object for the class here =========== //
             $question = new Question(
                 $question_1,
                 $question_2,
@@ -172,7 +171,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $question_8,
                 $question_9,
                 $question_10,
-            )
+            );
+
+            // inserting the records here =========== //
+            $question->saveInterviewQuestions($conn);
         }
     }
 

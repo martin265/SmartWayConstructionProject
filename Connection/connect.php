@@ -48,6 +48,31 @@ function createJobDetailsTable($connection) {
     }
 }
 
+
+function cerateInterviewQuestionsTable($connection) {
+    $sqlCommand = (
+        "CREATE TABLE IF NOT EXISTS InterviewQuestionsDetails(
+            interview_question_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            question_1 VARCHAR(100) NOT NULL,
+            question_2 VARCHAR(100) NOT NULL,
+            question_3 VARCHAR(100) NOT NULL,
+            question_4 VARCHAR(100) NOT NULL,
+            question_5 VARCHAR(100) NOT NULL,
+            question_6 VARCHAR(100) NOT NULL,
+            question_7 VARCHAR(100) NOT NULL,
+            question_8 VARCHAR(100) NOT NULL,
+            question_9 VARCHAR(100) NOT NULL,
+            question_10 VARCHAR(100) NOT NULL,
+        )"
+    );
+
+    // ========== running the query here =========== //
+    $results = mysqli_query($connection, $sqlCommand);
+    if ($results) {
+        echo("table created successfully");
+    }
+}
+
 // createJobDetailsTable($connection);
 
 ?>
