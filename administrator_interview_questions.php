@@ -10,6 +10,21 @@ function validateInputFields($data) {
     return $data;
 }
 
+// ============= the array for the errors here ============= //
+$all_errors = array(
+    "question_1"=>"",
+    "question_2"=>"",
+    "question_3"=>"",
+    "question_4"=>"",
+    "question_5"=>"",
+    "question_6"=>"",
+    "question_7"=>"",
+    "question_8"=>"",
+    "question_9"=>"",
+    "question_10"=>"",
+);
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question_1 = validateInputFields($_POST["question_1"]);
     $question_2 = validateInputFields($_POST["question_2"]);
@@ -21,6 +36,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question_8 = validateInputFields($_POST["question_8"]);
     $question_9 = validateInputFields($_POST["question_9"]);
     $question_10 = validateInputFields($_POST["question_10"]);
+
+    // ===========checking if the fields are empty here ============ //
+    if (isset($_POST["save_questions"])) {
+
+        if (empty($_POST["question_1"])) {
+            $all_errors["question_1"] = "add the question before you proceed please";
+        }
+        else {
+            if (preg_match("/^[a-zA-Z-' ]*$/", $question_1)) {
+                $all_errors["question_1"] = "all questions should be letters please";
+            }
+        }
+
+        
+    }
 
 }
 
