@@ -52,7 +52,7 @@
             <!-- the navigation item for the jobs section -->
             <div class="navigation-item">
                 <i class="bi bi-patch-question"></i>
-                <a href="administrator_interview_questions.php">interview questions</a>
+                <a href="administrator_interview_questions.php">questions</a>
             </div>
         </div>
     </section>
