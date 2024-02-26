@@ -148,7 +148,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error_message = "the form appears to have some errors";
         }
         else {
-            print("success");
+            // saving the questions details here ======== //
+            $question_1 = isset($_POST["question_1"]) ? mysqli_real_escape_string($_POST["question_1"]) : "";
+            $question_2 = validateInputFields($_POST["question_2"]);
+            $question_3 = validateInputFields($_POST["question_3"]);
+            $question_4 = validateInputFields($_POST["question_4"]);
+            $question_5 = validateInputFields($_POST["question_5"]);
+            $question_6 = validateInputFields($_POST["question_6"]);
+            $question_7 = validateInputFields($_POST["question_7"]);
+            $question_8 = validateInputFields($_POST["question_8"]);
+            $question_9 = validateInputFields($_POST["question_9"]);
+            $question_10 = validateInputFields($_POST["question_10"]);
+
+
+            $question = new Question(
+                $question_1 = validateInputFields($_POST["question_1"]);
+                $question_2 = validateInputFields($_POST["question_2"]);
+                $question_3 = validateInputFields($_POST["question_3"]);
+                $question_4 = validateInputFields($_POST["question_4"]);
+                $question_5 = validateInputFields($_POST["question_5"]);
+                $question_6 = validateInputFields($_POST["question_6"]);
+                $question_7 = validateInputFields($_POST["question_7"]);
+                $question_8 = validateInputFields($_POST["question_8"]);
+                $question_9 = validateInputFields($_POST["question_9"]);
+                $question_10 = validateInputFields($_POST["question_10"]);
+            )
         }
     }
 

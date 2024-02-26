@@ -99,6 +99,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             // creating an object for the model here //
+            $job_title = isset($_POST["job_title"]) ? mysqli_real_escape_string($conn, $_POST["job_title"]) : "";
+            $job_type = isset($_POST["job_type"]) ? mysqli_real_escape_string($conn, $_POST["job_type"]) : "";
+            $job_email = isset($_POST["job_email"]) ? mysqli_real_escape_string($conn, $_POST["job_email"]) : "";
+            $job_phone_number = isset($_POST["job_phone_number"]) ? mysqli_real_escape_string($conn, $_POST["job_phone_number"]) : "";
+            $qualification = isset($_POST["qualification"]) ? mysqli_real_escape_string($conn, $_POST["qualification"]) : "";
+            $technical_skills = isset($_POST["technical_skills"]) ? mysqli_real_escape_string($conn, $_POST["technical_skills"]) : "";
+            $benefits = isset($_POST["benefits"]) ? mysqli_real_escape_string($conn, $_POST["benefits"]) : "";
+            $location = isset($_POST["location"]) ? mysqli_real_escape_string($conn, $_POST["location"]) : "";
+            $job_description = isset($_POST["job_description"]) ? mysqli_real_escape_string($conn, $_POST["job_description"]) : "";
+            $application_instructions = isset($_POST["application_instructions"]) ? mysqli_real_escape_string($conn, $_POST["application_instructions"]) : "";
+            $job_start_date = isset($_POST["job_start_date"]) ? mysqli_real_escape_string($conn, $_POST["job_start_date"]) : "";
+            $application_deadline = isset($_POST["application_deadline"]) ? mysqli_real_escape_string($conn, $_POST["application_deadline"]) : "";
+
             $job = new Job(
                 $job_title,
                 $job_type,
