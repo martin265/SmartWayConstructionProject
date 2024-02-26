@@ -18,7 +18,15 @@
 
         <!-- ============ main content container will be here ============ -->
         <div class="content-area">
-
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="interview-questions-panel">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
