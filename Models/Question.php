@@ -34,7 +34,13 @@ class Question{
 
 
     // the function to save the question details here =========== //
-    
+    public function saveInterviewQuestions($conn) {
+        try {
+
+        }catch(Exception $ex) {
+            print($ex);
+        }
+    }
 }
 
 ?>
