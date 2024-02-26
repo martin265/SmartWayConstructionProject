@@ -175,6 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // inserting the records here =========== //
             $question->saveInterviewQuestions($conn);
+            $success_message = "questions saved successfully";
         }
     }
 
@@ -361,6 +362,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </button>
                                     </div>
                                 </form>
+                            </div>
+
+
+                            <!-- =============== the panel for the answers will be here ========== -->
+                            <div class="all-answers-panel">
+                                <div class="all-answers-panel-title">
+                                    <h1>add answers to questions</h1>
+                                </div>
+
+                                <div class="all-answers-panel-instructions">
+                                    <div class="all-answers-panel-card">
+                                        <p>
+                                            select a question and pass the answer to it, the added 
+                                            answer will be attached to the question. Since the questions
+                                            will be in a multiple choice format the other answers for the 
+                                            questions will be pre added to the code, but the answer that is correct 
+                                            will be among the pre added answer. 
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -147,4 +147,37 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    text-align: center;
+}
+
+/* =========== css for the answers panel ========== */
+.main-content-container .content-area .all-answers-panel .all-answers-panel-title h1{
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;   
+}
+
+.main-content-container .content-area .all-answers-panel .all-answers-panel-instructions {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content-container .content-area .all-answers-panel .all-answers-panel-instructions .all-answers-panel-card {
+    height: auto;
+    width: 700px;
+    background: linear-gradient(to right, #0050C1, #311B92);
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+.main-content-container .content-area .all-answers-panel .all-answers-panel-instructions .all-answers-panel-card p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

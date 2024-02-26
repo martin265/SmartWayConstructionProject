@@ -49,7 +49,7 @@ function createJobDetailsTable($connection) {
 }
 
 
-function cerateInterviewQuestionsTable($connection) {
+function createInterviewQuestionsTable($connection) {
     $sqlCommand = (
         "CREATE TABLE IF NOT EXISTS InterviewQuestionsDetails(
             interview_question_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -62,7 +62,7 @@ function cerateInterviewQuestionsTable($connection) {
             question_7 VARCHAR(100) NOT NULL,
             question_8 VARCHAR(100) NOT NULL,
             question_9 VARCHAR(100) NOT NULL,
-            question_10 VARCHAR(100) NOT NULL,
+            question_10 VARCHAR(100) NOT NULL
         )"
     );
 
@@ -74,5 +74,6 @@ function cerateInterviewQuestionsTable($connection) {
 }
 
 // createJobDetailsTable($connection);
+//createInterviewQuestionsTable($connection);
 
 ?>
