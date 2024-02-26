@@ -48,6 +48,12 @@
                 <i class="bi bi-clipboard-pulse"></i>
                 <a href="administrator_jobs.php">job Details</a>
             </div>
+
+            <!-- the navigation item for the jobs section -->
+            <div class="navigation-item">
+                <i class="bi bi-patch-question"></i>
+                <a href="administrator_interview_questions.php">interview questions</a>
+            </div>
         </div>
     </section>
 </body>
