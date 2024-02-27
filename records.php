@@ -25,6 +25,19 @@
                             <div class="all-records-panel-title">
                                 <h1>manage all records</h1>
                             </div>
+
+                            <div class="all-records-cards">
+                                <div class="all-records-single-card">
+                                    <div class="all-records-single-card-title">
+                                        <h1></h1>
+                                    </div>
+
+                                    <div class="all-records-single-card-icon">
+
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div> 
                     </div>
                 </div>
