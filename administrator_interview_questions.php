@@ -382,6 +382,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </p>
                                     </div>
                                 </div>
+
+                                <!-- ============= the main answers for the questions will be here -->
+                                
                             </div>
                         </div>
                     </div>
