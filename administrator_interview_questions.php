@@ -14,17 +14,16 @@ function validateInputFields($data) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_POST["save_answers"])) {
-            $question_1 = isset($_POST["question_1"]) ? mysqli_real_escape_string($conn, $_POST["question_1"]) : "";
-            $question_2 = isset($_POST["question_2"]) ? mysqli_real_escape_string($conn, $_POST["question_2"]) : "";
-            $question_3 = isset($_POST["question_3"]) ? mysqli_real_escape_string($conn, $_POST["question_3"]) : "";
-            $question_4 = isset($_POST["question_4"]) ? mysqli_real_escape_string($conn, $_POST["question_4"]) : "";
-            $question_5 = isset($_POST["question_5"]) ? mysqli_real_escape_string($conn, $_POST["question_5"]) : "";
-            $question_6 = isset($_POST["question_6"]) ? mysqli_real_escape_string($conn, $_POST["question_6"]) : "";
-            $question_7 = isset($_POST["question_7"]) ? mysqli_real_escape_string($conn, $_POST["question_7"]) : "";
-            $question_8 = isset($_POST["question_8"]) ? mysqli_real_escape_string($conn, $_POST["question_8"]) : "";
-            $question_9 = isset($_POST["question_9"]) ? mysqli_real_escape_string($conn, $_POST["question_9"]) : "";
-            $question_10 = isset($_POST["question_10"]) ? mysqli_real_escape_string($conn, $_POST["question_10"]) : "";
-        
+        $answer_1 = isset($_POST["answer_1"]) ? mysqli_real_escape_string($conn, $_POST["answer_1"]) : "";
+        $answer_2 = isset($_POST["answer_2"]) ? mysqli_real_escape_string($conn, $_POST["answer_2"]) : "";
+        $answer_3 = isset($_POST["answer_3"]) ? mysqli_real_escape_string($conn, $_POST["answer_3"]) : "";
+        $answer_4 = isset($_POST["answer_4"]) ? mysqli_real_escape_string($conn, $_POST["answer_4"]) : "";
+        $answer_5 = isset($_POST["answer_5"]) ? mysqli_real_escape_string($conn, $_POST["answer_5"]) : "";
+        $answer_6 = isset($_POST["answer_6"]) ? mysqli_real_escape_string($conn, $_POST["answer_6"]) : "";
+        $answer_7 = isset($_POST["answer_7"]) ? mysqli_real_escape_string($conn, $_POST["answer_7"]) : "";
+        $answer_8 = isset($_POST["answer_8"]) ? mysqli_real_escape_string($conn, $_POST["answer_8"]) : "";
+        $answer_9 = isset($_POST["answer_9"]) ? mysqli_real_escape_string($conn, $_POST["answer_9"]) : "";
+        $answer_10 = isset($_POST["answer_10"]) ? mysqli_real_escape_string($conn, $_POST["answer_10"]) : "";
     }
 
 }
