@@ -181,3 +181,20 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+/*=============== CSS FOR THE ANSWERS PANEL WILL BE HERE ======== */
+.main-content-container .content-area .all-answers-panel-form  {
+    margin-top: 30px;
+}
+
+.main-content-container .content-area .all-answers-panel-form .all-answers-card {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main-content-container .content-area .all-answers-panel-form .all-answers-panel .single-card-answer {
+    width: 400px;
+    height: 200px;
+    border: 2px solid #311B92;
+}

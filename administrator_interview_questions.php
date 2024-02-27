@@ -384,7 +384,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
 
                                 <!-- ============= the main answers for the questions will be here -->
-                                
+                                <div class="all-answers-panel-form">
+                                    <form action="administrator_interview_questions.php" method="POST">
+                                        <!-- the container for the question will be here ===== -->
+                                        <div class="all-answers-card">
+                                            <div class="single-card-answer">
+                                                1
+                                            </div>
+
+                                            <!-- ============= the other card will be here ===== -->
+                                            <div class="single-card-answer">
+                                                1
+                                            </div>
+                                        </div>
+
+                                        <!-- ========= end of the cards will be here ======== -->
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
