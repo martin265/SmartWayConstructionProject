@@ -48,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $answer_10 = isset($_POST["answer_10"]) ? mysqli_real_escape_string($conn, $_POST["answer_10"]) : "";
 
         // =============== inserting the records here ========== //
-        include("Models/Answers.php");
         $answer = new Answer(
             $answer_1,
             $answer_2, 
