@@ -36,7 +36,7 @@
                                     </div>
 
                                     <div class="all-records-single-card-icon">
-
+                                        <i class="fi fi-tr-briefcase-blank"></i>
                                     </div>
                                 </div>
 

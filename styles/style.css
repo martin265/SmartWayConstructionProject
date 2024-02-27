@@ -252,4 +252,10 @@
     text-transform: capitalize;
 }
 
-@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css')
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+
+.main-content-container .content-area .all-records-panel .all-records-single-card .all-records-single-card-icon {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 90px;
+}
