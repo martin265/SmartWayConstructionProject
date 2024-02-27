@@ -17,9 +17,10 @@ function fetchAllQuestions($conn) {
         // getting the results here ===== //
         $results = mysqli_query($conn, $sqlCommand);
         // ======= converting the results into an array ======== //
-        $all_results = mysqli_fetch_all($results);
+        $all_questions = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
-        print_r($all_results);
+        return $all_questions;
+
     }catch(Exception $ex) {
         print($ex);
     }
@@ -27,7 +28,7 @@ function fetchAllQuestions($conn) {
 }
 
 $all_questions = fetchAllQuestions($conn);
-
+print();
 // ================ saving the answers for the questions here ============== //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -432,7 +433,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($all_questions["question_1"]);?>"><?php echo($all_questions["question_1"]);?></option>
                                                         </select>
                                                     </div>
 
