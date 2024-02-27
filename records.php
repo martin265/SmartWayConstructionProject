@@ -21,7 +21,9 @@
             <div class="container-xxl">
                 <div class="row">
                     <div class="col-lg-12">
+
                         <div class="all-records-panel">
+                            
                             <div class="all-records-panel-title">
                                 <h1>manage all records</h1>
                             </div>
@@ -30,14 +32,14 @@
 
                                 <div class="all-records-single-card">
                                     <div class="all-records-single-card-title">
-                                        <h1></h1>
+                                        <h1>project</h1>
                                     </div>
 
                                     <div class="all-records-single-card-icon">
 
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                         </div> 
