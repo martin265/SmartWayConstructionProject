@@ -386,6 +386,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <!-- ============= the main answers for the questions will be here -->
                                 <div class="all-answers-panel-form">
                                     <form action="administrator_interview_questions.php" method="POST">
+
                                         <!-- the container for the question will be here ===== -->
                                         <div class="all-answers-card">
                                             <div class="single-card-answer">
@@ -405,18 +406,253 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                                     <div class="row mt-3 mb-4">
                                                         <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
-                                                        <input type="text" class="form-control form-control-lg">
+                                                        <input type="text" class="form-control form-control-lg" name="answer_1">
                                                     </div>
                                                 </div>
                                             </div>
 
+
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
-                                                1
+
+                                                 <div class="single-card-answer-title">
+                                                    <h1>Question 2</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_2">
+                                                    </div>
+                                                </div>
+
                                             </div>
+
                                         </div>
 
                                         <!-- ========= end of the cards will be here ======== -->
+                                        <!-- the container for the question will be here ===== -->
+                                        <div class="all-answers-card">
+                                            <div class="single-card-answer">
+
+                                                <div class="single-card-answer-title">
+                                                    <h1>Question 3</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_3">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ============= the other card will be here ===== -->
+                                            <div class="single-card-answer">
+
+                                                 <div class="single-card-answer-title">
+                                                    <h1>Question 4</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_4">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ============== // ================ // -->
+
+                                        <!-- the container for the question will be here ===== -->
+                                        <div class="all-answers-card">
+                                            <div class="single-card-answer">
+
+                                                <div class="single-card-answer-title">
+                                                    <h1>Question 5</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_3" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_5">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ============= the other card will be here ===== -->
+                                            <div class="single-card-answer">
+
+                                                 <div class="single-card-answer-title">
+                                                    <h1>Question 6</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_6">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- ================== // ================ // -->
+
+                                        <!-- the container for the question will be here ===== -->
+                                        <div class="all-answers-card">
+                                            <div class="single-card-answer">
+
+                                                <div class="single-card-answer-title">
+                                                    <h1>Question 7</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_7">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ============= the other card will be here ===== -->
+                                            <div class="single-card-answer">
+
+                                                 <div class="single-card-answer-title">
+                                                    <h1>Question 8</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_8">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ================== // =============== //  -->
+                                        <!-- the container for the question will be here ===== -->
+                                        <div class="all-answers-card">
+                                            <div class="single-card-answer">
+
+                                                <div class="single-card-answer-title">
+                                                    <h1>Question 9</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_9">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- ============= the other card will be here ===== -->
+                                            <div class="single-card-answer">
+
+                                                 <div class="single-card-answer-title">
+                                                    <h1>Question 10</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
+                                                <div class="col ms-5 me-5">
+                                                    <div class="row mt-4">
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
+                                                        <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="some">Some</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="row mt-3 mb-4">
+                                                        <label for="" class="fw-bold text-primary">Add answer to the selected question</label>
+                                                        <input type="text" class="form-control form-control-lg" name="answer_10"> 
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <!-- ============ the container for the save answers button ====== -->
+                                        <div class="save-answers ms-5 mt-4 mb-5">
+                                            <input type="submit" value="Save Answers" class="btn btn-lg btn-primary" name="save_answers">
+                                        </div>
                                     </form>
                                 </div>
                             </div>
