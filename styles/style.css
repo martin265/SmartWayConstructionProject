@@ -209,3 +209,22 @@
     text-transform: capitalize;
     color: #0050C1;
 }
+
+
+/* ============== css for the records area will be here ============ */
+.main-content-container .content-area .all-records-panel {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.main-content-container .content-area .all-records-panel .all-records-panel-title h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;  
+}

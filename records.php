@@ -22,7 +22,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="all-records-panel">
-                            
+                            <div class="all-records-panel-title">
+                                <h1>manage all records</h1>
+                            </div>
                         </div> 
                     </div>
                 </div>
