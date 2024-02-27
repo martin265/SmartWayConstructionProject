@@ -21,7 +21,9 @@
             <div class="container-xxl">
                 <div class="row">
                     <div class="col-lg-12">
-                        
+                        <div class="all-records-panel">
+                            
+                        </div> 
                     </div>
                 </div>
             </div>
