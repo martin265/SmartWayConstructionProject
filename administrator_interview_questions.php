@@ -19,7 +19,9 @@ function fetchAllQuestions($conn) {
         // ======= converting the results into an array ======== //
         $all_questions = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
-        return $all_questions;
+        foreach($all_questions as $single_question) {
+            print($single_question["question_1"]);
+        }
 
     }catch(Exception $ex) {
         print($ex);
@@ -28,7 +30,8 @@ function fetchAllQuestions($conn) {
 }
 
 $all_questions = fetchAllQuestions($conn);
-print();
+
+
 // ================ saving the answers for the questions here ============== //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
