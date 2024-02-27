@@ -10,6 +10,17 @@ function validateInputFields($data) {
     return $data;
 }
 
+// function to fetch all the questions here //
+function fetchAllQuestions($conn) {
+    try {
+        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails";
+        // getting the results here ===== //
+        $results = mysqli_query($)
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
+
 // ================ saving the answers for the questions here ============== //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
