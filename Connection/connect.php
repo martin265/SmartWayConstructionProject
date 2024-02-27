@@ -99,5 +99,6 @@ function createInterviewAnswersTable($connection) {
 
 // createJobDetailsTable($connection);
 //createInterviewQuestionsTable($connection);
-createInterviewAnswersTable($connection);
+//createInterviewAnswersTable($connection);
+
 ?>

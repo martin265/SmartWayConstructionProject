@@ -46,6 +46,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $answer_8 = isset($_POST["answer_8"]) ? mysqli_real_escape_string($conn, $_POST["answer_8"]) : "";
         $answer_9 = isset($_POST["answer_9"]) ? mysqli_real_escape_string($conn, $_POST["answer_9"]) : "";
         $answer_10 = isset($_POST["answer_10"]) ? mysqli_real_escape_string($conn, $_POST["answer_10"]) : "";
+
+        // =============== inserting the records here ========== //
+        $answer = new Answer(
+            $answer_1,
+            $answer_2, 
+            $answer_3,
+            $answer_4,
+            $answer_5,
+            $answer_6,
+            $answer_7,
+            $answer_8,
+            $answer_9,
+            $answer_10
+        );
+
+        // ============ creating the object for the class here ========//
+        
+
     }
 
 }
