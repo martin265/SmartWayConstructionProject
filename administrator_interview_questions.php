@@ -20,7 +20,7 @@ function fetchAllQuestions($conn) {
         $all_questions = mysqli_fetch_all($results, MYSQLI_ASSOC);
 
         foreach($all_questions as $single_question) {
-            print($single_question["question_1"]);
+            return $single_question;
         }
 
     }catch(Exception $ex) {
@@ -29,7 +29,7 @@ function fetchAllQuestions($conn) {
 
 }
 
-$all_questions = fetchAllQuestions($conn);
+$single_question = fetchAllQuestions($conn);
 
 
 // ================ saving the answers for the questions here ============== //
@@ -436,7 +436,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="<?php echo($all_questions["question_1"]);?>"><?php echo($all_questions["question_1"]);?></option>
+                                                            <option value="<?php echo($single_question["question_1"]);?>"><?php echo($single_question["question_1"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -459,7 +459,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_2"]);?>"><?php echo($single_question["question_2"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -487,7 +487,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_3"]);?>"><?php echo($single_question["question_3"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -510,7 +510,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_4"]);?>"><?php echo($single_question["question_4"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -538,7 +538,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_3" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_5"]);?>"><?php echo($single_question["question_5"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -562,7 +562,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_6"]);?>"><?php echo($single_question["question_6"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -590,7 +590,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_7"]);?>"><?php echo($single_question["question_7"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -614,7 +614,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_8"]);?>"><?php echo($single_question["question_8"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -642,7 +642,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_9"]);?>"><?php echo($single_question["question_9"]);?></option>
                                                         </select>
                                                     </div>
 
@@ -666,7 +666,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
-                                                            <option value="some">Some</option>
+                                                            <option value="<?php echo($single_question["question_10"]);?>"><?php echo($single_question["question_10"]);?></option>
                                                         </select>
                                                     </div>
 
