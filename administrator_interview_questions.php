@@ -389,9 +389,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <!-- the container for the question will be here ===== -->
                                         <div class="all-answers-card">
                                             <div class="single-card-answer">
+
+                                                <div class="single-card-answer-title">
+                                                    <h1>Question 1</h1>
+                                                </div>
+
+                                                <!-- =========== the main area ========= -->
                                                 <div class="col ms-5 me-5">
                                                     <div class="row mt-4">
-                                                        <label for="" class="fw-bold text-warning">Select a Question</label>
+                                                        <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
                                                             <option value="some">Some</option>
                                                         </select>

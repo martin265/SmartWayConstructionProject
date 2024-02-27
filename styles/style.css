@@ -198,7 +198,13 @@
 .main-content-container .content-area .all-answers-panel-form .single-card-answer {
     width: 500px;
     height: auto;
-    border: 2px solid #311B92;
+    border: 2px solid #0050C1;
     margin: 10px;
     border-radius: 9px;
+}
+
+.main-content-container .content-area .all-answers-panel-form .single-card-answer .single-card-answer-title h1 {
+    text-align: center;
+    padding-top: 10px;
+    text-transform: capitalize;
 }
