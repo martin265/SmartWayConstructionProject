@@ -228,3 +228,15 @@
     color: #0050C1;
     font-weight: bold;  
 }
+
+.main-content-container .content-area .all-records-panel .all-records-cards {
+    display: flex;
+    justify-content: center;
+    flex-flow:  row wrap;
+}
+
+.main-content-container .content-area .all-records-panel .all-answers-cards .all-records-single-card {
+    width: 500px;
+    height: 400px;
+    background: linear-gradient(to left, #0050C1, #311B92);
+}

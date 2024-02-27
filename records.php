@@ -27,6 +27,7 @@
                             </div>
 
                             <div class="all-records-cards">
+
                                 <div class="all-records-single-card">
                                     <div class="all-records-single-card-title">
                                         <h1></h1>
@@ -36,8 +37,9 @@
 
                                     </div>
                                 </div>
+                                
                             </div>
-                            
+
                         </div> 
                     </div>
                 </div>
