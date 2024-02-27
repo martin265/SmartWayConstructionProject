@@ -34,7 +34,7 @@ class Answer{
 
 
     // the function to save the question details here =========== //
-    public function saveInterviewQuestions($conn) {
+    public function saveInterviewAnswers($conn) {
         try {
             $sqlCommand = $conn->prepare(
                 "INSERT INTO InterviewAnswersDetails (

@@ -62,8 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
 
         // ============ creating the object for the class here ========//
-        
-
+        $answer->saveInterviewAnswers($conn);
+        $success_message = "answers for the questions saved successfully";
     }
 
 }
