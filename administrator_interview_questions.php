@@ -10,6 +10,25 @@ function validateInputFields($data) {
     return $data;
 }
 
+// ================ saving the answers for the questions here ============== //
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (isset($_POST["save_answers"])) {
+            $question_1 = isset($_POST["question_1"]) ? mysqli_real_escape_string($conn, $_POST["question_1"]) : "";
+            $question_2 = isset($_POST["question_2"]) ? mysqli_real_escape_string($conn, $_POST["question_2"]) : "";
+            $question_3 = isset($_POST["question_3"]) ? mysqli_real_escape_string($conn, $_POST["question_3"]) : "";
+            $question_4 = isset($_POST["question_4"]) ? mysqli_real_escape_string($conn, $_POST["question_4"]) : "";
+            $question_5 = isset($_POST["question_5"]) ? mysqli_real_escape_string($conn, $_POST["question_5"]) : "";
+            $question_6 = isset($_POST["question_6"]) ? mysqli_real_escape_string($conn, $_POST["question_6"]) : "";
+            $question_7 = isset($_POST["question_7"]) ? mysqli_real_escape_string($conn, $_POST["question_7"]) : "";
+            $question_8 = isset($_POST["question_8"]) ? mysqli_real_escape_string($conn, $_POST["question_8"]) : "";
+            $question_9 = isset($_POST["question_9"]) ? mysqli_real_escape_string($conn, $_POST["question_9"]) : "";
+            $question_10 = isset($_POST["question_10"]) ? mysqli_real_escape_string($conn, $_POST["question_10"]) : "";
+        
+    }
+
+}
+
 // ============= the array for the errors here ============= //
 $all_errors = array(
     "question_1"=>"",
@@ -182,32 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-// ================ saving the answers for the questions here ============== //
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $answer_1 = validateInputFields($_POST["answer_1"]);
-    $answer_2 = validateInputFields($_POST["answer_2"]);
-    $answer_3 = validateInputFields($_POST["answer_3"]);
-    $answer_4 = validateInputFields($_POST["answer_4"]);
-    $answer_5 = validateInputFields($_POST["answer_5"]);
-    $answer_6 = validateInputFields($_POST["answer_6"]);
-    $answer_7 = validateInputFields($_POST["answer_7"]);
-    $answer_8 = validateInputFields($_POST["answer_8"]);
-    $answer_9 = validateInputFields($_POST["answer_9"]);
-    $answer_10 = validateInputFields($_POST["answer_10"]);
 
-    // ============= getting the inputs from the form here =========== //
-    $answer_1 = isset($conn, $_POST["answer_1"]) ? mysqli_real_escape_string($conn, $_POST["answer_1"]) : "";
-    $answer_2 = isset($conn, $_POST["answer_2"]) ? mysqli_real_escape_string($conn, $_POST["answer_2"]) : "";
-    $answer_3 = isset($conn, $_POST["answer_3"]) ? mysqli_real_escape_string($conn, $_POST["answer_3"]) : "";
-    $answer_4 = isset($conn, $_POST["answer_4"]) ? mysqli_real_escape_string($conn, $_POST["answer_4"]) : "";
-    $answer_5 = isset($conn, $_POST["answer_5"]) ? mysqli_real_escape_string($conn, $_POST["answer_4"]) : "";
-    $answer_6 = isset($conn, $_POST["answer_6"]) ? mysqli_real_escape_string($conn, $_POST["answer_6"]) : "";
-    $answer_7 = isset($conn, $_POST["answer_7"]) ? mysqli_real_escape_string($conn, $_POST["answer_7"]) : "";
-    $answer_8 = isset($conn, $_POST["answer_8"]) ? mysqli_real_escape_string($conn, $_POST["answer_8"]) : "";
-    $answer_9 = isset($conn, $_POST["answer_9"]) ? mysqli_real_escape_string($conn, $_POST["answer_9"]) : "";
-    $answer_10 = isset($conn, $_POST["answer_10"]) ? mysqli_real_escape_string($conn, $_POST["answer_10"]) : "";
-    
-}
 
 ?>
 <!DOCTYPE html>
@@ -389,11 +383,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <i class="bi bi-save me-2"></i>Save Questions
                                         </button>
                                     </div>
-                                </form>
-                            </div>
 
-
-                            <!-- =============== the panel for the answers will be here ========== -->
+                                    <!-- =============== the panel for the answers will be here ========== -->
                             <div class="all-answers-panel">
                                 <div class="all-answers-panel-title">
                                     <h1>add answers to questions</h1>
@@ -412,17 +403,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
 
                                 <!-- ============= the main answers for the questions will be here -->
-                                <div class="all-answers-panel-form">
-                                    <form action="administrator_interview_questions.php" method="POST">
-
+                                    <div class="all-answers-panel-form">
                                         <!-- the container for the question will be here ===== -->
                                         <div class="all-answers-card">
                                             <div class="single-card-answer">
-
                                                 <div class="single-card-answer-title">
                                                     <h1>Question 1</h1>
                                                 </div>
-
                                                 <!-- =========== the main area ========= -->
                                                 <div class="col ms-5 me-5">
                                                     <div class="row mt-4">
@@ -439,11 +426,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                 </div>
                                             </div>
 
-
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
 
-                                                 <div class="single-card-answer-title">
+                                                    <div class="single-card-answer-title">
                                                     <h1>Question 2</h1>
                                                 </div>
 
@@ -491,11 +477,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                 </div>
                                             </div>
 
-
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
 
-                                                 <div class="single-card-answer-title">
+                                                    <div class="single-card-answer-title">
                                                     <h1>Question 4</h1>
                                                 </div>
 
@@ -519,7 +504,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         </div>
 
                                         <!-- ============== // ================ // -->
-
                                         <!-- the container for the question will be here ===== -->
                                         <div class="all-answers-card">
                                             <div class="single-card-answer">
@@ -548,7 +532,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
 
-                                                 <div class="single-card-answer-title">
+                                                    <div class="single-card-answer-title">
                                                     <h1>Question 6</h1>
                                                 </div>
 
@@ -571,9 +555,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                         </div>
 
-
                                         <!-- ================== // ================ // -->
-
                                         <!-- the container for the question will be here ===== -->
                                         <div class="all-answers-card">
                                             <div class="single-card-answer">
@@ -602,7 +584,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
 
-                                                 <div class="single-card-answer-title">
+                                                    <div class="single-card-answer-title">
                                                     <h1>Question 8</h1>
                                                 </div>
 
@@ -654,7 +636,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <!-- ============= the other card will be here ===== -->
                                             <div class="single-card-answer">
 
-                                                 <div class="single-card-answer-title">
+                                                    <div class="single-card-answer-title">
                                                     <h1>Question 10</h1>
                                                 </div>
 
@@ -681,9 +663,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div class="save-answers ms-5 mt-4 mb-5">
                                             <input type="submit" value="Save Answers" class="btn btn-lg btn-primary" name="save_answers">
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                 </div>
+                                </form>
                             </div>
+
+
+                            
+
                         </div>
                     </div>
                 </div>
