@@ -15,11 +15,18 @@ function fetchAllQuestions($conn) {
     try {
         $sqlCommand = "SELECT * FROM InterviewQuestionsDetails";
         // getting the results here ===== //
-        $results = mysqli_query($)
+        $results = mysqli_query($conn, $sqlCommand);
+        // ======= converting the results into an array ======== //
+        $all_results = mysqli_fetch_all($results);
+
+        print_r($all_results);
     }catch(Exception $ex) {
         print($ex);
     }
+
 }
+
+$all_questions = fetchAllQuestions($conn);
 
 // ================ saving the answers for the questions here ============== //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
