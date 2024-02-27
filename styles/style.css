@@ -244,3 +244,12 @@
     border-radius: 10px;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
+
+.main-content-container .content-area .all-records-panel .all-records-single-card .all-records-single-card-title h1 {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    text-transform: capitalize;
+}
+
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css')
