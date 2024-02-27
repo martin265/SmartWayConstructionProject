@@ -65,6 +65,41 @@ class Question{
             print($ex);
         }
     }
+
+     // the function to save the question details here =========== //
+     public function saveInterviewAnswers ($conn) {
+        try {
+            $sqlCommand = $conn->prepare(
+                "INSERT INTO InterviewAnswersDetails  (
+                    question_1, question_2, question_3, question_4,
+                    question_5, question_6, question_7, question_8,
+                    question_9, question_10
+                ) VALUES (?,?,?,?,?,?,?,?,?,?)"
+            );
+
+            // ============= binding the parameters here ============== //
+            $sqlCommand->bind_param(
+                "ssssssssss",
+                $this->question_1,
+                $this->question_2,
+                $this->question_3,
+                $this->question_4,
+                $this->question_5,
+                $this->question_6,
+                $this->question_7,
+                $this->question_8,
+                $this->question_9,
+                $this->question_10,
+            );
+
+            // ============ running the query here ============== //
+            $sqlCommand->execute();
+        }catch(Exception $ex) {
+            print($ex);
+        }
+    }
+
+
 }
 
 ?>
