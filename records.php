@@ -32,7 +32,7 @@
 
                                 <div class="all-records-single-card">
                                     <div class="all-records-single-card-title">
-                                        <h1>project</h1>
+                                        <h1>available jobs</h1>
                                     </div>
 
                                     <div class="all-records-single-card-icon">
