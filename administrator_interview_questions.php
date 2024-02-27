@@ -181,6 +181,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
+
+// ================ saving the answers for the questions here ============== //
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $answer_1 = validateInputFields($_POST["answer_1"]);
+    $answer_2 = validateInputFields($_POST["answer_2"]);
+    $answer_3 = validateInputFields($_POST["answer_3"]);
+    $answer_4 = validateInputFields($_POST["answer_4"]);
+    $answer_5 = validateInputFields($_POST["answer_5"]);
+    $answer_6 = validateInputFields($_POST["answer_6"]);
+    $answer_7 = validateInputFields($_POST["answer_7"]);
+    $answer_8 = validateInputFields($_POST["answer_8"]);
+    $answer_9 = validateInputFields($_POST["answer_9"]);
+    $answer_10 = validateInputFields($_POST["answer_10"]);
+
+    // ============= getting the inputs from the form here =========== //
+    $answer_1 = isset($conn, $_POST["answer_1"]) ? mysqli_real_escape_string($conn, $_POST["answer_1"]) : "";
+    $answer_2 = isset($conn, $_POST["answer_2"]) ? mysqli_real_escape_string($conn, $_POST["answer_2"]) : "";
+    $answer_3 = isset($conn, $_POST["answer_3"]) ? mysqli_real_escape_string($conn, $_POST["answer_3"]) : "";
+    $answer_4 = isset($conn, $_POST["answer_4"]) ? mysqli_real_escape_string($conn, $_POST["answer_4"]) : "";
+    $answer_5 = isset($conn, $_POST["answer_5"]) ? mysqli_real_escape_string($conn, $_POST["answer_4"]) : "";
+    $answer_6 = isset($conn, $_POST["answer_6"]) ? mysqli_real_escape_string($conn, $_POST["answer_6"]) : "";
+    $answer_7 = isset($conn, $_POST["answer_7"]) ? mysqli_real_escape_string($conn, $_POST["answer_7"]) : "";
+    $answer_8 = isset($conn, $_POST["answer_8"]) ? mysqli_real_escape_string($conn, $_POST["answer_8"]) : "";
+    $answer_9 = isset($conn, $_POST["answer_9"]) ? mysqli_real_escape_string($conn, $_POST["answer_9"]) : "";
+    $answer_10 = isset($conn, $_POST["answer_10"]) ? mysqli_real_escape_string($conn, $_POST["answer_10"]) : "";
+    
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
