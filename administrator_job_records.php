@@ -70,7 +70,10 @@ $all_results = fetchPatientDetails($conn);
                                                         <td><?php echo($single_record["technical_skills"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                         <td>
-                                                            <form action="administrator_job_records"></form>
+                                                            <form action="administrator_job_records" method="POST">
+                                                                <input type="hidden" name="id_to_delete" value="<?php echo($single_record["job_id"]); ?>">
+                                                                <input type="submit" name="delete_record" value="Delete Record" class="btn btn-sm btn-danger">
+                                                            </form>
                                                         </td>
                                                     </tr>
                                                 <?php }?>
