@@ -21,6 +21,8 @@ $all_results = fetchPatientDetails($conn);
 
 // ================ checking if the job ID is set here =========== //
 if (isset($_POST["delete_record"])) {
+    $id_to_delete = mysqli_real_escape_string($conn, $_POST["id_to_delete"]);
+    // calling the function to delete the record here ======= //
     
 }
 
