@@ -65,6 +65,30 @@ class Job{
         $sqlCommand->execute();
         
     }
+
+    // ================= function to delete the record in the database here ============== //
+    public function deleteApplicantRecord($current_applicant_id) {
+        try {
+            // getting the connection with the databse here ============= //
+            $this->connection->EstablishConnection();
+            $conn = $this->connection->get_connection();
+            // ================ getting the sql command here ================ //
+            $sqlCommand = $conn->prepare(
+                "DELETE FROM ApplicationDetails WHERE application_id = ?"
+            );
+
+            // ============== binding the query here ================= //
+            $sqlCommand->bind_param(
+                "s",
+                $current_applicant_id
+            );
+            $sqlCommand->execute();
+            print("record deleted successfully");
+        }catch(Exception $ex) {
+            print($ex);
+        }
+    }
+    
 }
 
 
