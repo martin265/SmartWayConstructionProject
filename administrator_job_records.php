@@ -1,5 +1,22 @@
 <?php
 
+// ================= function to fetch patient details here ===============//
+function fetchPatientDetails($conn) {
+    try {
+        $sqlCommand = "SELECT * FROM ApplicationDetails";
+        // =========== getting the results here =================//
+        $results = mysqli_query($conn, $sqlCommand);
+        // ============== passing the results into an array here ==========//
+        $all_results = mysqli_fetch_all($results, MYSQLI_ASSOC);
+
+        return $all_results;
+        
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
+
+$all_results = fetchPatientDetails($conn);
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +43,40 @@
                             </div>
 
                             <div class="job-records-panel-table">
-                                
+                                <div class="recent-job-data-table">
+                                    <table id="recent-table" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-capitalize">job title</th>
+                                                <th scope="col" class="text-capitalize">job type</th>
+                                                <th scope="col" class="text-capitalize">job email</th>
+                                                <th scope="col" class="text-capitalize">job phone number</th>
+                                                <th scope="col" class="text-capitalize">qualification</th>
+                                                <th scope="col" class="text-capitalize">technical skills</th>
+                                                <th scope="col" class="text-capitalize">benefits</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- ============== looping through the results here ====== -->
+                                            <?php if ($all_results): ?>
+                                                <?php foreach($all_results as $single_record) {?>
+                                                    <tr>
+                                                        <td><?php echo($single_record["first_name"]); ?></td>
+                                                        <td><?php echo($single_record["last_name"]); ?></td>
+                                                        <td><?php echo($single_record["email"]); ?></td>
+                                                        <td><?php echo($single_record["age"]); ?></td>
+                                                        <td><?php echo($single_record["gender"]); ?></td>
+                                                        <td><?php echo($single_record["job_title"]); ?></td>
+                                                        <td><?php echo($single_record["job_id"]); ?></td>
+                                                        <!-- ============ for the button here -->
+                                                    </tr>
+                                                <?php }?>
+                                                <?php else: ?>
+
+                                                <?php endif; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
