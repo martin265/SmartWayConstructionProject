@@ -48,6 +48,11 @@
                                             with the other jobs.
                                         </p>
                                     </div>
+
+                                    <!-- =============== the section for the redirect button will be here =========  -->
+                                    <div class="redirect-jobs-button">
+                                        <a href="" class="btn btn-lg btn-warning"></a>
+                                    </div>
                                 </div>
 
                             </div>
