@@ -306,3 +306,9 @@
     color: #0050C1;
     font-weight: bold; 
 }
+
+.main-content-container .content-area .job-records-panel .job-records-panel-table {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
