@@ -65,7 +65,7 @@
                                     </div>
 
                                     <div class="all-records-single-card-icon">
-                                        <i class="bi bi-patch-question"></i> 
+                                        <i class="bi bi-patch-question text-success"></i> 
                                     </div>
 
                                     <div class="all-records-single-card-details">
@@ -80,7 +80,7 @@
 
                                     <!-- =============== the section for the redirect button will be here =========  -->
                                     <div class="redirect-jobs-button">
-                                        <a href="administrator_job_records.php" class="btn btn-lg btn-warning">
+                                        <a href="administrator_question_records.php" class="btn btn-lg btn-warning">
                                             <i class="bi bi-patch-question me-2"></i> Check Available Questions
                                         </a>
                                     </div>
