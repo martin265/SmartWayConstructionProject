@@ -51,7 +51,9 @@
 
                                     <!-- =============== the section for the redirect button will be here =========  -->
                                     <div class="redirect-jobs-button">
-                                        <a href="" class="btn btn-lg btn-warning"></a>
+                                        <a href="administrator_job_records.php" class="btn btn-lg btn-warning">
+                                            <i class="bi bi-box-arrow-right"></i> Check Available Jobs
+                                        </a>
                                     </div>
                                 </div>
 

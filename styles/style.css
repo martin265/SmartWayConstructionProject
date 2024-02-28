@@ -237,7 +237,7 @@
 
 .main-content-container .content-area .all-records-panel .all-records-single-card {
     width: 500px;
-    height: 500px;
+    height: auto;
     background: linear-gradient(to left, #0050C1, #311B92);
     margin-top: 40px;
     margin-bottom: 50px;
