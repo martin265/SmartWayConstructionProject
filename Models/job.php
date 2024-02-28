@@ -72,7 +72,7 @@ class Job{
             // getting the connection with the databse here ============= //
             // ================ getting the sql command here ================ //
             $sqlCommand = $conn->prepare(
-                "DELETE FROM ApplicationDetails WHERE application_id = ?"
+                "DELETE FROM JobDetails WHERE job_id = ?"
             );
 
             // ============== binding the query here ================= //
@@ -85,7 +85,7 @@ class Job{
             print($ex);
         }
     }
-    
+
 }
 
 
