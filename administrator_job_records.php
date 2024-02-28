@@ -37,7 +37,6 @@ if (isset($_POST["delete_record"])) {
     $sqlCommand->execute();
     $success_message = "record deleted successfully";
 
-    print($success_message);
 }
 
 ?>
@@ -64,6 +63,32 @@ if (isset($_POST["delete_record"])) {
                                 <h1>job records table</h1>
                             </div>
 
+                            <!-- ============== the succee massage will be here =========== -->
+                            <div class="success-message-panel">
+                                <?php if (isset($success_message)) : ?>
+                                    <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                        <?php echo $success_message; ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("successAlert").style.display = "none";
+                                        }, 5000);
+                                    </script>
+                                    <?php elseif (isset($error_message)) : ?>
+                                        <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                            <?php echo($error_message); ?>
+                                        </div>
+                                        <script>
+                                            // Automatically dismiss the success alert after 5 seconds
+                                            setTimeout(function() {
+                                                document.getElementById("errorAlert").style.display = "none";
+                                            }, 5000);
+                                        </script>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <!-- =============== the other section of the page here ===== -->
                             <div class="job-records-panel-table">
                                 <div class="recent-job-data-table">
                                     <table id="recent-table" class="table table-striped">
