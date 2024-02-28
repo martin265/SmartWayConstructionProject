@@ -21,7 +21,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="job-records-panel">
-                            
+                            <div class="job-racords panel-title">
+                                <h1>job records table</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
