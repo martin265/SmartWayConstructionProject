@@ -38,6 +38,16 @@
                                     <div class="all-records-single-card-icon">
                                         <i class="fi fi-tr-briefcase-blank"></i>
                                     </div>
+
+                                    <div class="all-records-single-card-details">
+                                        <p>
+                                            Click on the button to access the records
+                                            in the jobs table, the table will allow you to delete 
+                                            the record. the main purpose is to make sure that only one job 
+                                            is available in the database at a time, so that there is confusion
+                                            with the other jobs.
+                                        </p>
+                                    </div>
                                 </div>
 
                             </div>
