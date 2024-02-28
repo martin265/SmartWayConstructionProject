@@ -61,11 +61,11 @@
 
                                 <div class="all-records-single-card">
                                     <div class="all-records-single-card-title">
-                                        <h1>available jobs</h1>
+                                        <h1>available Questions</h1>
                                     </div>
 
                                     <div class="all-records-single-card-icon">
-                                        <i class="fi fi-tr-briefcase-blank"></i>
+                                        <i class="bi bi-patch-question"></i> 
                                     </div>
 
                                     <div class="all-records-single-card-details">
@@ -81,7 +81,7 @@
                                     <!-- =============== the section for the redirect button will be here =========  -->
                                     <div class="redirect-jobs-button">
                                         <a href="administrator_job_records.php" class="btn btn-lg btn-warning">
-                                            <i class="bi bi-box-arrow-right me-2"></i> Check Available Jobs
+                                            <i class="bi bi-patch-question me-2"></i> Check Available Questions
                                         </a>
                                     </div>
                                 </div>
