@@ -1,5 +1,6 @@
 <?php
 include("Connection/connect.php");
+$conn = $connection;
 // ================= function to fetch patient details here ===============//
 function fetchPatientDetails($conn) {
     try {
@@ -61,13 +62,13 @@ $all_results = fetchPatientDetails($conn);
                                             <?php if ($all_results): ?>
                                                 <?php foreach($all_results as $single_record) {?>
                                                     <tr>
-                                                        <td><?php echo($single_record["first_name"]); ?></td>
-                                                        <td><?php echo($single_record["last_name"]); ?></td>
-                                                        <td><?php echo($single_record["email"]); ?></td>
-                                                        <td><?php echo($single_record["age"]); ?></td>
-                                                        <td><?php echo($single_record["gender"]); ?></td>
                                                         <td><?php echo($single_record["job_title"]); ?></td>
-                                                        <td><?php echo($single_record["job_id"]); ?></td>
+                                                        <td><?php echo($single_record["job_type"]); ?></td>
+                                                        <td><?php echo($single_record["job_email"]); ?></td>
+                                                        <td><?php echo($single_record["job_phone_number"]); ?></td>
+                                                        <td><?php echo($single_record["qualification"]); ?></td>
+                                                        <td><?php echo($single_record["technical_skills"]); ?></td>
+                                                        <td><?php echo($single_record["benefits"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                     </tr>
                                                 <?php }?>
