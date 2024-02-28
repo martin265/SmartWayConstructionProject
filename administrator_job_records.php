@@ -1,9 +1,9 @@
 <?php
-
+include("Connection/connect.php");
 // ================= function to fetch patient details here ===============//
 function fetchPatientDetails($conn) {
     try {
-        $sqlCommand = "SELECT * FROM ApplicationDetails";
+        $sqlCommand = "SELECT * FROM JobDetails";
         // =========== getting the results here =================//
         $results = mysqli_query($conn, $sqlCommand);
         // ============== passing the results into an array here ==========//
