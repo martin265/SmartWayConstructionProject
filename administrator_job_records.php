@@ -24,6 +24,10 @@
                             <div class="job-records-panel-title">
                                 <h1>job records table</h1>
                             </div>
+
+                            <div class="job-records-panel-table">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
