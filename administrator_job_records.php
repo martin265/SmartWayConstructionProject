@@ -54,7 +54,6 @@ $all_results = fetchPatientDetails($conn);
                                                 <th scope="col" class="text-capitalize">job phone number</th>
                                                 <th scope="col" class="text-capitalize">qualification</th>
                                                 <th scope="col" class="text-capitalize">technical skills</th>
-                                                <th scope="col" class="text-capitalize">benefits</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -68,7 +67,6 @@ $all_results = fetchPatientDetails($conn);
                                                         <td><?php echo($single_record["job_phone_number"]); ?></td>
                                                         <td><?php echo($single_record["qualification"]); ?></td>
                                                         <td><?php echo($single_record["technical_skills"]); ?></td>
-                                                        <td><?php echo($single_record["benefits"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                     </tr>
                                                 <?php }?>
