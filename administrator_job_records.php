@@ -20,7 +20,9 @@
             <div class="containwer-xxl">
                 <div class="row">
                     <div class="col-lg-12">
-                        
+                        <div class="job-records-panel">
+                            
+                        </div>
                     </div>
                 </div>
             </div>

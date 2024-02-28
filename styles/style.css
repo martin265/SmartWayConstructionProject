@@ -287,3 +287,14 @@
         margin: 10px;
     }
 }
+
+
+/* ============= css for the job records table ========== */
+.main-content-container .content-area .job-records-panel {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
