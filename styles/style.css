@@ -260,3 +260,16 @@
     font-size: 90px;
     color: #E52E6A;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+.main-content-container .content-area .all-records-panel .all-records-single-card .all-records-single-card-details p {
+    text-align: center;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 24px;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
