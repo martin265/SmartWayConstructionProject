@@ -19,6 +19,11 @@ function fetchPatientDetails($conn) {
 
 $all_results = fetchPatientDetails($conn);
 
+// ================ checking if the job ID is set here =========== //
+if (isset($_POST["delete_record"])) {
+    
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

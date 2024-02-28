@@ -67,7 +67,7 @@ class Job{
     }
 
     // ================= function to delete the record in the database here ============== //
-    public function deleteApplicantRecord($conn, $current_applicant_id) {
+    public function deleteJobRecord($conn, $current_applicant_id) {
         try {
             // getting the connection with the databse here ============= //
             // ================ getting the sql command here ================ //
