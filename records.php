@@ -57,8 +57,36 @@
                                     </div>
                                 </div>
 
-                            </div>
+                                <!-- ============== the other card will be here ===========  -->
 
+                                <div class="all-records-single-card">
+                                    <div class="all-records-single-card-title">
+                                        <h1>available jobs</h1>
+                                    </div>
+
+                                    <div class="all-records-single-card-icon">
+                                        <i class="fi fi-tr-briefcase-blank"></i>
+                                    </div>
+
+                                    <div class="all-records-single-card-details">
+                                        <p>
+                                            Click on the button to access the records
+                                            in the jobs table, the table will allow you to delete 
+                                            the record. the main purpose is to make sure that only one job 
+                                            is available in the database at a time, so that there is confusion
+                                            with the other jobs.
+                                        </p>
+                                    </div>
+
+                                    <!-- =============== the section for the redirect button will be here =========  -->
+                                    <div class="redirect-jobs-button">
+                                        <a href="administrator_job_records.php" class="btn btn-lg btn-warning">
+                                            <i class="bi bi-box-arrow-right me-2"></i> Check Available Jobs
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div> 
                     </div>
                 </div>
