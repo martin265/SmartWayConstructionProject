@@ -1,5 +1,5 @@
 <?php
-include("Connection/connect.php");
+include("Models/job.php");
 $conn = $connection;
 // ================= function to fetch patient details here ===============//
 function fetchPatientDetails($conn) {
@@ -23,7 +23,21 @@ $all_results = fetchPatientDetails($conn);
 if (isset($_POST["delete_record"])) {
     $id_to_delete = mysqli_real_escape_string($conn, $_POST["id_to_delete"]);
     // calling the function to delete the record here ======= //
-    
+    // getting the connection with the databse here ============= //
+    // ================ getting the sql command here ================ //
+    $sqlCommand = $conn->prepare(
+        "DELETE FROM JobDetails WHERE job_id = ?"
+    );
+
+    // ============== binding the query here ================= //
+    $sqlCommand->bind_param(
+        "s",
+        $id_to_delete
+    );
+    $sqlCommand->execute();
+    $success_message = "record deleted successfully";
+
+    print($success_message);
 }
 
 ?>
