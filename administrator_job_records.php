@@ -64,7 +64,7 @@ if (isset($_POST["delete_record"])) {
                             </div>
 
                             <!-- ============== the succee massage will be here =========== -->
-                            <div class="success-message-panel">
+                            <div class="success-message-panel d-flex justfy-center">
                                 <?php if (isset($success_message)) : ?>
                                     <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
                                         <?php echo $success_message; ?>
@@ -87,7 +87,7 @@ if (isset($_POST["delete_record"])) {
                                         </script>
                                 <?php endif; ?>
                             </div>
-                            
+
                             <!-- =============== the other section of the page here ===== -->
                             <div class="job-records-panel-table">
                                 <div class="recent-job-data-table">
