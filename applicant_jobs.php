@@ -130,13 +130,17 @@ $all_results = getAllAvailableJobs($conn);
                                     <div class="available-jobs-single-card-details">
                                         <p><i class="bi bi-body-text me-2 ms-2"></i><?php echo($single_result["job_title"]); ?></p>
                                         <p><i class="bi bi-body-text me-2 ms-2"></i><?php echo($single_result["job_title"]); ?></p>
-                                        <p><i class="bi bi-envelope me-2"></i><?php echo($single_result["job_email"]); ?></p>
-                                        <p><i class="bi bi-phone me-2"></i><?php echo($single_result["job_phone_number"]); ?></p>
-                                        <p><i class="bi bi-file-earmark-bar-graph me-2"></i><?php echo($single_result["qualification"]); ?></p>
-                                        <p><i class="bi bi-tools me-2"></i><?php echo($single_result["technical_skills"]); ?></p>
-                                        <p><i class="bi bi-bag-plus me-2"></i><?php echo($single_result["benefits"]); ?></p>
-                                        <p><i class="bi bi-geo-alt me-2"></i><?php echo($single_result["location"]); ?></p>
-                                        <p><i class="bi bi-calendar-week me-2"></i><?php echo($single_result["application_deadline"]); ?></p>
+                                        <p><i class="bi bi-envelope me-2 ms-2"></i><?php echo($single_result["job_email"]); ?></p>
+                                        <p><i class="bi bi-phone me-2 ms-2"></i><?php echo($single_result["job_phone_number"]); ?></p>
+                                        <p><i class="bi bi-file-earmark-bar-graph me-2 ms-2"></i><?php echo($single_result["qualification"]); ?></p>
+                                        <p><i class="bi bi-tools me-2 ms-2"></i><?php echo($single_result["technical_skills"]); ?></p>
+                                        <p><i class="bi bi-bag-plus me-2 ms-2"></i><?php echo($single_result["benefits"]); ?></p>
+                                        <p><i class="bi bi-geo-alt me-2 ms-2"></i><?php echo($single_result["location"]); ?></p>
+                                        <p><i class="bi bi-calendar-week me-2 ms-2"></i><?php echo($single_result["application_deadline"]); ?></p>
+                                    </div>
+
+                                    <div class="job-application-redirect-button">
+                                        <a href="" class="btn btn-lg btn-warning ms-2 mb-3"><i class="bi bi-bookmark-check me-2"></i>Apply Job</a>
                                     </div>
                                 </div>
                             <?php }?>
