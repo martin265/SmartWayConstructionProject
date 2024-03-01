@@ -210,3 +210,13 @@ body {
     text-transform: capitalize;
     font-weight: bolder;
 }
+
+/* =============CSS FOR THE PAGE OF ALL AVAILABLE JOBS ========= */
+.all-available-jobs-panel {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
