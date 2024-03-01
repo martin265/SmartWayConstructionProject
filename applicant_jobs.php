@@ -13,5 +13,19 @@
     <div class="main-navigation-bar">
         <?php include("templates/header.php"); ?>
     </div>
+
+    <!-- the main content for the applicant page will be here ======= -->
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="applicant-jobs-page">
+                    <div class="applicant-jobs-page-cards">
+                        <div class="applicant-jobs-single-card">1</div>
+                        <div class="applicant-jobs-single-card-2">2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
