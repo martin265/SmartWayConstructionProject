@@ -1,4 +1,24 @@
 <?php
+// ============= fetching the records in the database here ============ //
+include("Connection/connect.php");
+// =========== getting the actual database connection here ======= //
+$conn = $connection;
+
+// ================= the function will be used to fetch for all the available job details here ======== //
+function getAllAvailableJobs($conn) {
+    try {
+        $sqlCommand = "SELECT * FROM JobDetails";
+        // ======== getting the results here ======== //
+        $results = mysqli_query($conn, $sql);
+        // ======= converting the results into an array here ========= //
+        $all_results = mysqli_real_escape_string($results, MYSQLI_ASSOC);
+        print_r($all_results);
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
+
+getAllAvailableJobs($conn);
 
 
 ?>
@@ -98,7 +118,9 @@
                     </div>
 
                     <div class="available-jobs-cards">
-                        
+                        <div class="available-jobs-single-card">
+
+                        </div>
                     </div>
                 </div>
             </div>
