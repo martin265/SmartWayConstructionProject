@@ -124,7 +124,7 @@ $all_results = getAllAvailableJobs($conn);
                             <?php foreach($all_results as $single_result) {?>
                                 <div class="available-jobs-single-card shadow-lg">
                                     <div class="available-jobs-single-card-header">
-                                        
+                                        <i class="bi bi-journal-medical"></i>
                                     </div>
                                 </div>
                             <?php }?>
