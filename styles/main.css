@@ -228,3 +228,10 @@ body {
     color: #0050C1;
     font-weight: bold;
 }
+
+/* =============== css for the available jobs page =========== */
+.all-available-jobs-panel .available-jobs-cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
