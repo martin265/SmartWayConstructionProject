@@ -26,7 +26,7 @@ if (isset($_POST["delete_record"])) {
     // getting the connection with the databse here ============= //
     // ================ getting the sql command here ================ //
     $sqlCommand = $conn->prepare(
-        "DELETE FROM InterviewQuestionsDetails WHERE question_id = ?"
+        "DELETE FROM InterviewQuestionsDetails WHERE interview_question_id = ?"
     );
 
     // ============== binding the query here ================= //
@@ -64,7 +64,7 @@ if (isset($_POST["delete_record"])) {
                             </div>
 
                             <!-- ============== the succee massage will be here =========== -->
-                            <div class="success-message-panel d-flex justfy-center">
+                            <div class="success-message-panel">
                                 <?php if (isset($success_message)) : ?>
                                     <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
                                         <?php echo $success_message; ?>
