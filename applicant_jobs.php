@@ -27,6 +27,19 @@
                             <div class="applicant-jobs-single-card-title-icon">
                                 <i class="bi bi-brightness-low"></i>
                             </div>
+                            <!-- ============= the information about the application here -->
+                            <div class="applicant-jobs-single-card-title-information">
+                                <p>
+                                    In today's digital age, online platforms
+                                    have revolutionized the way we conduct interviews,
+                                    making the process more accessible and efficient than
+                                    ever before. As you embark on your journey to register
+                                    with our online interview site, we want to ensure that
+                                    your experience is seamless and successful. To this end,
+                                    we have compiled a set of guidelines to assist you in navigating
+                                    the registration process effectively.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
