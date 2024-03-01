@@ -127,6 +127,9 @@ $all_results = getAllAvailableJobs($conn);
                                         <i class="bi bi-journal-medical"></i>
                                     </div>
                                     <!-- ============ main content for the job applications page -->
+                                    <div class="available-jobs-single-card-details">
+                                        <p><i class="bi bi-body-text me-2 ms-2"></i><?php echo($single_result["job_title"]); ?></p>
+                                    </div>
                                 </div>
                             <?php }?>
                         <?php else :?>

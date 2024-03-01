@@ -253,3 +253,7 @@ body {
     color: #F9EAFF;
     font-size: 40px;
 }
+
+.all-available-jobs-panel .available-jobs-cards .available-jobs-single-card .available-jobs-single-card-details p {
+    color: white;
+}
