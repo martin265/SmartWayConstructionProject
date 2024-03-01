@@ -116,8 +116,8 @@ if (isset($_POST["delete_record"])) {
                                                         <td><?php echo($single_record["question_6"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                         <td>
-                                                            <form action="administrator_job_records.php" method="POST">
-                                                                <input type="hidden" name="id_to_delete" value="<?php echo($single_record["job_id"]); ?>">
+                                                            <form action="administrator_question_records.php" method="POST">
+                                                                <input type="hidden" name="id_to_delete" value="<?php echo($single_record["interview_question_id"]); ?>">
                                                                 <input type="submit" name="delete_record" value="Delete Record" class="btn btn-sm btn-danger">
                                                             </form>
                                                         </td>
