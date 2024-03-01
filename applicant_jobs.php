@@ -122,7 +122,7 @@ $all_results = getAllAvailableJobs($conn);
                         <!-- ========== looping through the database results here ====== -->
                         <?php if ($all_results) : ?>
                             <?php foreach($all_results as $single_result) {?>
-                                <div class="available-jobs-single-card">
+                                <div class="available-jobs-single-card shadow-lg">
                                     <p>hello</p>
                                 </div>
                             <?php }?>
