@@ -312,3 +312,8 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.main-content-container .content-area .job-details-panel .success-message-panel {
+    display: flex;
+    justify-content: center;
+}
