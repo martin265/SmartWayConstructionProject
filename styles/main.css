@@ -41,16 +41,26 @@ body {
 
 
 /* ============== css for the jobs page will be here ========= */
+.applicant-jobs-page .applicant-jobs-page-title h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
+}
+
 .applicant-jobs-page .applicant-jobs-page-cards {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
 }
 
+
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card {
     width: 90%;
     height: 300px;
-    background-color: #0078D9;
+    background: linear-gradient(to left, #0050C1, #311B92);
     margin-top: 30px;
+    border-radius: 8px;
 }
 

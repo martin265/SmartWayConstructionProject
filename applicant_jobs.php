@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="applicant-jobs-page">
-                    <div class="applicant-jobs-age-title">
+                    <div class="applicant-jobs-page-title">
                         <h1>apply for job</h1>
                     </div>
                     <div class="applicant-jobs-page-cards">
