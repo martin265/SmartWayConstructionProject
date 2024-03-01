@@ -23,7 +23,11 @@
                         <h1>apply for job</h1>
                     </div>
                     <div class="applicant-jobs-page-cards">
-                        <div class="applicant-jobs-single-card">1</div>
+                        <div class="applicant-jobs-single-card">
+                            <div class="applicant-jobs-single-card-title-icon">
+                                <i class="bi bi-brightness-low"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
