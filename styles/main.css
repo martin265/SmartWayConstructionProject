@@ -62,6 +62,7 @@ body {
     background: linear-gradient(to left, #0050C1, #311B92);
     margin-top: 30px;
     border-radius: 8px;
+    margin-bottom: 40px;
 }
 
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-icon {
@@ -79,7 +80,43 @@ body {
     font-family: 'Manrope', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
+
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 {
+    width: 300px;
+    height: 200px;
+    border-radius: 9px;
+    background: linear-gradient(to left, #F9EAFF, #F9EAFF);
+    margin-bottom: 20px;
+}
+
+/* ============= // */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-2 {
+    width: 300px;
+    height: 200px;
+    border-radius: 9px;
+    background: linear-gradient(to left, #F9EAFF, #F9EAFF);
+    margin-bottom: 20px;
+}
+
+/*  */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-3 {
+    width: 300px;
+    height: 200px;
+    border-radius: 9px;
+    background: linear-gradient(to left, #F9EAFF, #F9EAFF);
+    margin-bottom: 20px;
+}
+/*  */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-4 {
+    width: 300px;
+    height: 200px;
+    border-radius: 9px;
+    background: linear-gradient(to left, #F9EAFF, #F9EAFF);
+    margin-bottom: 20px;
 }
