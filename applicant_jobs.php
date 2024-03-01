@@ -9,16 +9,17 @@ function getAllAvailableJobs($conn) {
     try {
         $sqlCommand = "SELECT * FROM JobDetails";
         // ======== getting the results here ======== //
-        $results = mysqli_query($conn, $sql);
+        $results = mysqli_query($conn, $sqlCommand);
         // ======= converting the results into an array here ========= //
-        $all_results = mysqli_real_escape_string($results, MYSQLI_ASSOC);
-        print_r($all_results);
+        $all_results = mysqli_fetch_all($results, MYSQLI_ASSOC);
+        
+        return $all_results;
     }catch(Exception $ex) {
         print($ex);
     }
 }
 
-getAllAvailableJobs($conn);
+$all_results = getAllAvailableJobs($conn);
 
 
 ?>
