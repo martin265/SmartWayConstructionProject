@@ -89,6 +89,14 @@
     </div>
 
     <!-- ============== the container for all the available jobs will be here ======= -->
-    
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="all-available-jobs-panel">
+                    <h1>hello</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
