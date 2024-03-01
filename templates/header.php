@@ -40,7 +40,7 @@
     <div class="top-navigation-bar">
         <ul>
             <li><a href="">home</a></li>
-            <li><a href="">jobs</a></li>
+            <li><a href="applicant_jobs.php">jobs</a></li>
             <li><a href="">interviews</a></li>
         </ul>
     </div>
