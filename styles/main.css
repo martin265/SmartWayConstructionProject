@@ -79,3 +79,7 @@ body {
     font-family: 'Manrope', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features {
+    display: flex;
+    justify-content: center;
+}

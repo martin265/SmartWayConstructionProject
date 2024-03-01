@@ -38,6 +38,13 @@
                                     your experience is seamless and successful.
                                 </p>
                             </div>
+
+                            <div class="applicant-jobs-single-card-features">
+                                <div class="applicant-jobs-single-card-features-1">1</div>
+                                <div class="applicant-jobs-single-card-features-1">2</div>
+                                <div class="applicant-jobs-single-card-features-1">3</div>
+                                <div class="applicant-jobs-single-card-features-1">4</div>
+                            </div>
                         </div>
                     </div>
                 </div>
