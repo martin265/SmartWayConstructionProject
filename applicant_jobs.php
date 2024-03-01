@@ -93,7 +93,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="all-available-jobs-panel">
-                    <h1>hello</h1>
+                    <div class="all-available-jobs-panel-header">
+                        <h1>available jobs</h1>
+                    </div>
                 </div>
             </div>
         </div>
