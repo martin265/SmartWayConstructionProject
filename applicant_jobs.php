@@ -119,9 +119,17 @@ $all_results = getAllAvailableJobs($conn);
                     </div>
 
                     <div class="available-jobs-cards">
-                        <div class="available-jobs-single-card">
 
-                        </div>
+                        <!-- ========== looping through the database results here ====== -->
+                        <?php if ($all_results) : ?>
+                            <?php foreach($all_results as $single_result) {?>
+                                <div class="available-jobs-single-card">
+                                    <p>hello</p>
+                                </div>
+                            <?php }?>
+                        <?php else :?>
+
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
