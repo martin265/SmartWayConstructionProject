@@ -58,8 +58,8 @@ if (isset($_POST["delete_record"])) {
             <div class="containwer-xxl">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="job-records-panel">
-                            <div class="job-records-panel-title">
+                        <div class="questions-records-panel">
+                            <div class="questions-records-panel-title">
                                 <h1>job records table</h1>
                             </div>
 
@@ -89,7 +89,7 @@ if (isset($_POST["delete_record"])) {
                             </div>
 
                             <!-- =============== the other section of the page here ===== -->
-                            <div class="job-records-panel-table">
+                            <div class="questions-records-panel-table">
                                 <div class="recent-job-data-table">
                                     <table id="recent-table" class="table table-striped">
                                         <thead>
