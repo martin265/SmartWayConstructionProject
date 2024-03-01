@@ -454,6 +454,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     <div class="row mt-4">
                                                         <label for="" class="fw-bold text-primary">Select a Question</label>
                                                         <select name="select_question_1" id="" class="form-control form-control-lg">
+                                                            <option value="Select Something">Select Something</option>
                                                             <option value="<?php echo($single_question["question_1"]);?>"><?php echo($single_question["question_1"]);?></option>
                                                         </select>
                                                     </div>
