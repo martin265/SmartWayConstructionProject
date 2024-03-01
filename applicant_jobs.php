@@ -96,6 +96,10 @@
                     <div class="all-available-jobs-panel-header">
                         <h1>available jobs</h1>
                     </div>
+
+                    <div class="available-jobs-cards">
+                        
+                    </div>
                 </div>
             </div>
         </div>
