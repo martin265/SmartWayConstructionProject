@@ -146,3 +146,17 @@ body {
         font-family: 'Roboto', sans-serif;
     }
 }
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 .applicant-jobs-single-card-features-title {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+} 
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 .applicant-jobs-single-card-features-header p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
