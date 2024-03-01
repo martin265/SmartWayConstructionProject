@@ -72,7 +72,7 @@ body {
     color: #FFB84A;
 }
 
-.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-information {
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-information p{
     padding-top: 10;
     text-align: center;
     color: white;
@@ -123,4 +123,26 @@ body {
     border-radius: 9px;
     background: linear-gradient(to left, #F9EAFF, #F9EAFF);
     margin-bottom: 20px;
+}
+
+/* =============== the media query will be here ===== */
+@media only screen and (max-width: 768px) {
+    .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card {
+        width: 100%;
+        height: auto;
+        background: linear-gradient(to left, #0050C1, #311B92);
+        margin-top: 30px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+    }
+    .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-information p{
+        padding-top: 10;
+        text-align: center;
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 20px;
+        font-family: 'Manrope', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
 }
