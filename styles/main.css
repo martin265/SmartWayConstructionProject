@@ -67,15 +67,13 @@ body {
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-icon {
     text-align: center;
     padding-top: 20px;
-    font-size: 50px;
+    font-size: 80px;
     color: #FFB84A;
 }
 
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-information {
     padding-top: 10;
     text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
     color: white;
     font-size: 20px;
     font-family: 'Manrope', sans-serif;

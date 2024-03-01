@@ -35,9 +35,7 @@
                                     making the process more accessible and efficient than
                                     ever before. As you embark on your journey to register
                                     with our online interview site, we want to ensure that
-                                    your experience is seamless and successful. To this end,
-                                    we have compiled a set of guidelines to assist you in navigating
-                                    the registration process effectively.
+                                    your experience is seamless and successful.
                                 </p>
                             </div>
                         </div>
