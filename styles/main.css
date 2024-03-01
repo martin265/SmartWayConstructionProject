@@ -58,9 +58,15 @@ body {
 
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card {
     width: 90%;
-    height: 300px;
+    height: auto;
     background: linear-gradient(to left, #0050C1, #311B92);
     margin-top: 30px;
     border-radius: 8px;
 }
 
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-title-icon {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+    color: #FFB84A;
+}
