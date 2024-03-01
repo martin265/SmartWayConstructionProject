@@ -123,7 +123,9 @@ $all_results = getAllAvailableJobs($conn);
                         <?php if ($all_results) : ?>
                             <?php foreach($all_results as $single_result) {?>
                                 <div class="available-jobs-single-card shadow-lg">
-                                    <p>hello</p>
+                                    <div class="available-jobs-single-card-header">
+                                        
+                                    </div>
                                 </div>
                             <?php }?>
                         <?php else :?>

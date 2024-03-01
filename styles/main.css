@@ -246,3 +246,10 @@ body {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
     margin-left: 10px;
 }
+
+.all-available-jobs-panel .available-jobs-cards .available-jobs-single-card .available-jobs-single-card-header {
+    text-align: center;
+    padding-top: 50px;
+    color: #E52E6A;
+    font-size: 40px;
+}
