@@ -41,7 +41,7 @@
 
                             <div class="applicant-jobs-single-card-features">
                                 <div class="applicant-jobs-single-card-features-1 shadow-lg">
-                                    
+
                                     <div class="applicant-jobs-single-card-features-title">
                                         <i class="bi bi-intersect"></i>
                                     </div>
@@ -83,8 +83,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
+    <!-- ============== the container for all the available jobs will be here ======= -->
+    
 </body>
 </html>
