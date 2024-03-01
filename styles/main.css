@@ -232,7 +232,7 @@ body {
 /* =============== css for the available jobs page =========== */
 .all-available-jobs-panel .available-jobs-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-flow: row wrap;
 }
 
