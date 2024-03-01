@@ -40,10 +40,44 @@
                             </div>
 
                             <div class="applicant-jobs-single-card-features">
-                                <div class="applicant-jobs-single-card-features-1 shadow-lg">1</div>
-                                <div class="applicant-jobs-single-card-features-2">2</div>
-                                <div class="applicant-jobs-single-card-features-3">3</div>
-                                <div class="applicant-jobs-single-card-features-4">4</div>
+                                <div class="applicant-jobs-single-card-features-1 shadow-lg">
+                                    <div class="applicant-jobs-single-card-features-title">
+                                        <i class="bi bi-intersect"></i>
+                                    </div>
+                                    <!-- ========== the text will be here ========= -->
+                                    <div class="applicant-jobs-single-card-features-header">
+                                        <p>monitored</p>
+                                    </div>
+                                </div>
+                                <!-- ================ // ========= -->
+                                <div class="applicant-jobs-single-card-features-2 shadow-lg">
+                                    <div class="applicant-jobs-single-card-features-title">
+                                        <i class="bi bi-clipboard-data"></i>
+                                    </div>
+                                    <!-- ========== the text will be here ========= -->
+                                    <div class="applicant-jobs-single-card-features-header">
+                                        <p>monitored</p>
+                                    </div>
+                                </div>
+                                <!-- ================== // ================= // -->
+                                <div class="applicant-jobs-single-card-features-3 shadow-lg">
+                                    <div class="applicant-jobs-single-card-features-title">
+                                        <i class="bi bi-tree"></i>
+                                    </div>
+                                    <!-- ========== the text will be here ========= -->
+                                    <div class="applicant-jobs-single-card-features-header">
+                                        <p>monitored</p>
+                                    </div>
+                                </div>
+                                <div class="applicant-jobs-single-card-features-4 shadow-lg">
+                                    <div class="applicant-jobs-single-card-features-title">
+                                        <i class="bi bi-palette2"></i>
+                                    </div>
+                                    <!-- ========== the text will be here ========= -->
+                                    <div class="applicant-jobs-single-card-features-header">
+                                        <p>monitored</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
