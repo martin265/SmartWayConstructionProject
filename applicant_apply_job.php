@@ -31,6 +31,47 @@
                                     <input type="text" name="first_name" class="form-control form-control-lg">
                                 </div>
                             </div>
+
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+
+                                <!-- ============= for the last name here ========= -->
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+
+                                <!-- ============= for the last name here ========= -->
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+
+                                <!-- ============= for the last name here ========= -->
+                                <div class="col">
+                                    <label for="FirstName" class="fw-bold">First Name</label>
+                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
