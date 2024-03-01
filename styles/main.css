@@ -85,36 +85,40 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    flex-flow: row wrap;
 }
 
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 {
-    width: 300px;
+    width: 200px;
     height: 200px;
     border-radius: 9px;
     background: linear-gradient(to left, #F9EAFF, #F9EAFF);
     margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 /* ============= // */
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-2 {
-    width: 300px;
+    width: 200px;
     height: 200px;
     border-radius: 9px;
     background: linear-gradient(to left, #F9EAFF, #F9EAFF);
     margin-bottom: 20px;
+    margin-right: 10px;
 }
 
 /*  */
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-3 {
-    width: 300px;
+    width: 200px;
     height: 200px;
     border-radius: 9px;
     background: linear-gradient(to left, #F9EAFF, #F9EAFF);
     margin-bottom: 20px;
+    margin-right: 10px;
 }
 /*  */
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-4 {
-    width: 300px;
+    width: 200px;
     height: 200px;
     border-radius: 9px;
     background: linear-gradient(to left, #F9EAFF, #F9EAFF);
