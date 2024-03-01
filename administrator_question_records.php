@@ -94,12 +94,12 @@ if (isset($_POST["delete_record"])) {
                                     <table id="recent-table" class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th scope="col" class="text-capitalize">job title</th>
-                                                <th scope="col" class="text-capitalize">job type</th>
-                                                <th scope="col" class="text-capitalize">job email</th>
-                                                <th scope="col" class="text-capitalize">job phone number</th>
-                                                <th scope="col" class="text-capitalize">qualification</th>
-                                                <th scope="col" class="text-capitalize">technical skills</th>
+                                                <th scope="col" class="text-capitalize">question 1</th>
+                                                <th scope="col" class="text-capitalize">question 2</th>
+                                                <th scope="col" class="text-capitalize">question 3</th>
+                                                <th scope="col" class="text-capitalize">question 4</th>
+                                                <th scope="col" class="text-capitalize">question 5</th>
+                                                <th scope="col" class="text-capitalize">question 6</th>
                                                 <th scope="col" class="text-capitalize">actions</th>
                                             </tr>
                                         </thead>
@@ -108,12 +108,12 @@ if (isset($_POST["delete_record"])) {
                                             <?php if ($all_results): ?>
                                                 <?php foreach($all_results as $single_record) {?>
                                                     <tr>
-                                                        <td><?php echo($single_record["job_title"]); ?></td>
-                                                        <td><?php echo($single_record["job_type"]); ?></td>
-                                                        <td><?php echo($single_record["job_email"]); ?></td>
-                                                        <td><?php echo($single_record["job_phone_number"]); ?></td>
-                                                        <td><?php echo($single_record["qualification"]); ?></td>
-                                                        <td><?php echo($single_record["technical_skills"]); ?></td>
+                                                        <td><?php echo($single_record["question_1"]); ?></td>
+                                                        <td><?php echo($single_record["question_2"]); ?></td>
+                                                        <td><?php echo($single_record["question_3"]); ?></td>
+                                                        <td><?php echo($single_record["question_4"]); ?></td>
+                                                        <td><?php echo($single_record["question_5"]); ?></td>
+                                                        <td><?php echo($single_record["question_6"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                         <td>
                                                             <form action="administrator_job_records.php" method="POST">
