@@ -126,10 +126,17 @@ $all_results = getAllAvailableJobs($conn);
                                     <div class="available-jobs-single-card-header">
                                         <i class="bi bi-journal-medical"></i>
                                     </div>
+                                    <!-- ============ main content for the job applications page -->
                                 </div>
                             <?php }?>
                         <?php else :?>
-
+                            <div class="available-jobs-single-card shadow-lg">
+                                <div class="available-jobs-single-card-header">
+                                    <i class="bi bi-journal-medical"></i>
+                                </div>
+                                <!-- ============ main content for the job applications page -->
+                                <p class="text-center">no available jobs</p>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
