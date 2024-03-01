@@ -4,7 +4,7 @@ $conn = $connection;
 // ================= function to fetch patient details here ===============//
 function fetchPatientDetails($conn) {
     try {
-        $sqlCommand = "SELECT * FROM nterviewQuestionsDetails";
+        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails";
         // =========== getting the results here =================//
         $results = mysqli_query($conn, $sqlCommand);
         // ============== passing the results into an array here ==========//
@@ -26,7 +26,7 @@ if (isset($_POST["delete_record"])) {
     // getting the connection with the databse here ============= //
     // ================ getting the sql command here ================ //
     $sqlCommand = $conn->prepare(
-        "DELETE FROM nterviewQuestionsDetails WHERE question_id = ?"
+        "DELETE FROM InterviewQuestionsDetails WHERE question_id = ?"
     );
 
     // ============== binding the query here ================= //
