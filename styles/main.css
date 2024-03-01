@@ -150,10 +150,60 @@ body {
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 .applicant-jobs-single-card-features-title {
     text-align: center;
     padding-top: 50px;
+    color: #A50084;
     font-size: 40px;
 } 
 
 .applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-1 .applicant-jobs-single-card-features-header p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+/* ========================== // ================================== // */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-2 .applicant-jobs-single-card-features-title {
+    text-align: center;
+    padding-top: 50px;
+    color: #FFB84A;
+    font-size: 40px;
+} 
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-2 .applicant-jobs-single-card-features-header p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+
+/* ================================ // ========================================== // */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-3 .applicant-jobs-single-card-features-title {
+    text-align: center;
+    padding-top: 50px;
+    color: #FF7451;
+    font-size: 40px;
+} 
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-3 .applicant-jobs-single-card-features-header p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+/* ============================= // =============================// */
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-4 .applicant-jobs-single-card-features-title {
+    text-align: center;
+    padding-top: 50px;
+    color: #E52E6A;
+    font-size: 40px;
+} 
+
+.applicant-jobs-page .applicant-jobs-page-cards .applicant-jobs-single-card .applicant-jobs-single-card-features .applicant-jobs-single-card-features-4 .applicant-jobs-single-card-features-header p {
     text-align: center;
     padding-top: 20px;
     font-size: 20px;
