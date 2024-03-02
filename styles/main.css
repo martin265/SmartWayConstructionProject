@@ -299,5 +299,7 @@ body {
 }
 
 .applicant-apply-job-page .applicant-apply-job-page-form .error-message {
-    
+    color: red;
+    font-weight: bolder;
+    padding-left: 10px;
 }

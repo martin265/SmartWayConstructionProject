@@ -36,6 +36,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $all_errors["first_name"] = "enter valid characters please";
             }
         }
+
+        if (empty($_POST["last_name"])) {
+            $all_errors["last_name"] = "enter the first name please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $last_name)) {
+                $all_errors["last_name"] = "enter valid characters please";
+            }
+        }
+
+        if (empty($_POST["age"])) {
+            $all_errors["age"] = "enter the first name please";
+        }
+        else {
+            if (preg_match("/^[a-zA-Z-' ]*$/", $age)) {
+                $all_errors["age"] = "enter valid characters please";
+            }
+        }
+
+        if (empty($_POST["gender"])) {
+            $all_errors["gender"] = "enter the first name please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $gender)) {
+                $all_errors["gender"] = "enter valid characters please";
+            }
+        }
     }
    
 }
