@@ -11,6 +11,9 @@ function validateInputFields($data) {
 }
 
 // =========== the array to keep the errors ========= //
+$all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
+"email"=>"", "marital_status"=>"", "home_address"=>"");
+
 // =========== getting inputs here ============ //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = validateInputFields($_POST["first_name"]);
