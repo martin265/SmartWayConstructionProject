@@ -59,7 +59,10 @@
                                 <!-- ============= for the last name here ========= -->
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Email</label>
-                                    <input type="email" name="first_name" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"></span>
+                                        <input type="email" name="first_name" class="form-control form-control-lg">
+                                    </div>
                                 </div>
                             </div>
 
@@ -67,17 +70,23 @@
                             <div class="row mt-3">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Marital Status</label>
-                                    <select name="marital_status" id="" class="form-control form-control-lg">
-                                        <option value="Married">Married</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Divorced">Divorced</option>
-                                    </select>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person-hearts"></i></span>
+                                        <select name="marital_status" id="" class="form-control form-control-lg">
+                                            <option value="Married">Married</option>
+                                            <option value="Single">Single</option>
+                                            <option value="Divorced">Divorced</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Home address</label>
-                                    <input type="text" name="address" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-house-add"></i></span>
+                                        <input type="text" name="address" class="form-control form-control-lg">
+                                    </div>
                                 </div>
                             </div>
 
