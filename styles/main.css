@@ -280,6 +280,7 @@ body {
     margin-top: 10px;
     border-radius: 8px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(9, 118, 187, 0.1); 
 }
 
 .applicant-apply-job-page .applicant-apply-job-page-form {
@@ -289,6 +290,10 @@ body {
 }
 
 
-.applicant-apply-job-page .welcome-jobs-page {
-
+.applicant-apply-job-page .welcome-jobs-page h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
 }
