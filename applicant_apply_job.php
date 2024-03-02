@@ -10,6 +10,7 @@ function validateInputFields($data) {
     return $data;
 }
 
+// =========== the array to keep the errors ========= //
 // =========== getting inputs here ============ //
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = validateInputFields($_POST["first_name"]);
@@ -22,6 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $home_address = validateInputFields($_POST["home_address"]);
 
     // ============ checking if the fields are empty when submitting the form here
+    if (empty($_POST["first_name"])) {
+
+    }
 }
 
 ?>
