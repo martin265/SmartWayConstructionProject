@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             if (!preg_match("/^[a-zA-Z,.-' ]*$/", $first_name)) {
-                $all_errors["first_name"] = "enter valida characters please";
+                $all_errors["first_name"] = "enter valid characters please";
             }
         }
     }
@@ -83,6 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <span class="input-group-text"><i class="bi bi-body-text"></i></span>
                                         <input type="text" name="last_name" class="form-control form-control-lg">
                                     </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["first_name"]); ?>
+                                    </div>
                                 </div>
                             </div>
 
@@ -123,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <label for="FirstName" class="fw-bold ms-2">Email</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                                        <input type="email" name="first_name" class="form-control form-control-lg">
+                                        <input type="email" name="email" class="form-control form-control-lg">
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <label for="FirstName" class="fw-bold ms-2">Home address</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-house-add"></i></span>
-                                        <input type="text" name="address" class="form-control form-control-lg">
+                                        <input type="text" name="home_address" class="form-control form-control-lg">
                                     </div>
                                 </div>
                             </div>
