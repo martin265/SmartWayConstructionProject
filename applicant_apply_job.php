@@ -82,7 +82,26 @@
                             </div>
 
                             <div class="education-documents">
-                                
+                                <!-- ============= the section for applying for a job here ========= -->
+                                <div class="row">
+                                    <div class="col ms-3">
+                                        <label for="ForFile">
+                                            <span class="fw-bold"><i class="bi bi-file-earmark-person me-2"></i>Select Cv File</span>
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control form-control-lg" name="cv">
+                                        </div>
+                                    </div>
+                                    <!-- ============== // ================ // -->
+                                    <div class="col me-3">
+                                        <label for="ForCoverLetter">
+                                            <span class="fw-bold"><i class="bi bi-postcard me-2"></i>Upload Cover Letter</span>
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control form-control-lg" name="cover_letter">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
