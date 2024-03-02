@@ -22,30 +22,41 @@
                             <div class="row">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">First Name</label>
-                                    <input type="text" name="first_name" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-body-text"></i></span>
+                                        <input type="text" name="first_name" class="form-control form-control-lg">
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
                                 <div class="col">
                                     <label for="LastName" class="fw-bold">Last Name</label>
-                                    <input type="text" name="last_name" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-body-text"></i></span>
+                                        <input type="text" name="last_name" class="form-control form-control-lg">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Age</label>
-                                    <input type="text" name="age" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-123"></i></span>
+                                        <input type="text" name="age" class="form-control form-control-lg">
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Gender</label>
-                                    <select name="gender" id="" class="form-control form-control-lg">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                    
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
+                                        <select name="gender" id="" class="form-control form-control-lg">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
@@ -53,14 +64,17 @@
                             <div class="row mt-3">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Phone Number</label>
-                                    <input type="text" name="phone_number" class="form-control form-control-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-phone"></i></span>
+                                        <input type="text" name="phone_number" class="form-control form-control-lg">
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold">Email</label>
                                     <div class="input-group">
-                                        <span class="input-group-text"></span>
+                                        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
                                         <input type="email" name="first_name" class="form-control form-control-lg">
                                     </div>
                                 </div>
@@ -88,6 +102,10 @@
                                         <input type="text" name="address" class="form-control form-control-lg">
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="available-job-documents">
+                                
                             </div>
 
                             <div class="education-documents">
