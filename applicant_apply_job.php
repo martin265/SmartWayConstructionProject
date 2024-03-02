@@ -11,7 +11,18 @@ function validateInputFields($data) {
 }
 
 // =========== getting inputs here ============ //
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $first_name = validateInputFields($_POST["first_name"]);
+    $last_name = validateInputFields($_POST["last_name"]);
+    $age = validateInputFields($_POST["age"]);
+    $gender = validateInputFields($_POST["gender"]);
+    $phone_number = validateInputFields($_POST["phone_number"]);
+    $email = validateInputFields($_POST["email"]);
+    $marital_status = validateInputFields($_POST["marital_status"]);
+    $home_address = validateInputFields($_POST["home_address"]);
 
+    // ============ checking if the fields are empty when submitting the form here
+}
 
 ?>
 <!DOCTYPE html>
