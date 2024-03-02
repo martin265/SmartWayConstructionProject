@@ -13,14 +13,21 @@
         <?php include("templates/header.php"); ?>
     </div>
 
+     
+
     <div class="container-xxl">
         <div class="row">
             <div class="col-lg-12">
                 <div class="applicant-apply-job-page">
                     <!-- =========== the container for the top page will be here = -->
+                    <div class="welcome-jobs-page">
+                        <h1>apply for job</h1>
+                    </div>
+
+                    <!-- ============= the form to collect the details here -->
                     <div class="applicant-apply-job-page-form">
                         <form action="applicant_apply_job.php" method="POST" enctype="">
-                            <div class="row">
+                            <div class="row pt-5">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold ms-2">First Name</label>
                                     <div class="input-group">
@@ -131,6 +138,10 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- =============== the section for the form here =========== -->
+                            <input type="hidden" name="id_to_insert" value="">
+                            <input type="submit" name="save_details" class="btn btn-primary btn-lg mt-3 mb-5" value="save details">
                         </form>
                     </div>
                 </div>
