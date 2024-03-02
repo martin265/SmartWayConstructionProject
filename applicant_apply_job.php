@@ -63,6 +63,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $all_errors["gender"] = "enter valid characters please";
             }
         }
+
+        if (empty($_POST["phone_number"])) {
+            $all_errors["phone_number"] = "enter the first name please";
+        }
+        else {
+            if (preg_match("/^[a-zA-Z-' ]*$/", $phone_number)) {
+                $all_errors["phone_number"] = "enter valid characters please";
+            }
+        }
+
+        if (empty($_POST["email"])) {
+            $all_errors["email"] = "enter the first name please";
+        }
+        else {
+            if (filter_var(FILTER_VALIDATE_EMAIL, $email)) {
+                $all_errors["email"] = "provide valid email";
+            }
+        }
     }
    
 }
