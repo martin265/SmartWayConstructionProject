@@ -1,5 +1,18 @@
 <?php
 
+// =========== getting the connection here ========= //
+// validating the input fields here ============== //
+function validateInputFields($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+
+    return $data;
+}
+
+// =========== getting inputs here ============ //
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
