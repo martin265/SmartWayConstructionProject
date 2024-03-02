@@ -26,9 +26,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $home_address = validateInputFields($_POST["home_address"]);
 
     // ============ checking if the fields are empty when submitting the form here
-    if (empty($_POST["first_name"])) {
+    if (isset($_POST["save_details"])) {
 
+        if (empty($_POST["first_name"])) {
+            $all_errors["first_name"] = "enter the first name please";
+        }
+        else {
+            if (!preg_match("/^[a-zA-Z,.-' ]*$/", $first_name)) {
+                $all_errors["first_name"] = "enter valida characters please";
+            }
+        }
     }
+   
 }
 
 ?>
