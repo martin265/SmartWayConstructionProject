@@ -17,6 +17,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="applicant-apply-job-page">
+                    <!-- =========== the container for the top page will be here = -->
                     <div class="applicant-apply-job-page-form">
                         <form action="applicant_apply_job.php" method="POST" enctype="">
                             <div class="row">
