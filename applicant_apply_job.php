@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $all_errors["first_name"] = "enter the first name please";
         }
         else {
-            if (!preg_match("/^[a-zA-Z,.-' ]*$/", $first_name)) {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $first_name)) {
                 $all_errors["first_name"] = "enter valid characters please";
             }
         }
@@ -74,6 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <span class="input-group-text"><i class="bi bi-body-text"></i></span>
                                         <input type="text" name="first_name" class="form-control form-control-lg">
                                     </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["first_name"]); ?>
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
@@ -84,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <input type="text" name="last_name" class="form-control form-control-lg">
                                     </div>
                                     <div class="error-message">
-                                        <?php echo($all_errors["first_name"]); ?>
+                                        <?php echo($all_errors["last_name"]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-123"></i></span>
                                         <input type="text" name="age" class="form-control form-control-lg">
+                                    </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["age"]); ?>
                                     </div>
                                 </div>
 
@@ -119,6 +125,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <span class="input-group-text"><i class="bi bi-phone"></i></span>
                                         <input type="text" name="phone_number" class="form-control form-control-lg">
                                     </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["phone_number"]); ?>
+                                    </div>
                                 </div>
 
                                 <!-- ============= for the last name here ========= -->
@@ -127,6 +136,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
                                         <input type="email" name="email" class="form-control form-control-lg">
+                                    </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["email"]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -151,6 +163,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-house-add"></i></span>
                                         <input type="text" name="home_address" class="form-control form-control-lg">
+                                    </div>
+                                    <div class="error-message">
+                                        <?php echo($all_errors["home_address"]); ?>
                                     </div>
                                 </div>
                             </div>
