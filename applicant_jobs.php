@@ -144,7 +144,7 @@ $all_results = getAllAvailableJobs($conn);
                                     </div>
 
                                     <div class="job-application-redirect-button">
-                                        <a href="applicant_apply_job.php" class="btn btn-lg btn-warning ms-2 mb-3"><i class="bi bi-bookmark-check me-2"></i>Apply Job</a>
+                                        <a href="applicant_apply_job.php?id=<?php echo($single_result["job_id"]); ?>" class="btn btn-lg btn-warning ms-2 mb-3"><i class="bi bi-bookmark-check me-2"></i>Apply Job</a>
                                     </div>
                                 </div>
                             <?php }?>

@@ -10,6 +10,8 @@ function validateInputFields($data) {
     return $data;
 }
 
+// =========== getting the current id to apply for the job here ============= //
+
 // =========== the array to keep the errors ========= //
 $all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
 "email"=>"", "marital_status"=>"", "home_address"=>"");
