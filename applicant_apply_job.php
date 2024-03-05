@@ -16,6 +16,7 @@ function validateInputFields($data) {
 // =========== getting the current id to apply for the job here ============= //
 if (isset($_GET["id"])) {
     $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
+    // ======== selecting records from the job details table here ========= //
     
 }
 
