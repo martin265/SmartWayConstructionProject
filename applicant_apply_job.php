@@ -12,11 +12,13 @@ function validateInputFields($data) {
     return $data;
 }
 
+
 // =========== getting the current id to apply for the job here ============= //
 if (isset($_GET["id"])) {
     $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
-    print($id_to_insert);
+    
 }
+
 
 // =========== the array to keep the errors ========= //
 $all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
