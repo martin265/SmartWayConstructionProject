@@ -120,7 +120,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else {
 
             if (isset($_POST["cv"]) && isset($_POST["cover_letter"])) {
-                print("hello world");
                 // File upload directory
                 $uploadDirectory = "uploads/";
                 // Extract first name and last name
@@ -207,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <!-- ============= the form to collect the details here -->
                     <div class="applicant-apply-job-page-form">
-                        <form action="applicant_apply_job.php" method="POST" enctype="">
+                        <form action="applicant_apply_job.php" method="POST" enctype="multipart/form-data">
                             <div class="row pt-5">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold ms-2">First Name</label>
