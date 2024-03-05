@@ -118,9 +118,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             print($error_message);
         }
         else {
-
-            if (isset($_POST["cv"]) && isset($_POST["cover_letter"])) {
+            
+            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
                 // File upload directory
+                print("testing");
                 $uploadDirectory = "uploads/";
                 // Extract first name and last name
                 $firstName = validateInputFields($_POST["first_name"]);
