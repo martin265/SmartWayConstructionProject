@@ -17,7 +17,12 @@ function validateInputFields($data) {
 if (isset($_GET["id"])) {
     $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
     // ======== selecting records from the job details table here ========= //
-    
+    $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
+    $result = mysqli_query($conn, $sqlCommand);
+
+    // ========= getting all the results here ========== //
+    $singl_record = mysqli_fetch_assoc($result);
+    print_r($singl_record);
 }
 
 
