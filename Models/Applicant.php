@@ -1,6 +1,7 @@
 <?php
 // ======== inclusing the connection here
 include("Connection/connect.php");
+$conn = $connection;
 
 class Applicant{
     // public methods for the class will be here
@@ -28,6 +29,16 @@ class Applicant{
         $this->home_address = $home_address;
         $this->cv = $cv;
         $this->cover_letter = $cover_letter;
+    }
+
+    // ============ the function to save the records will be here ========= //
+    public function saveApplicantDetails($conn) {
+        try {
+
+
+        }catch(Exception $ex){
+            print($ex);
+        }
     }
 }
 
