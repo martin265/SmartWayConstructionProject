@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $all_errors["home_address"] = "enter home address";
         }
         else {
-            if (preg_match("/^[a-zA-Z-' ]*$/", $home_address)) {
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $home_address)) {
                 $all_errors["address"] = "enter valid characters please";
             }
         }
@@ -115,55 +115,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // ========== filtering the errors here // ================= //
         if (array_filter($all_errors)) {
             $error_message = "the form still has some errors";
+            print($error_message);
         }
         else {
 
-            // File upload directory
-            $uploadDirectory = "uploads/";
-            // Extract first name and last name
-            $firstName = ValidateInputs($_POST["first_name"]);
-            $lastName = ValidateInputs($_POST["last_name"]);
+            if (isset($_POST["cv"]) && isset($_POST["cover_letter"])) {
+                print("hello world");
+                // File upload directory
+                $uploadDirectory = "uploads/";
+                // Extract first name and last name
+                $firstName = validateInputFields($_POST["first_name"]);
+                $lastName = validateInputFields($_POST["last_name"]);
 
-            // Create a folder for each user based on their first name
-            $userFolder = $uploadDirectory . $firstName . '/';
+                // Create a folder for each user based on their first name
+                $userFolder = $uploadDirectory . $firstName . '/';
 
-            if (!file_exists($userFolder)) {
-                mkdir($userFolder, 0755, true); // Create the user's folder if it doesn't exist
+                if (!file_exists($userFolder)) {
+                    mkdir($userFolder, 0755, true); // Create the user's folder if it doesn't exist
+                }
+
+                // Get file names
+                $cvFileName = $_FILES['cv']['name'];
+                $coverLetterFileName = $_FILES['cover_letter']['name'];
+
+                // Append first name and last name to file names
+                $cvFileNameWithNames = $firstName . '_' . $lastName . '_' . $cvFileName;
+                $coverLetterFileNameWithNames = $firstName . '_' . $lastName . '_' . $coverLetterFileName;
+
+                // Set file paths
+                $cvFilePath = $userFolder . $cvFileNameWithNames;
+                $coverLetterFilePath = $userFolder . $coverLetterFileNameWithNames;
+
+                // Move uploaded files to the specified directory
+                move_uploaded_file($_FILES['cv']['tmp_name'], $cvFilePath);
+                move_uploaded_file($_FILES['cover_letter']['tmp_name'], $coverLetterFilePath);
+
+                // Get only the file names without the directory path
+                $cvFileNameOnly = basename($cvFileNameWithNames);
+                $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
+
+                // ========= creating an object for the applicant class here ======= //
+                $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
+                $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
+                $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
+                $gender = isset($conn, $_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
+                $phone_number = isset($conn, $_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
+                $email = isset($conn, $_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
+                $marital_status = isset($conn, $_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
+
+                // calling the function here =====//
+                $applicant = new Applicant(
+                    $first_name, $last_name, $age, $gender, $phone_number, $email,
+                    $marital_status, $home_address, $cvFilePath, $coverLetterFilePath
+                );
+                $applicant->saveApplicantDetails($conn);
+                // showing the success message here //
+                $success_message = "details saved successfully";
+                print($success_message);
             }
 
-            // Get file names
-            $cvFileName = $_FILES['cv']['name'];
-            $coverLetterFileName = $_FILES['cover_letter']['name'];
-
-            // Append first name and last name to file names
-            $cvFileNameWithNames = $firstName . '_' . $lastName . '_' . $cvFileName;
-            $coverLetterFileNameWithNames = $firstName . '_' . $lastName . '_' . $coverLetterFileName;
-
-            // Set file paths
-            $cvFilePath = $userFolder . $cvFileNameWithNames;
-            $coverLetterFilePath = $userFolder . $coverLetterFileNameWithNames;
-
-            // Move uploaded files to the specified directory
-            move_uploaded_file($_FILES['cv']['tmp_name'], $cvFilePath);
-            move_uploaded_file($_FILES['cover_letter']['tmp_name'], $coverLetterFilePath);
-
-            // Get only the file names without the directory path
-            $cvFileNameOnly = basename($cvFileNameWithNames);
-            $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
-            
-            // ========= creating an object for the applicant class here ======= //
-            $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
-            $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
-            $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
-            $gender = isset($conn, $_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
-            $phone_number = isset($conn, $_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
-            $email = isset($conn, $_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
-            $marital_status = isset($conn, $_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
-            $applicant = new Applicant(
-                $first_name, $last_name, $age, $gender, $phone_number, $email,
-                $marital_status, 
-            )
-            $success_message = "details saved successfully";
         }
 
         

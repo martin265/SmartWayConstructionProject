@@ -50,7 +50,6 @@ class Applicant{
             );
             // ======= running the query here ======= //
             $sqlCommand->execute();
-            
         }catch(Exception $ex){
             print($ex);
         }
