@@ -1,6 +1,8 @@
 <?php
-
 // =========== getting the connection here ========= //
+include("Connection/connect.php");
+$conn = $connection;
+
 // validating the input fields here ============== //
 function validateInputFields($data) {
     $data = trim($data);
@@ -11,6 +13,10 @@ function validateInputFields($data) {
 }
 
 // =========== getting the current id to apply for the job here ============= //
+if (isset($_GET["id"])) {
+    $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
+    print($id_to_insert);
+}
 
 // =========== the array to keep the errors ========= //
 $all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
@@ -270,7 +276,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
 
                             <!-- =============== the section for the form here =========== -->
-                            <input type="hidden" name="id_to_insert" value="">
+                            <input type="hidden" name="id_to_insert" value="<?php echo($all_results["job_id"]); ?>">
                             <input type="submit" name="save_details" class="btn btn-primary btn-lg mt-3 mb-5" value="save details">
                         </form>
                     </div>
