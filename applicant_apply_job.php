@@ -37,8 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+
         if (empty($_POST["last_name"])) {
-            $all_errors["last_name"] = "enter the first name please";
+            $all_errors["last_name"] = "enter the last name please";
         }
         else {
             if (!preg_match("/^[a-zA-Z-' ]*$/", $last_name)) {
@@ -46,14 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+
         if (empty($_POST["age"])) {
-            $all_errors["age"] = "enter the first name please";
+            $all_errors["age"] = "enter the age name please";
         }
         else {
             if (preg_match("/^[a-zA-Z-' ]*$/", $age)) {
                 $all_errors["age"] = "enter valid characters please";
             }
         }
+
 
         if (empty($_POST["gender"])) {
             $all_errors["gender"] = "enter the first name please";
@@ -64,8 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+
         if (empty($_POST["phone_number"])) {
-            $all_errors["phone_number"] = "enter the first name please";
+            $all_errors["phone_number"] = "provide a phone number please";
         }
         else {
             if (preg_match("/^[a-zA-Z-' ]*$/", $phone_number)) {
@@ -73,14 +77,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+
         if (empty($_POST["email"])) {
-            $all_errors["email"] = "enter the first name please";
+            $all_errors["email"] = "please provide an email";
         }
         else {
-            if (filter_var(FILTER_VALIDATE_EMAIL, $email)) {
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $all_errors["email"] = "provide valid email";
             }
         }
+
+
+        if (empty($_POST["home_address"])) {
+            $all_errors["home_address"] = "enter home address";
+        }
+        else {
+            if (preg_match("/^[a-zA-Z-' ]*$/", $home_address)) {
+                $all_errors["address"] = "enter valid characters please";
+            }
+        }
+        
+        // ========== filtering the errors here // ================= //
+        if (array_filter($all_errors)) {
+            $error_message = "the form still has some errors";
+        }
+        else {
+            $success_message = "details saved successfully";
+        }
+
+        
     }
    
 }

@@ -1,8 +1,10 @@
 <?php
+
 // ============= fetching the records in the database here ============ //
 include("Connection/connect.php");
 // =========== getting the actual database connection here ======= //
 $conn = $connection;
+
 
 // ================= the function will be used to fetch for all the available job details here ======== //
 function getAllAvailableJobs($conn) {
@@ -14,6 +16,7 @@ function getAllAvailableJobs($conn) {
         $all_results = mysqli_fetch_all($results, MYSQLI_ASSOC);
         
         return $all_results;
+
     }catch(Exception $ex) {
         print($ex);
     }
@@ -21,8 +24,9 @@ function getAllAvailableJobs($conn) {
 
 $all_results = getAllAvailableJobs($conn);
 
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +54,7 @@ $all_results = getAllAvailableJobs($conn);
                             </div>
                             <!-- ============= the information about the application here -->
                             <div class="applicant-jobs-single-card-title-information">
-                                <p>
+                                <p class="ps-3 pe-3">
                                     In today's digital age, online platforms
                                     have revolutionized the way we conduct interviews,
                                     making the process more accessible and efficient than
@@ -60,7 +64,7 @@ $all_results = getAllAvailableJobs($conn);
                                 </p>
                             </div>
 
-                            <div class="applicant-jobs-single-card-features">
+                            <div class="applicant-jobs-single-card-features mb-5">
                                 <div class="applicant-jobs-single-card-features-1 shadow-lg">
 
                                     <div class="applicant-jobs-single-card-features-title">
