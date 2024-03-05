@@ -21,7 +21,7 @@ if (isset($_GET["id"])) {
     $result = mysqli_query($conn, $sqlCommand);
 
     // ========= getting all the results here ========== //
-    $singl_record = mysqli_fetch_assoc($result);
+    $single_record = mysqli_fetch_assoc($result);
 }
 
 
@@ -120,8 +120,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else {
             
             if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
+                // =========== getting the current id to apply for the job here ============= //
+                if (isset($_GET["id"])) {
+                    $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
+                    // ======== selecting records from the job details table here ========= //
+                    $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
+                    $result = mysqli_query($conn, $sqlCommand);
+
+                    // ========= getting all the results here ========== //
+                    $single_record = mysqli_fetch_assoc($result);
+                }
                 // File upload directory
-                print("testing");
+                print($single_record["job_title"]);
                 $uploadDirectory = "uploads/";
                 // Extract first name and last name
                 $firstName = validateInputFields($_POST["first_name"]);
@@ -166,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // calling the function here =====//
                 $applicant = new Applicant(
                     $first_name, $last_name, $age, $gender, $phone_number, $email,
-                    $marital_status, $home_address, $singl_record["job_title"], $singl_record["job_type"], $cvFilePath, $coverLetterFilePath
+                    $marital_status, $home_address, $single_record["job_title"], $single_record["job_type"], $cvFilePath, $coverLetterFilePath
                 );
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //

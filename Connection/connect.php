@@ -113,7 +113,7 @@ function createApplicantDetailsTable($connection) {
             job_title VARCHAR(100) NOT NULL,
             first_type VARCHAR(100) NOT NULL,
             cv VARCHAR(100) NOT NULL,
-            cover_letter VARCHAR(100) NOT NULL,
+            cover_letter VARCHAR(100) NOT NULL
         )"
     );
 
@@ -127,5 +127,5 @@ function createApplicantDetailsTable($connection) {
 // createJobDetailsTable($connection);
 //createInterviewQuestionsTable($connection);
 //createInterviewAnswersTable($connection);
-
+//createApplicantDetailsTable($connection);
 ?>
