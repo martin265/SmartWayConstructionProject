@@ -166,7 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // calling the function here =====//
                 $applicant = new Applicant(
                     $first_name, $last_name, $age, $gender, $phone_number, $email,
-                    $marital_status, $home_address, $cvFilePath, $coverLetterFilePath
+                    $marital_status, $home_address, $singl_record["job_title"], $singl_record["job_type"], $cvFilePath, $coverLetterFilePath
                 );
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //
