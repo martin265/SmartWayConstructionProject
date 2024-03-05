@@ -1,6 +1,6 @@
 <?php
 // =========== getting the connection here ========= //
-include("Connection/connect.php");
+include("Models/Applicant.php");
 $conn = $connection;
 
 // validating the input fields here ============== //

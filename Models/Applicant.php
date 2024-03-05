@@ -47,7 +47,10 @@ class Applicant{
                 $this->first_name, $this->last_name, $this->age,
                 $this->gender, $this->phone_number, $this->email,
                 $this->marital_status, $this->home_address, $this->cv, $this->cover_letter
-            )
+            );
+            // ======= running the query here ======= //
+            $sqlCommand->execute();
+            
         }catch(Exception $ex){
             print($ex);
         }
