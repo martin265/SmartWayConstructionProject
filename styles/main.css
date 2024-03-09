@@ -405,3 +405,11 @@ body {
     color: #0050C1;
     font-weight: bold;
 }
+
+.interviews-panel .interview-questions-panel .interview-questions-panel-info p {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}

@@ -51,7 +51,7 @@
                             </div>
 
                             <div class="interviews-panel-cards-3-info">
-                                <h1>reviewd</h1>
+                                <h1>reviewed</h1>
                             </div>
                         </div>
 
