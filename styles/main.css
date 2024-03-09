@@ -325,6 +325,7 @@ body {
     height: auto;
     border-radius: 10px;
     background: linear-gradient(to left, #0050C1, #311B92);
+    margin-right: 10px;
 }
 
 .interviews-panel .interviews-panel-cards .interviews-panel-cards-2 {
@@ -332,6 +333,7 @@ body {
     height: auto;
     border-radius: 10px;
     background: linear-gradient(to left, #0050C1, #311B92);
+    margin-right: 10px;
 }
 
 .interviews-panel .interviews-panel-cards .interviews-panel-cards-3 {
