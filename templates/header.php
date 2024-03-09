@@ -41,7 +41,7 @@
         <ul>
             <li><a href="">home</a></li>
             <li><a href="applicant_jobs.php">jobs</a></li>
-            <li><a href="">interviews</a></li>
+            <li><a href="applicant_interviews.php">interviews</a></li>
         </ul>
     </div>
 </body>
