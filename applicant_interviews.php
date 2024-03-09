@@ -21,6 +21,12 @@
                     <div class="interviews-panel-header">
                         <h1>take online interviews here</h1>
                     </div>
+
+                    <div class="interviews-panel-cards">
+                        <div class="interviews-panel-cards-1">1</div>
+                        <div class="interviews-panel-cards-1">2</div>
+                        <div class="interviews-panel-cards-1">2</div>
+                    </div>
                 </div>
             </div>
         </div>
