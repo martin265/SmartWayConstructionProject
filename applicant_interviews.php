@@ -44,16 +44,16 @@ $single_answer = getAnswersFunc($conn);
 
 // Assuming $single_answer is an array containing the correct answers fetched from the database
 $questions = [
-    "question_1" => "<?php echo(\$single_answer['answer_1']); ?>",
-    "question_2" => "<?php echo(\$single_answer['answer_2']); ?>",
-    "question_3" => "<?php echo(\$single_answer['answer_3']); ?>",
-    "question_4" => "<?php echo(\$single_answer['answer_4']); ?>",
-    "question_5" => "<?php echo(\$single_answer['answer_5']); ?>",
-    "question_6" => "<?php echo(\$single_answer['answer_6']); ?>",
-    "question_7" => "<?php echo(\$single_answer['answer_7']); ?>",
-    "question_8" => "<?php echo(\$single_answer['answer_8']); ?>",
-    "question_9" => "<?php echo(\$single_answer['answer_9']); ?>",
-    "question_10" => "<?php echo(\$single_answer['answer_10']); ?>"
+    "question_1" => "<?php echo(\$single_answer['question_1']); ?>",
+    "question_2" => "<?php echo(\$single_answer['question_2']); ?>",
+    "question_3" => "<?php echo(\$single_answer['question_3']); ?>",
+    "question_4" => "<?php echo(\$single_answer['question_4']); ?>",
+    "question_5" => "<?php echo(\$single_answer['question_5']); ?>",
+    "question_6" => "<?php echo(\$single_answer['question_6']); ?>",
+    "question_7" => "<?php echo(\$single_answer['question_7']); ?>",
+    "question_8" => "<?php echo(\$single_answer['question_8']); ?>",
+    "question_9" => "<?php echo(\$single_answer['question_9']); ?>",
+    "question_10" => "<?php echo(\$single_answer['question_10']); ?>"
 ];
 // =============== getting the selected values from the form here ============ //
 if (isset($_POST["save_responses"])) {
@@ -69,26 +69,25 @@ if (isset($_POST["save_responses"])) {
     $question10 = isset($conn, $_POST["question_10"]) ? mysqli_real_escape_string($conn, $_POST["question_10"]) : "";
 
     // ========== checking if the responses are valid basing on the saved records =============== //
-    if ($question1 != $single_answer["answer_1"] and $question2 != $single_answer["answer_2"] and $question3 != $single_answer["answer_3"] and $question4 != $single_answer["answer_4"] and $question5 != $single_answer["answer_5"] and $question6 != $single_answer["answer_6"] and $question7 != $single_answer["answer_7"] and $question8 != $single_answer["answer_8"] and $question9 != $single_answer["answer_9"] and $question10 != $single_answer["answer_10"]) {
+    if ($question1 != $single_answer["question_1"] and $question2 != $single_answer["question_2"] and $question3 != $single_answer["question_3"] and $question4 != $single_answer["question_4"] and $question5 != $single_answer["question_5"] and $question6 != $single_answer["question_6"] and $question7 != $single_answer["question_7"] and $question8 != $single_answer["question_8"] and $question9 != $single_answer["question_9"] and $question10 != $single_answer["question_10"]) {
         $error_message = "something is wrong here";
     }
-    else if ($question1 == $single_answer["answer_1"] or $question2 == $single_answer["answer_2"] or $question3 == $single_answer["answer_3"] or $question4 == $single_answer["answer_4"] or $question5 == $single_answer["answer_5"] or $question6 == $single_answer["answer_6"] or $question7 == $single_answer["answer_7"] or $question8 == $single_answer["answer_8"] or $question9 == $single_answer["answer_9"] or $question10 == $single_answer["answer_10"]) {
+    else if ($question1 == $single_answer["question_1"] or $question2 == $single_answer["question_2"] or $question3 == $single_answer["question_3"] or $question4 == $single_answer["question_4"] or $question5 == $single_answer["question_5"] or $question6 == $single_answer["question_6"] or $question7 == $single_answer["question_7"] or $question8 == $single_answer["question_8"] or $question9 == $single_answer["question_9"] or $question10 == $single_answer["question_10"]) {
+        echo("some question where ");
         // Initialize a variable to store the total score
         $totalScore = 0;
 
         // Iterate through each question
         for ($i = 1; $i <= 10; $i++) {
-            $questionKey = "answer_" . $i;
+            $questionKey = "question_" . $i;
             
-            echo($questionKey);
             // Check if the question is answered and the answer is correct
             if (isset($_POST[$questionKey]) && $_POST[$questionKey] == $single_answer[$questionKey]) {
                 // If the answer is correct, add 10 marks to the total score
                 $totalScore += 10;
-               
-
             }
         }
+
         // Output the total score
         echo "Total score: " . $totalScore;
     }
@@ -167,10 +166,12 @@ if (isset($_POST["save_responses"])) {
 
                         <!-- the form for the questions will be here ======== -->
                         <!-- ============ the section for the questions will be here -->
+                        
+
                         <div class="interviews-questions-panel-area">
                             <form action="applicant_interviews.php" method="POST">
 
-                                <div class="row mb-3 interview-single">
+                                <div class="row mb-3">
                                     <div class="col">
                                         <?php if ($single_record) :?>
                                             <p class="text-primary">Question 1: <?php echo($single_record["question_1"]); ?></p>
@@ -181,9 +182,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_1" id="flexRadioDefault2" value="<?php echo($single_answer["answer_1"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_1" id="flexRadioDefault2" value="<?php echo($single_answer["question_1"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_1"]); ?>
+                                                    <?php echo($single_answer["question_1"]); ?>
                                                 </label>
                                             </div>
 
@@ -222,9 +223,9 @@ if (isset($_POST["save_responses"])) {
                                             </div>
 
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_2" id="flexRadioDefault1" value="<?php echo($single_answer["answer_2"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_2" id="flexRadioDefault1" value="<?php echo($single_answer["question_2"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault1">
-                                                    <?php echo($single_answer["answer_2"]); ?>
+                                                    <?php echo($single_answer["question_2"]); ?>
                                                 </label>
                                                 </div>
                                             <div class="form-check">
@@ -246,9 +247,9 @@ if (isset($_POST["save_responses"])) {
                                         <?php if ($single_record) :?>
                                             <p class="text-primary">Question 3: <?php echo($single_record["question_3"]); ?></p>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_3" id="flexRadioDefault1" value="<?php echo($single_answer["answer_3"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_3" id="flexRadioDefault1" value="<?php echo($single_answer["question_3"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault1">
-                                                    <?php echo($single_answer["answer_3"]); ?>
+                                                    <?php echo($single_answer["question_3"]); ?>
                                                 </label>
                                                 </div>
                                             <div class="form-check">
@@ -299,9 +300,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_4" id="flexRadioDefault2" value="<?php echo($single_answer["answer_4"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_4" id="flexRadioDefault2" value="<?php echo($single_answer["question_4"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_4"]); ?>
+                                                    <?php echo($single_answer["question_4"]); ?>
                                                 </label>
                                             </div>
 
@@ -323,9 +324,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_5" id="flexRadioDefault2" value="<?php echo($single_answer["answer_5"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_5" id="flexRadioDefault2" value="<?php echo($single_answer["question_5"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_5"]); ?>
+                                                    <?php echo($single_answer["question_5"]); ?>
                                                 </label>
                                             </div>
 
@@ -357,9 +358,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_6" id="flexRadioDefault2" value="<?php echo($single_answer["answer_6"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_6" id="flexRadioDefault2" value="<?php echo($single_answer["question_6"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_6"]); ?>
+                                                    <?php echo($single_answer["question_6"]); ?>
                                                 </label>
                                             </div>
 
@@ -401,9 +402,9 @@ if (isset($_POST["save_responses"])) {
                                             </div>
 
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_7" id="flexRadioDefault1" value="<?php echo($single_answer["answer_7"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_7" id="flexRadioDefault1" value="<?php echo($single_answer["question_7"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault1">
-                                                    <?php echo($single_answer["answer_7"]); ?>
+                                                    <?php echo($single_answer["question_1"]); ?>
                                                 </label>
                                                 </div>
                                             <div class="form-check">
@@ -428,9 +429,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_8" id="flexRadioDefault2" value="<?php echo($single_answer["answer_8"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_8" id="flexRadioDefault2" value="<?php echo($single_answer["question_8"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_8"]); ?>
+                                                    <?php echo($single_answer["question_8"]); ?>
                                                 </label>
                                             </div>
 
@@ -479,9 +480,9 @@ if (isset($_POST["save_responses"])) {
                                                 </label>
                                                 </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_9" id="flexRadioDefault2" value="<?php echo($single_answer["answer_9"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_9" id="flexRadioDefault2" value="<?php echo($single_answer["question_9"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault2">
-                                                    <?php echo($single_answer["answer_9"]); ?>
+                                                    <?php echo($single_answer["question_9"]); ?>
                                                 </label>
                                             </div>
                                         <?php endif; ?>
@@ -494,9 +495,9 @@ if (isset($_POST["save_responses"])) {
                                         <?php if ($single_record) :?>
                                             <p class="text-primary">Question 10: <?php echo($single_record["question_10"]); ?></p>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="question_10" id="flexRadioDefault1" value="<?php echo($single_answer["answer_10"]); ?>">
+                                                <input class="form-check-input" type="radio" name="question_10" id="flexRadioDefault1" value="<?php echo($single_answer["question_10"]); ?>">
                                                 <label class="form-check-label" for="flexRadioDefault1">
-                                                    <?php echo($single_answer["answer_10"]); ?>
+                                                    <?php echo($single_answer["question_10"]); ?>
                                                 </label>
                                                 </div>
                                             <div class="form-check">
