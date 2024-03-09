@@ -62,6 +62,10 @@
                         <div class="interview-questions-panel-title">
                             <h1>interview questions</h1>
                         </div>
+                        <!-- ================= // ================ // -->
+                        <div class="interview-questions-panel-title">
+                            <h1>interview questions</h1>
+                        </div>
                     </div>
                 </div>
             </div>

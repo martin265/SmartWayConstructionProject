@@ -392,8 +392,16 @@ body {
 .interviews-panel .interview-questions-panel {
     height: auto;
     width: 100%;
-    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
     margin-top: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
+}
+
+.interviews-panel .interview-questions-panel .interview-questions-panel-title h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
 }
