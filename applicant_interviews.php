@@ -44,16 +44,16 @@ $single_answer = getAnswersFunc($conn);
 
 // Assuming $single_answer is an array containing the correct answers fetched from the database
 $questions = [
-    "question_1" => "<?php echo(\$single_answer['question_1']); ?>",
-    "question_2" => "<?php echo(\$single_answer['question_2']); ?>",
-    "question_3" => "<?php echo(\$single_answer['question_3']); ?>",
-    "question_4" => "<?php echo(\$single_answer['question_4']); ?>",
-    "question_5" => "<?php echo(\$single_answer['question_5']); ?>",
-    "question_6" => "<?php echo(\$single_answer['question_6']); ?>",
-    "question_7" => "<?php echo(\$single_answer['question_7']); ?>",
-    "question_8" => "<?php echo(\$single_answer['question_8']); ?>",
-    "question_9" => "<?php echo(\$single_answer['question_9']); ?>",
-    "question_10" => "<?php echo(\$single_answer['question_10']); ?>"
+    "question_1" => "<?php echo(\$single_answer['answer_1']); ?>",
+    "question_2" => "<?php echo(\$single_answer['answer_2']); ?>",
+    "question_3" => "<?php echo(\$single_answer['answer_3']); ?>",
+    "question_4" => "<?php echo(\$single_answer['answer_4']); ?>",
+    "question_5" => "<?php echo(\$single_answer['answer_5']); ?>",
+    "question_6" => "<?php echo(\$single_answer['answer_6']); ?>",
+    "question_7" => "<?php echo(\$single_answer['answer_7']); ?>",
+    "question_8" => "<?php echo(\$single_answer['answer_8']); ?>",
+    "question_9" => "<?php echo(\$single_answer['answer_9']); ?>",
+    "question_10" => "<?php echo(\$single_answer['answer_10']); ?>"
 ];
 // =============== getting the selected values from the form here ============ //
 if (isset($_POST["save_responses"])) {
