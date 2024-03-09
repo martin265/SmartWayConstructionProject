@@ -69,10 +69,10 @@ if (isset($_POST["save_responses"])) {
     $question10 = isset($conn, $_POST["question_10"]) ? mysqli_real_escape_string($conn, $_POST["question_10"]) : "";
 
     // ========== checking if the responses are valid basing on the saved records =============== //
-    if ($question1 != $single_answer["question_1"] and $question2 != $single_answer["question_2"] and $question3 != $single_answer["question_3"] and $question4 != $single_answer["question_4"] and $question5 != $single_answer["question_5"] and $question6 != $single_answer["question_6"] and $question7 != $single_answer["question_7"] and $question8 != $single_answer["question_8"] and $question9 != $single_answer["question_9"] and $question10 != $single_answer["question_10"]) {
+    if ($question1 != $single_answer["answer_1"] and $question2 != $single_answer["answer_2"] and $question3 != $single_answer["answer_3"] and $question4 != $single_answer["answer_4"] and $question5 != $single_answer["answer_5"] and $question6 != $single_answer["answer_6"] and $question7 != $single_answer["answer_7"] and $question8 != $single_answer["answer_8"] and $question9 != $single_answer["answer_9"] and $question10 != $single_answer["answer_10"]) {
         $error_message = "something is wrong here";
     }
-    else if ($question1 == $single_answer["question_1"] or $question2 == $single_answer["question_2"] or $question3 == $single_answer["question_3"] or $question4 == $single_answer["question_4"] or $question5 == $single_answer["question_5"] or $question6 == $single_answer["question_6"] or $question7 == $single_answer["question_7"] or $question8 == $single_answer["question_8"] or $question9 == $single_answer["question_9"] or $question10 == $single_answer["question_10"]) {
+    else if ($question1 == $single_answer["answer_1"] or $question2 == $single_answer["answer_2"] or $question3 == $single_answer["answer_3"] or $question4 == $single_answer["answer_4"] or $question5 == $single_answer["answer_5"] or $question6 == $single_answer["answer_6"] or $question7 == $single_answer["answer_7"] or $question8 == $single_answer["answer_8"] or $question9 == $single_answer["answer_9"] or $question10 == $single_answer["answer_10"]) {
         // Initialize a variable to store the total score
         $totalScore = 0;
 
@@ -167,7 +167,7 @@ if (isset($_POST["save_responses"])) {
                         <div class="interviews-questions-panel-area">
                             <form action="applicant_interviews.php" method="POST">
 
-                                <div class="row mb-3">
+                                <div class="row mb-3 interview-single">
                                     <div class="col">
                                         <?php if ($single_record) :?>
                                             <p class="text-primary">Question 1: <?php echo($single_record["question_1"]); ?></p>

@@ -414,7 +414,10 @@ body {
     text-transform: capitalize;
 }
 
-.interviews-panel .interviews-questions-panel-area {
-    justify-content: center;
+.interviews-panel .interview-questions-panel .interviews-questions-panel-area{
     display: flex;
+    justify-content: center;
+    gap: 30px;
 }
+
+
