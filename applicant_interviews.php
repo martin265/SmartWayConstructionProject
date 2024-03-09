@@ -56,6 +56,11 @@
                         </div>
 
                     </div>
+
+                    <!-- ============= panel for the questions will be here -->
+                    <div class="interview-questions-panel">
+                        
+                    </div>
                 </div>
             </div>
         </div>
