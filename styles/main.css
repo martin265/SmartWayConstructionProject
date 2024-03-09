@@ -413,3 +413,8 @@ body {
     font-weight: bold;
     text-transform: capitalize;
 }
+
+.interviews-panel .interviews-questions-panel-area {
+    justify-content: center;
+    display: flex;
+}
