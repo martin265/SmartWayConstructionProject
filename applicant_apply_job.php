@@ -13,17 +13,22 @@ function validateInputFields($data) {
 }
 
 
-// =========== getting the current id to apply for the job here ============= //
-if (isset($_GET["id"])) {
-    $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
-    // ======== selecting records from the job details table here ========= //
-    $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
-    $result = mysqli_query($conn, $sqlCommand);
+function getSingleRecord($conn) {
+    // =========== getting the current id to apply for the job here ============= //
+    if (isset($_GET["id"])) {
+        $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
+        // ======== selecting records from the job details table here ========= //
+        $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
+        $result = mysqli_query($conn, $sqlCommand);
 
-    // ========= getting all the results here ========== //
-    $single_record = mysqli_fetch_assoc($result);
+        // ========= getting all the results here ========== //
+        $singl_record = mysqli_fetch_assoc($result);
+
+        return $singl_record;
+    }
 }
 
+$singl_record = getSingleRecord($conn);
 
 // =========== the array to keep the errors ========= //
 $all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
@@ -115,23 +120,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // ========== filtering the errors here // ================= //
         if (array_filter($all_errors)) {
             $error_message = "the form still has some errors";
-            print($error_message);
         }
         else {
             
             if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
-                // =========== getting the current id to apply for the job here ============= //
-                if (isset($_GET["id"])) {
-                    $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
-                    // ======== selecting records from the job details table here ========= //
-                    $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
-                    $result = mysqli_query($conn, $sqlCommand);
-
-                    // ========= getting all the results here ========== //
-                    $single_record = mysqli_fetch_assoc($result);
-                }
                 // File upload directory
-                print($single_record["job_title"]);
                 $uploadDirectory = "uploads/";
                 // Extract first name and last name
                 $firstName = validateInputFields($_POST["first_name"]);

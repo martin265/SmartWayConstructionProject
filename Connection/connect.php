@@ -101,7 +101,7 @@ function createInterviewAnswersTable($connection) {
 function createApplicantDetailsTable($connection) {
     $sqlCommand = (
         "CREATE TABLE IF NOT EXISTS ApplicantDetails(
-            interview_question_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            applicant_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             first_name VARCHAR(100) NOT NULL,
             last_name VARCHAR(100) NOT NULL,
             age VARCHAR(100) NOT NULL,
@@ -110,8 +110,6 @@ function createApplicantDetailsTable($connection) {
             email VARCHAR(100) NOT NULL,
             marital_status VARCHAR(100) NOT NULL,
             home_address VARCHAR(100) NOT NULL,
-            job_title VARCHAR(100) NOT NULL,
-            first_type VARCHAR(100) NOT NULL,
             cv VARCHAR(100) NOT NULL,
             cover_letter VARCHAR(100) NOT NULL
         )"
@@ -127,5 +125,5 @@ function createApplicantDetailsTable($connection) {
 // createJobDetailsTable($connection);
 //createInterviewQuestionsTable($connection);
 //createInterviewAnswersTable($connection);
-//createApplicantDetailsTable($connection);
+createApplicantDetailsTable($connection);
 ?>
