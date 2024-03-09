@@ -5,7 +5,7 @@ $conn = $connection;
 // ============ function to fetch the questions in the databse here =========== //
 function fecthQuestions($conn) {
     try {
-        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails WHERE question_id = 8";
+        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails WHERE question_id = 2";
         // =========== running the sql command here ============ //
         $results = mysqli_query($conn, $sqlCommand);
         // ============ showing the results here =============== //
@@ -26,7 +26,7 @@ $single_record = fecthQuestions($conn);
 // =================== function to get answers from the database here ================= //
 function getAnswersFunc($conn) {
     try {
-        $sqlCommand = "SELECT * FROM QuestionAnswerDetails";
+        $sqlCommand = "SELECT * FROM InterviewAnswersDetails";
         // =========== running the sql command here ============ //
         $results = mysqli_query($conn, $sqlCommand);
         // ============ showing the results here =============== //
