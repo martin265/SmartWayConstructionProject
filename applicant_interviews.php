@@ -78,12 +78,15 @@ if (isset($_POST["save_responses"])) {
 
         // Iterate through each question
         for ($i = 1; $i <= 10; $i++) {
-            $questionKey = "question_" . $i;
+            $questionKey = "answer_" . $i;
             
+            echo($questionKey);
             // Check if the question is answered and the answer is correct
             if (isset($_POST[$questionKey]) && $_POST[$questionKey] == $single_answer[$questionKey]) {
                 // If the answer is correct, add 10 marks to the total score
                 $totalScore += 10;
+               
+
             }
         }
         // Output the total score
