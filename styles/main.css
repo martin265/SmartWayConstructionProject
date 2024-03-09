@@ -303,3 +303,12 @@ body {
     font-weight: bolder;
     padding-left: 10px;
 }
+
+/* =============== CSS FOR THE INTERVIEWS PANEL */
+.interviews-panel .interviews-panel-header h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
+}

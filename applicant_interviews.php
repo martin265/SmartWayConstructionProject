@@ -18,7 +18,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="interviews-panel">
-                    
+                    <div class="interviews-panel-header">
+                        <h1>take online interviews here</h1>
+                    </div>
                 </div>
             </div>
         </div>
