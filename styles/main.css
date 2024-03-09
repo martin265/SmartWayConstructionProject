@@ -349,5 +349,42 @@ body {
     text-align: center;
     color: white;
     padding-top: 20px;
-    font-size: 40px;
+    font-size: 50px;
+}
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-info h1 {
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+/* ================== // =================== // */
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-title {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 50px;
+}
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-info h1 {
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+/* ================== // =================== // */
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-title {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 50px;
+}
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-info h1 {
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-top: 10px;
 }
