@@ -58,8 +58,10 @@
                     </div>
 
                     <!-- ============= panel for the questions will be here -->
-                    <div class="interview-questions-panel">
-                        
+                    <div class="interview-questions-panel shadow-lg">
+                        <div class="interview-questions-panel-title">
+                            <h1>interview questions</h1>
+                        </div>
                     </div>
                 </div>
             </div>

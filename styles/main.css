@@ -390,5 +390,10 @@ body {
 }
 
 .interviews-panel .interview-questions-panel {
-    
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to left, #eeeeee, #eeeeee);
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
