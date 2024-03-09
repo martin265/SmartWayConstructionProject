@@ -125,5 +125,5 @@ function createApplicantDetailsTable($connection) {
 // createJobDetailsTable($connection);
 //createInterviewQuestionsTable($connection);
 //createInterviewAnswersTable($connection);
-createApplicantDetailsTable($connection);
+//createApplicantDetailsTable($connection);
 ?>
