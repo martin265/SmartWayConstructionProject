@@ -312,3 +312,10 @@ body {
     color: #0050C1;
     font-weight: bold;
 }
+
+.interviews-panel .interviews-panel-cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
