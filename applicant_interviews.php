@@ -32,13 +32,27 @@
                                 <h1>secured</h1>
                             </div>
                         </div>
-                        <!-- the other card for the items will be here -->
+                        
+                        <!-- =========== the other card here -->
                         <div class="interviews-panel-cards-2">
+                            <div class="interviews-panel-cards-1-title">
+                                <i class="bi bi-file-lock2"></i>
+                            </div>
 
+                            <div class="interviews-panel-cards-2-info">
+                                <h1>secured</h1>
+                            </div>
                         </div>
-                        <!-- the other card for the items will be here -->
-                        <div class="interviews-panel-cards-3">
 
+                        <!-- ============= the other card here -->
+                        <div class="interviews-panel-cards-3">
+                            <div class="interviews-panel-cards-3-title">
+                                <i class="bi bi-file-lock2"></i>
+                            </div>
+
+                            <div class="interviews-panel-cards-3-info">
+                                <h1>secured</h1>
+                            </div>
                         </div>
 
                     </div>
