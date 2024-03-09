@@ -168,7 +168,7 @@ if (isset($_POST["save_responses"])) {
                         <!-- ============ the section for the questions will be here -->
                         
 
-                        <div class="interviews-questions-panel-area">
+                        <div class="interviews-questions-panel-area mt-5">
                             <form action="applicant_interviews.php" method="POST">
 
                                 <div class="row mb-3">
@@ -527,7 +527,7 @@ if (isset($_POST["save_responses"])) {
                                 </div>
 
                                 <div class="saving-questions-panel ms-2 mt-3 mb-5">
-                                    <input type="submit" class="btn btn-lg btn-primary" value="send interview responses" name="save_responses">
+                                    <input type="submit" class="btn btn-lg btn-primary mb-5" value="send interview responses" name="save_responses">
                                 </div>
 
                             </form>

@@ -414,10 +414,23 @@ body {
     text-transform: capitalize;
 }
 
-.interviews-panel .interview-questions-panel .interviews-questions-panel-area{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.interviews-panel .interview-questions-panel .interviews-questions-panel-area {
+    margin-top: 30px;
 }
 
+.interviews-panel .interview-questions-panel .interviews-questions-panel-area p{
+    font-size: 20px;
+    padding-left: 20px;
+    color: "#212121";
+    text-transform: capitalize;
+}
+
+.interviews-panel .interview-questions-panel .interviews-questions-panel-area input{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.interviews-panel .interview-questions-panel .interviews-questions-panel-area label{
+    font-size: 20px;
+    padding-left: 10px;
+}
 
