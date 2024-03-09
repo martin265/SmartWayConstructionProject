@@ -23,9 +23,20 @@
                     </div>
 
                     <div class="interviews-panel-cards">
-                        <div class="interviews-panel-cards-1">1</div>
-                        <div class="interviews-panel-cards-2">2</div>
-                        <div class="interviews-panel-cards-3">2</div>
+                        <div class="interviews-panel-cards-1">
+                            <div class="interviews-panel-cards-1-title">
+                                <i class="bi bi-file-lock2"></i>
+                            </div>
+                        </div>
+                        <!-- the other card for the items will be here -->
+                        <div class="interviews-panel-cards-2">
+
+                        </div>
+                        <!-- the other card for the items will be here -->
+                        <div class="interviews-panel-cards-3">
+
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -323,22 +323,31 @@ body {
 .interviews-panel .interviews-panel-cards .interviews-panel-cards-1 {
     width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(to left, #0050C1, #311B92);
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .interviews-panel .interviews-panel-cards .interviews-panel-cards-2 {
     width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(to left, #0050C1, #311B92);
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .interviews-panel .interviews-panel-cards .interviews-panel-cards-3 {
     width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(to left, #0050C1, #311B92);
+    margin: 10px;
+}
+
+/* ================== // =================== // */
+.interviews-panel .interviews-panel-cards .interviews-panel-cards-1 .interviews-panel-cards-1-title {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 40px;
 }
