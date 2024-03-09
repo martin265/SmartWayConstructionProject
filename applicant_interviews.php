@@ -63,8 +63,13 @@
                             <h1>interview questions</h1>
                         </div>
                         <!-- ================= // ================ // -->
-                        <div class="interview-questions-panel-title">
-                            <h1>interview questions</h1>
+                        <div class="interview-questions-panel-info">
+                            <p>
+                                each question within this section carries 10 marks,
+                                before answering any of the questions please make sure 
+                                that you have fully understand what each question is about. 
+                                and you are only allowed to answer a single page questions at a time
+                            </p>
                         </div>
                     </div>
                 </div>
