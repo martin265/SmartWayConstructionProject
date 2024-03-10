@@ -1,5 +1,13 @@
 <?php
 
+// function to validate the fields
+function validateInputFields($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+
+    return $data;
+}
 
 ?>
 <!DOCTYPE html>
