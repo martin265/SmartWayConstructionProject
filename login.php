@@ -56,12 +56,15 @@
                                 <div class="col">
                                     <label for="ForUsername" class="fw-bold ps-2">Role</label>
                                     <div class="input-group">
-                                       <select name="role" id="" class="form-control form-control-lg"></select>
+                                       <select name="role" id="" class="form-control form-control-lg">
+                                            <option value="Administrator">Administrator</option>
+                                            <option value="Applicant">Applicant</option>
+                                       </select>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row mt-3">
+                            <div class="row mt-2">
                                 <div class="col">
                                     <label for="ForUsername" class="fw-bold ps-2">Username</label>
                                     <div class="input-group">
@@ -70,12 +73,18 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-3">
+                            <div class="row mt-2">
                                 <div class="col">
                                     <label for="ForUsername" class="fw-bold ps-2">Password</label>
                                     <div class="input-group">
                                         <input type="password" name="password" class="form-control form-control-lg">
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <input type="submit" class="btn btn-lg btn-dark" value="login">
                                 </div>
                             </div>
                         </div>
