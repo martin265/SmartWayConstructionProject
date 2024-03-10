@@ -1,6 +1,5 @@
 <?php
-include("Models/job.php");
-$conn = $connection;
+
 
 session_start();
 // function to validate the fields
