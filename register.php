@@ -99,6 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                             <?php if (isset($success_message)) : ?>
                                 <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
                                     <?php echo $success_message; ?>
+                                    <!-- redirecting the user upon success -->
+                                    <?php header("Location: login.php")?>
                                 </div>
                                 <script>
                                     // Automatically dismiss the success alert after 5 seconds

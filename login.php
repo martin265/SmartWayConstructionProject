@@ -1,5 +1,31 @@
 <?php
+session_start();
+include('db_config.php');
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Fetch user from database
+    $sql = "SELECT * FROM users WHERE username='$username'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row["password"])) {
+            // Set session variables
+            $_SESSION["loggedin"] = true;
+            $_SESSION["username"] = $username;
+            
+            // Redirect to welcome page
+            header("location: welcome.php");
+        } else {
+            echo "Invalid username or password";
+        }
+    } else {
+        echo "Invalid username or password";
+    }
+}
 // function to validate the fields
 function validateInputFields($data) {
     $data = trim($data);
