@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Models/Registration.php");
 // function to validate the fields
 function validateInputFields($data) {

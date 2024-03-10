@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("Models/Registration.php");
 $conn = $connection;
 
