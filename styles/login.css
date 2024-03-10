@@ -57,6 +57,7 @@ body {
     width: 600px;
     margin-top: 40px;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .main-register-page .center-register-panel .center-register-panel-title h1 {
@@ -78,4 +79,9 @@ body {
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+.main-register-page .success-message-panel {
+    display: flex;
+    justify-content: center;
 }
