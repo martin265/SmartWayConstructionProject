@@ -38,6 +38,16 @@
 </head>
 <body>
     <!-- the file for logging in into the system will be here -->
-
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-login-page">
+                    <div class="center-login-panel">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
