@@ -36,7 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             $password = isset($conn, $_POST["password"]) ? mysqli_real_escape_string($conn, $_POST["password"]) : "";
 
             // =========== creating a new object for the class here ======= //
-            
+            $register = new Register(
+                $role, $username, $password
+            );
             print("success message");
         }
     }
