@@ -1,5 +1,5 @@
 <?php
-include("Models/Registration.php");
+include("Connection/connect.php");
 $conn = $connection;
 
 class Register{
@@ -19,7 +19,7 @@ class Register{
     public function registerPeople($conn) {
         try {
             $sqlCommand = $conn->prepare(
-                "INSERT INTO ApplicantDetails RegisterDetails(
+                "INSERT INTO RegisterDetails(
                     login_role, username, password
                 ) VALUES (?,?,?)"
             );

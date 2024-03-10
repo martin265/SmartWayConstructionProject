@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             $register = new Register(
                 $role, $username, $password
             );
+            $register->registerPeople($conn);
             print("success message");
         }
     }
