@@ -104,6 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                                         <div class="input-group">
                                             <input type="text" name="username" class="form-control form-control-lg">
                                         </div>
+                                        <div class="error-message fw-bold text-danger ps-2">
+                                            <?php echo($all_errors["username"]); ?>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -113,12 +116,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                                         <div class="input-group">
                                             <input type="password" name="password" class="form-control form-control-lg">
                                         </div>
+                                        <div class="error-message fw-bold text-danger ps-2">
+                                            <?php echo($all_errors["password"]); ?>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row mt-4">
                                     <div class="col">
                                         <input type="submit" class="btn btn-lg btn-dark" value="login" name="login">
+                                    </div>
+
+                                    <div class="col">
+                                        <a href="register.php">Dont have account? Register Here</a>
                                     </div>
                                 </div>
                             </div>

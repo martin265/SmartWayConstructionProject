@@ -42,3 +42,40 @@ body {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+
+/* =========== the css for the register page will be here ========= */
+.main-login-page {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.main-login-page .center-login-panel {
+    background: linear-gradient(to right, #CBCCFF, #CBCCFF);
+    height: auto;
+    width: 600px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.main-login-page .center-login-panel .center-login-panel-title h1 {
+    text-align: center;
+    text-transform: capitalize;
+    color: #7F4D3E;
+    padding-top: 20px;
+} 
+
+.main-login-page .center-login-panel .center-login-panel-icon {
+    text-align: center;
+    font-size: 70px;
+    color: #FF876B;
+    padding-top: 10px;
+}
+
+.main-login-page .center-login-panel .center-login-panel-controls {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
