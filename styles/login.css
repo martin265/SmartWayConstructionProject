@@ -11,5 +11,9 @@ body {
 .main-login-page {
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+}
+
+.main-login-page .center-login-panel {
+    background: linear-gradient(to right, );
 }
