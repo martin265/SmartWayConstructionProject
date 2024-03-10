@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     else {
         if (array_filter($all_errors)) {
             $error_message = "something is wrong with the form";
-            print($error_message);
         }
         else {
             // getting the input fields here ============ //
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                 $role, $username, $password
             );
             $register->registerPeople($conn);
-            print("success message");
+            $success_message = "registered successfully";
         }
     }
     
@@ -93,6 +92,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 
                         <div class="center-register-panel-icon">
                             <i class="bi bi-shield-lock"></i>
+                        </div>
+
+                        <!-- ============== the success message will be here -->
+                        <div class="success-message-panel">
+                            <?php if (isset($success_message)) : ?>
+                                <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                    <?php echo $success_message; ?>
+                                </div>
+                                <script>
+                                    // Automatically dismiss the success alert after 5 seconds
+                                    setTimeout(function() {
+                                        document.getElementById("successAlert").style.display = "none";
+                                    }, 5000);
+                                </script>
+                                <?php elseif (isset($error_message)) : ?>
+                                    <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                        <?php echo($error_message); ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("errorAlert").style.display = "none";
+                                        }, 5000);
+                                    </script>
+                            <?php endif; ?>
                         </div>
 
                         <form action="register.php" method="POST">
