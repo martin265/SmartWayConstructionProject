@@ -1,7 +1,6 @@
 <?php
-
-
 session_start();
+include("Models/Registration.php");
 // function to validate the fields
 function validateInputFields($data) {
     $data = trim($data);
@@ -11,9 +10,6 @@ function validateInputFields($data) {
     return $data;
 }
 
-function saveRegisterDetails($conn) {
-
-}
 
 $all_errors = array("username"=>"", "password"=>"");
 
@@ -34,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             print($error_message);
         }
         else {
+            // getting the input fields here ============ //
             print("success message");
         }
     }
