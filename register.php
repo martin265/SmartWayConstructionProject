@@ -31,6 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         }
         else {
             // getting the input fields here ============ //
+            $role = isset($conn, $_POST["role"]) ? mysqli_real_escape_string($conn, $_POST["role"]) : "";
+            $username = isset($conn, $_POST["username"]) ? mysqli_real_escape_string($conn, $_POST["username"]) : "";
+            $password = isset($conn, $_POST["password"]) ? mysqli_real_escape_string($conn, $_POST["password"]) : "";
+
+            // =========== creating a new object for the class here ======= //
+            
             print("success message");
         }
     }
