@@ -21,3 +21,10 @@ body {
     margin-top: 40px;
     border-radius: 10px;
 }
+
+.main-login-page .center-login-panel .center-login-panel-title h1 {
+    text-align: center;
+    text-transform: capitalize;
+    color: "#7F4D3E";
+    padding-top: 20px;
+} 

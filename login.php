@@ -43,7 +43,13 @@
             <div class="col-lg-12">
                 <div class="main-login-page">
                     <div class="center-login-panel shadow-lg">
-                        <h1>hello</h1>
+                        <div class="center-login-panel-title">
+                            <h1>welcome to smartway construction</h1>
+                        </div>
+
+                        <div class="center-login-panel-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
                     </div>
                 </div>
             </div>
