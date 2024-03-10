@@ -84,43 +84,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                             <i class="bi bi-shield-lock"></i>
                         </div>
 
-                        <div class="center-login-panel-controls">
-                            <div class="row">
-                                <div class="col">
-                                    <label for="ForUsername" class="fw-bold ps-2">Role</label>
-                                    <div class="input-group">
-                                       <select name="role" id="" class="form-control form-control-lg">
-                                            <option value="Administrator">Administrator</option>
-                                            <option value="Applicant">Applicant</option>
-                                       </select>
+                        <form action="login.php" method="POST">
+                            <div class="center-login-panel-controls">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="ForUsername" class="fw-bold ps-2">Role</label>
+                                        <div class="input-group">
+                                        <select name="role" id="" class="form-control form-control-lg">
+                                                <option value="Administrator">Administrator</option>
+                                                <option value="Applicant">Applicant</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <label for="ForUsername" class="fw-bold ps-2">Username</label>
+                                        <div class="input-group">
+                                            <input type="text" name="username" class="form-control form-control-lg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <label for="ForUsername" class="fw-bold ps-2">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" name="password" class="form-control form-control-lg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <input type="submit" class="btn btn-lg btn-dark" value="login" name="login">
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row mt-2">
-                                <div class="col">
-                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
-                                    <div class="input-group">
-                                        <input type="text" name="username" class="form-control form-control-lg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mt-2">
-                                <div class="col">
-                                    <label for="ForUsername" class="fw-bold ps-2">Password</label>
-                                    <div class="input-group">
-                                        <input type="password" name="password" class="form-control form-control-lg">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mt-4">
-                                <div class="col">
-                                    <input type="submit" class="btn btn-lg btn-dark" value="login" name="login">
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
