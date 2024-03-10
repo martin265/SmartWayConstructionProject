@@ -28,3 +28,10 @@ body {
     color: "#7F4D3E";
     padding-top: 20px;
 } 
+
+.main-login-page .center-login-panel .center-login-panel-icon {
+    text-align: center;
+    font-size: 70px;
+    color: "#412728";
+    padding-top: 10px;
+}
