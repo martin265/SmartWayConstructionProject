@@ -104,6 +104,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                                         <div class="input-group">
                                             <input type="text" name="username" class="form-control form-control-lg">
                                         </div>
+
+                                        <div class="error-message fw-bold text-danger ps-2">
+                                            <?php echo($all_errors["username"]); ?>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -112,6 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                                         <label for="ForUsername" class="fw-bold ps-2">Password</label>
                                         <div class="input-group">
                                             <input type="password" name="password" class="form-control form-control-lg">
+                                        </div>
+
+                                        <div class="error-message fw-bold text-danger ps-2">
+                                            <?php echo($all_errors["username"]); ?>
                                         </div>
                                     </div>
                                 </div>

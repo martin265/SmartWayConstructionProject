@@ -45,13 +45,13 @@ body {
 
 
 /* =========== the css for the register page will be here ========= */
-.main-login-page {
+.main-register-page {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
 }
 
-.main-login-page .center-login-panel {
+.main-register-page .center-register-panel {
     background: linear-gradient(to right, #CBCCFF, #CBCCFF);
     height: auto;
     width: 600px;
@@ -59,21 +59,21 @@ body {
     border-radius: 10px;
 }
 
-.main-login-page .center-login-panel .center-login-panel-title h1 {
+.main-register-page .center-register-panel .center-register-panel-title h1 {
     text-align: center;
     text-transform: capitalize;
-    color: #7F4D3E;
+    color: #212121;
     padding-top: 20px;
 } 
 
-.main-login-page .center-login-panel .center-login-panel-icon {
+.main-register-page .center-register-panel .center-register-panel-icon {
     text-align: center;
     font-size: 70px;
-    color: #FF876B;
+    color: #009865;
     padding-top: 10px;
 }
 
-.main-login-page .center-login-panel .center-login-panel-controls {
+.main-register-page .center-register-panel .center-register-panel-controls {
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 20px;
