@@ -9,6 +9,15 @@ function validateInputFields($data) {
     return $data;
 }
 
+// ========== getting the input fields from the form here ========== //
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
+    $data = validateInputFields($_POST["role"]);
+    $data = validateInputFields($_POST["username"]);
+    $data = validateInputFields($_POST["password"]);
+    
+    // checking if the input fields are not empty here ========= //
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +101,7 @@ function validateInputFields($data) {
 
                             <div class="row mt-4">
                                 <div class="col">
-                                    <input type="submit" class="btn btn-lg btn-dark" value="login">
+                                    <input type="submit" class="btn btn-lg btn-dark" value="login" name="login">
                                 </div>
                             </div>
                         </div>
