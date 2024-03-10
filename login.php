@@ -9,6 +9,8 @@ function validateInputFields($data) {
     return $data;
 }
 
+$all_errors = array("username"=>"", "password"=>"");
+
 // ========== getting the input fields from the form here ========== //
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $data = validateInputFields($_POST["role"]);
@@ -16,6 +18,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $data = validateInputFields($_POST["password"]);
     
     // checking if the input fields are not empty here ========= //
+    if (empty($_POST["username"]) && empty($_POST["password"])) {
+        $all_errors["username"] = "please fill in the blanks";
+        $all_errors["password"] = "enter your password plese";
+    }
+    else {
+        if (array_filter($all_errors)) {
+            $error_message = "something is wrong with the form";
+            print($error_message);
+        }
+        else {
+            print("success message");
+        }
+    }
+    
     
 }
 ?>
