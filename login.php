@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('db_config.php');
-
+include('Connection/connect.php');
+$conn = $connection;
 
 
 // function to validate the fields
@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                 // Check if the role is valid
                 if (!in_array($role, ["Administrator", "Applicant"])) {
                     $error_message = "Invalid role selected";
+                    print($error_message);
                     exit;
                 }
             
@@ -49,7 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             
                 if ($result->num_rows == 1) {
                     $row = $result->fetch_assoc();
-                    if (password_verify($password, $row["password"])) {
+                    $stored_password = $row["password"]; // Password stored in the database
+                
+                    // Check if the provided password matches the stored password (assuming it's not hashed)
+                    if ($password === $stored_password) {
                         // Set session variables
                         $_SESSION["loggedin"] = true;
                         $_SESSION["username"] = $username;
@@ -57,16 +61,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                         
                         // Redirect based on role or to a welcome page
                         if ($role == "Administrator") {
-                            header("location: admin_dashboard.php");
+                            header("location: administrator_index.php");
                         } else {
-                            header("location: applicant_dashboard.php");
+                            header("location: applicant_index.php");
                         }
                     } else {
                         $error_message = "Invalid username or password";
+                        print($error_message);
                     }
                 } else {
                     $error_message = "Invalid username or password";
+                    print($error_message);
                 }
+                
             }
         }
     }
