@@ -16,7 +16,7 @@ body {
 
 .main-login-page .center-login-panel {
     background: linear-gradient(to right, #CBCCFF, #CBCCFF);
-    height: 400px;
+    height: auto;
     width: 600px;
     margin-top: 40px;
     border-radius: 10px;
@@ -40,4 +40,5 @@ body {
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }

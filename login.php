@@ -54,7 +54,25 @@
                         <div class="center-login-panel-controls">
                             <div class="row">
                                 <div class="col">
-                                    <label for="ForUsername">Username</label>
+                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
+                                    <div class="input-group">
+                                        <input type="text" name="username" class="form-control form-control-lg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
+                                    <div class="input-group">
+                                        <input type="text" name="username" class="form-control form-control-lg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
                                     <div class="input-group">
                                         <input type="text" name="username" class="form-control form-control-lg">
                                     </div>
