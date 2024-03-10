@@ -70,10 +70,9 @@ if (isset($_POST["save_responses"])) {
 
     // ========== checking if the responses are valid basing on the saved records =============== //
     if ($question1 != $single_answer["question_1"] and $question2 != $single_answer["question_2"] and $question3 != $single_answer["question_3"] and $question4 != $single_answer["question_4"] and $question5 != $single_answer["question_5"] and $question6 != $single_answer["question_6"] and $question7 != $single_answer["question_7"] and $question8 != $single_answer["question_8"] and $question9 != $single_answer["question_9"] and $question10 != $single_answer["question_10"]) {
-        $error_message = "something is wrong here";
+        $error_message = "please answer some questions first";
     }
     else if ($question1 == $single_answer["question_1"] or $question2 == $single_answer["question_2"] or $question3 == $single_answer["question_3"] or $question4 == $single_answer["question_4"] or $question5 == $single_answer["question_5"] or $question6 == $single_answer["question_6"] or $question7 == $single_answer["question_7"] or $question8 == $single_answer["question_8"] or $question9 == $single_answer["question_9"] or $question10 == $single_answer["question_10"]) {
-        echo("some question where ");
         // Initialize a variable to store the total score
         $totalScore = 0;
 
@@ -88,10 +87,9 @@ if (isset($_POST["save_responses"])) {
             }
         }
 
-        // Output the total score
-        echo "Total score: " . $totalScore;
     }
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -166,7 +164,30 @@ if (isset($_POST["save_responses"])) {
 
                         <!-- the form for the questions will be here ======== -->
                         <!-- ============ the section for the questions will be here -->
-                        
+                        <!-- =========== the error message will be shown here ======== -->
+                        <div class="success-message-panel">
+                            <?php if (isset($totalScore)) : ?>
+                                <div id="successAlert" class="alert alert-warning w-50 fw-bold text-uppercase" role="alert">
+                                    <?php echo "Your Total Score is ". $totalScore . "%"; ?>
+                                </div>
+                                <script>
+                                    // Automatically dismiss the success alert after 5 seconds
+                                    setTimeout(function() {
+                                        document.getElementById("successAlert").style.display = "none";
+                                    }, 60000);
+                                </script>
+                                <?php elseif (isset($error_message)) : ?>
+                                    <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                        <?php echo($error_message); ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("errorAlert").style.display = "none";
+                                        }, 60000);
+                                    </script>
+                            <?php endif; ?>
+                        </div>
 
                         <div class="interviews-questions-panel-area mt-5">
                             <form action="applicant_interviews.php" method="POST">

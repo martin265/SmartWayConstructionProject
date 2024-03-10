@@ -434,3 +434,11 @@ body {
     padding-left: 10px;
 }
 
+.interviews-panel .success-message-panel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    color: #FFB84A;
+    text-transform: capitalize;
+}
