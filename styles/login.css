@@ -25,14 +25,14 @@ body {
 .main-login-page .center-login-panel .center-login-panel-title h1 {
     text-align: center;
     text-transform: capitalize;
-    color: "#7F4D3E";
+    color: #7F4D3E;
     padding-top: 20px;
 } 
 
 .main-login-page .center-login-panel .center-login-panel-icon {
     text-align: center;
     font-size: 70px;
-    color: "#412728";
+    color: #FF876B;
     padding-top: 10px;
 }
 

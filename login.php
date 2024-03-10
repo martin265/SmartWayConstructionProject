@@ -54,14 +54,14 @@
                         <div class="center-login-panel-controls">
                             <div class="row">
                                 <div class="col">
-                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
+                                    <label for="ForUsername" class="fw-bold ps-2">Role</label>
                                     <div class="input-group">
-                                        <input type="text" name="username" class="form-control form-control-lg">
+                                       <select name="role" id="" class="form-control form-control-lg"></select>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col">
                                     <label for="ForUsername" class="fw-bold ps-2">Username</label>
                                     <div class="input-group">
@@ -70,11 +70,11 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col">
-                                    <label for="ForUsername" class="fw-bold ps-2">Username</label>
+                                    <label for="ForUsername" class="fw-bold ps-2">Password</label>
                                     <div class="input-group">
-                                        <input type="text" name="username" class="form-control form-control-lg">
+                                        <input type="password" name="password" class="form-control form-control-lg">
                                     </div>
                                 </div>
                             </div>
