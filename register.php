@@ -1,4 +1,7 @@
 <?php
+include("Models/job.php");
+$conn = $connection;
+
 session_start();
 // function to validate the fields
 function validateInputFields($data) {
@@ -7,6 +10,10 @@ function validateInputFields($data) {
     $data = htmlspecialchars($data);
 
     return $data;
+}
+
+function saveRegisterDetails($conn) {
+
 }
 
 $all_errors = array("username"=>"", "password"=>"");
@@ -126,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 
                                 <div class="row mt-4">
                                     <div class="col">
-                                        <input type="submit" class="btn btn-lg btn-dark" value="login" name="login">
+                                        <input type="submit" class="btn btn-lg btn-dark" value="Register" name="login">
                                     </div>
                                 </div>
                             </div>

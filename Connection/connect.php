@@ -128,7 +128,7 @@ function createRegisterTable($connection) {
             applicant_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             login_role VARCHAR(100) NOT NULL,
             username VARCHAR(100) NOT NULL,
-            password VARCHAR(100) NOT NULL,
+            password VARCHAR(100) NOT NULL
         )"
     );
 
@@ -142,4 +142,5 @@ function createRegisterTable($connection) {
 //createInterviewQuestionsTable($connection);
 //createInterviewAnswersTable($connection);
 //createApplicantDetailsTable($connection);
+//createRegisterTable($connection);
 ?>
