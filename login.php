@@ -2,30 +2,8 @@
 session_start();
 include('db_config.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
 
-    // Fetch user from database
-    $sql = "SELECT * FROM users WHERE username='$username'";
-    $result = $conn->query($sql);
 
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row["password"])) {
-            // Set session variables
-            $_SESSION["loggedin"] = true;
-            $_SESSION["username"] = $username;
-            
-            // Redirect to welcome page
-            header("location: welcome.php");
-        } else {
-            echo "Invalid username or password";
-        }
-    } else {
-        echo "Invalid username or password";
-    }
-}
 // function to validate the fields
 function validateInputFields($data) {
     $data = trim($data);
@@ -54,13 +32,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             print($error_message);
         }
         else {
-            print("success message");
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+                $role = $_POST["role"];
+            
+                // Check if the role is valid
+                if (!in_array($role, ["Administrator", "Applicant"])) {
+                    $error_message = "Invalid role selected";
+                    exit;
+                }
+            
+                // Fetch user from database
+                $sql = "SELECT * FROM RegisterDetails WHERE username='$username' AND login_role='$role'";
+                $result = $conn->query($sql);
+            
+                if ($result->num_rows == 1) {
+                    $row = $result->fetch_assoc();
+                    if (password_verify($password, $row["password"])) {
+                        // Set session variables
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["username"] = $username;
+                        $_SESSION["role"] = $role; // Add role to session
+                        
+                        // Redirect based on role or to a welcome page
+                        if ($role == "Administrator") {
+                            header("location: admin_dashboard.php");
+                        } else {
+                            header("location: applicant_dashboard.php");
+                        }
+                    } else {
+                        $error_message = "Invalid username or password";
+                    }
+                } else {
+                    $error_message = "Invalid username or password";
+                }
+            }
         }
     }
     
     
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
