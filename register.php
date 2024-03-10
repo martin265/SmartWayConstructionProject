@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // function to validate the fields
 function validateInputFields($data) {
     $data = trim($data);

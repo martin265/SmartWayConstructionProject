@@ -122,6 +122,22 @@ function createApplicantDetailsTable($connection) {
     }
 }
 
+function createRegisterTable($connection) {
+    $sqlCommand = (
+        "CREATE TABLE IF NOT EXISTS RegisterDetails(
+            applicant_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            login_role VARCHAR(100) NOT NULL,
+            username VARCHAR(100) NOT NULL,
+            password VARCHAR(100) NOT NULL,
+        )"
+    );
+
+    // ========== running the query here =========== //
+    $results = mysqli_query($connection, $sqlCommand);
+    if ($results) {
+        echo("table created successfully");
+    }
+}
 // createJobDetailsTable($connection);
 //createInterviewQuestionsTable($connection);
 //createInterviewAnswersTable($connection);
