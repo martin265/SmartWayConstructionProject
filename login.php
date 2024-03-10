@@ -50,6 +50,17 @@
                         <div class="center-login-panel-icon">
                             <i class="bi bi-shield-lock"></i>
                         </div>
+
+                        <div class="center-login-panel-controls">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="ForUsername">Username</label>
+                                    <div class="input-group">
+                                        <input type="text" name="username" class="form-control form-control-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

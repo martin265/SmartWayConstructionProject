@@ -35,3 +35,9 @@ body {
     color: "#412728";
     padding-top: 10px;
 }
+
+.main-login-page .center-login-panel .center-login-panel-controls {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
