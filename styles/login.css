@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to left, #f9fbe7, #fff8e1);
+}
