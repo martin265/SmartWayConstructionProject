@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             
-            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"]) && isset($_GET["id"])) {
+            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
 
                 // File upload directory
                 $uploadDirectory = "uploads/";
@@ -176,6 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //
                 $success_message = "job application sent successfully successfully";
+                $_SESSION["success"] = true;
             }
 
         }
