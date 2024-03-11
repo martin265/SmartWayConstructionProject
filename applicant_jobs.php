@@ -39,6 +39,25 @@ $all_results = getAllAvailableJobs($conn);
         <?php include("templates/header.php"); ?>
     </div>
 
+    <!-- Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Modal Content
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
     <!-- the main content for the applicant page will be here ======= -->
     <div class="container-xxl">
         <div class="row">
@@ -144,7 +163,7 @@ $all_results = getAllAvailableJobs($conn);
                                     </div>
 
                                     <div class="job-application-redirect-button">
-                                        <a href="applicant_apply_job.php?id=<?php echo($single_result["job_id"]); ?>" class="btn btn-lg btn-warning ms-2 mb-3"><i class="bi bi-bookmark-check me-2"></i>Apply Job</a>
+                                        <input type="text" id="openModalBtn" class="btn btn-lg btn-warning" value="apply for job">
                                     </div>
                                 </div>
                             <?php }?>
@@ -162,5 +181,15 @@ $all_results = getAllAvailableJobs($conn);
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            // Handle button click
+            $("#openModalBtn").click(function(){
+                // Show modal
+                $("#exampleModal").modal('show');
+            });
+        });
+    </script>
 </body>
 </html>
