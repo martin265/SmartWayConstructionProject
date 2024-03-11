@@ -17,7 +17,15 @@
 
         <!-- =============== the main content will be here for administrator dashboard ====== -->
         <div class="content-area">
-            <h1>hello world</h1>
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="administrator-preview-documents">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
