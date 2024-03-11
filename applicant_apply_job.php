@@ -22,59 +22,13 @@ function getSingleRecord($conn) {
         $result = mysqli_query($conn, $sqlCommand);
 
         // ========= getting all the results here ========== //
-        $single_record = mysqli_fetch_assoc($result);
+        $singl_record = mysqli_fetch_assoc($result);
 
-        if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
-            // File upload directory
-            $uploadDirectory = "uploads/";
-            // Extract first name and last name
-            $firstName = validateInputFields($_POST["first_name"]);
-            $lastName = validateInputFields($_POST["last_name"]);
-
-            // Create a folder for each user based on their first name
-            $userFolder = $uploadDirectory . $firstName . '/';
-
-            if (!file_exists($userFolder)) {
-                mkdir($userFolder, 0755, true); // Create the user's folder if it doesn't exist
-            }
-
-            // Get file names
-            $cvFileName = $_FILES['cv']['name'];
-            $coverLetterFileName = $_FILES['cover_letter']['name'];
-
-            // Append first name and last name to file names
-            $cvFileNameWithNames = $firstName . '_' . $lastName . '_' . $cvFileName;
-            $coverLetterFileNameWithNames = $firstName . '_' . $lastName . '_' . $coverLetterFileName;
-
-            // Set file paths
-            $cvFilePath = $userFolder . $cvFileNameWithNames;
-            $coverLetterFilePath = $userFolder . $coverLetterFileNameWithNames;
-
-            // Move uploaded files to the specified directory
-            move_uploaded_file($_FILES['cv']['tmp_name'], $cvFilePath);
-            move_uploaded_file($_FILES['cover_letter']['tmp_name'], $coverLetterFilePath);
-
-            // Get only the file names without the directory path
-            $cvFileNameOnly = basename($cvFileNameWithNames);
-            $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
-
-            // ========= creating an object for the applicant class here ======= //
-            $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
-            $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
-            $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
-            $gender = isset($conn, $_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
-            $phone_number = isset($conn, $_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
-            $email = isset($conn, $_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
-            $marital_status = isset($conn, $_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
-            $home_address = isset($conn, $_POST["home_address"]) ? mysqli_real_escape_string($conn, $_POST["home_address"]) : "";
-            // calling the function here =====//
-           
-        }
+        return $singl_record;
     }
 }
 
-$single_record = getSingleRecord($conn);
-// print_r($single_record);
+$singl_record = getSingleRecord($conn);
 
 // =========== the array to keep the errors ========= //
 $all_errors = array("first_name"=>"", "last_name"=>"", "age"=>"", "gender"=>"", "phone_number"=>"",
@@ -90,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = validateInputFields($_POST["email"]);
     $marital_status = validateInputFields($_POST["marital_status"]);
     $home_address = validateInputFields($_POST["home_address"]);
-
 
     // ============ checking if the fields are empty when submitting the form here
     if (isset($_POST["save_details"])) {
@@ -169,13 +122,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error_message = "the form still has some errors";
         }
         else {
-            $applicant = new Applicant(
-                $first_name, $last_name, $age, $gender, $phone_number, $email,
-                $marital_status, $home_address, $cvFilePath, $coverLetterFilePath
-            );
-            $applicant->saveApplicantDetails($conn);
-            // showing the success message here //
-            $success_message = "job application sent successfully successfully";
+            
+            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"]) && isset($_GET["id"])) {
+
+                // File upload directory
+                $uploadDirectory = "uploads/";
+                // Extract first name and last name
+                $firstName = validateInputFields($_POST["first_name"]);
+                $lastName = validateInputFields($_POST["last_name"]);
+
+                // Create a folder for each user based on their first name
+                $userFolder = $uploadDirectory . $firstName . '/';
+
+                if (!file_exists($userFolder)) {
+                    mkdir($userFolder, 0755, true); // Create the user's folder if it doesn't exist
+                }
+
+                // Get file names
+                $cvFileName = $_FILES['cv']['name'];
+                $coverLetterFileName = $_FILES['cover_letter']['name'];
+
+                // Append first name and last name to file names
+                $cvFileNameWithNames = $firstName . '_' . $lastName . '_' . $cvFileName;
+                $coverLetterFileNameWithNames = $firstName . '_' . $lastName . '_' . $coverLetterFileName;
+
+                // Set file paths
+                $cvFilePath = $userFolder . $cvFileNameWithNames;
+                $coverLetterFilePath = $userFolder . $coverLetterFileNameWithNames;
+
+                // Move uploaded files to the specified directory
+                move_uploaded_file($_FILES['cv']['tmp_name'], $cvFilePath);
+                move_uploaded_file($_FILES['cover_letter']['tmp_name'], $coverLetterFilePath);
+
+                // Get only the file names without the directory path
+                $cvFileNameOnly = basename($cvFileNameWithNames);
+                $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
+
+                // ========= creating an object for the applicant class here ======= //
+                $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
+                $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
+                $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
+                $gender = isset($conn, $_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
+                $phone_number = isset($conn, $_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
+                $email = isset($conn, $_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
+                $marital_status = isset($conn, $_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
+
+                // calling the function here =====//
+                $applicant = new Applicant(
+                    $first_name, $last_name, $age, $gender, $phone_number, $email,
+                    $marital_status, $home_address, $cvFilePath, $coverLetterFilePath
+                );
+                $applicant->saveApplicantDetails($conn);
+                // showing the success message here //
+                $success_message = "job application sent successfully successfully";
+            }
+
         }
 
         
@@ -235,7 +236,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <!-- ============= the form to collect the details here -->
                     <div class="applicant-apply-job-page-form">
                         <form action="applicant_apply_job.php" method="POST" enctype="multipart/form-data">
-                            <div class="row pt-5">
+                            <div class="row mt-3">
+                                <div class="col">
+                                <select name="job_title" id="" class="form-control form-control-lg">
+                                    <?php if ($singl_record && isset($singl_record["job_title"])) : ?>
+                                        <option value="<?php echo $singl_record["job_title"]; ?>"><?php echo $singl_record["job_title"]; ?></option>
+                                    <?php else: ?>
+                                        <option value="">No Job Details Available</option>
+                                    <?php endif; ?>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="row pt-3">
                                 <div class="col">
                                     <label for="FirstName" class="fw-bold ms-2">First Name</label>
                                     <div class="input-group">

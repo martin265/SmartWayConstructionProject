@@ -19,7 +19,7 @@ class Applicant{
     public $cover_letter;
 
     // =============== constructor function for the class will be here ====== //
-    public function __construct($first_name, $last_name, $age, $gender, $phone_number, $email, $marital_status, $home_address, $cv, $cover_letter)
+    public function __construct($first_name, $last_name, $age, $gender, $phone_number, $email, $marital_status, $home_address, $job_title, $cv, $cover_letter)
     {
         $this->first_name = $first_name;
         $this->last_name = $last_name;
@@ -29,6 +29,7 @@ class Applicant{
         $this->email = $email;
         $this->marital_status = $marital_status;
         $this->home_address = $home_address;
+        $this->job_title = $job_title;
         $this->cv = $cv;
         $this->cover_letter = $cover_letter;
     }
@@ -40,7 +41,7 @@ class Applicant{
                 "INSERT INTO ApplicantDetails (
                     first_name, last_name, age, gender,
                     phone_number, email, marital_status,
-                    home_address, cv, cover_letter
+                    home_address, job_title, cv, cover_letter
                 ) VALUES (?,?,?,?,?,?,?,?,?,?)"
             );
             // ======= binding the parameters here ========= //
