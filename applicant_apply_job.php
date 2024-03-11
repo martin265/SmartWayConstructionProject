@@ -174,7 +174,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //
                 $success_message = "details saved successfully";
-                print($success_message);
             }
 
         }

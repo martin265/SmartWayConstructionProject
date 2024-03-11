@@ -1,6 +1,13 @@
 <?php
+session_start();
 
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    // Redirect the user to the login page if they are not logged in
+    header("location: login.php");
+    exit;
+}
 
+// Continue to display the content of the restricted page
 ?>
 <!DOCTYPE html>
 <html lang="en">
