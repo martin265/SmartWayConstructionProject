@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                      <!-- =========== the error message will be shown here ======== -->
                     <div class="success-message-panel">
                         <?php if (isset($success_message)) : ?>
-                            <div id="successAlert" class="alert alert-warning w-50 fw-bold text-uppercase" role="alert">
+                            <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
                                 <?php echo $success_message; ?>
                             </div>
                             <script>

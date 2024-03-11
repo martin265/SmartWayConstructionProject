@@ -283,6 +283,11 @@ body {
     box-shadow: 0 4px 8px rgba(9, 118, 187, 0.1); 
 }
 
+.applicant-apply-job-page .success-message-panel {
+    display: flex;
+    justify-content: center;
+}
+
 .applicant-apply-job-page .applicant-apply-job-page-form {
     margin-left: 20px;
     margin-right: 20px;
