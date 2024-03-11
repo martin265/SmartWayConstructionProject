@@ -353,12 +353,14 @@
     background: linear-gradient(to left, #CBCCFF,#CBCCFF);
     border-radius: 8px;
     margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 .main-content-container .content-area .administrator-preview-documents-title h1 {
     text-align: center;
-    padding-top: px;
+    padding-top: 20px;
     text-transform: capitalize;
     color: #0050C1;
     font-weight: bold;
+    
 }
