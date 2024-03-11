@@ -42,14 +42,14 @@ class Applicant{
                     first_name, last_name, age, gender,
                     phone_number, email, marital_status,
                     home_address, job_title, cv, cover_letter
-                ) VALUES (?,?,?,?,?,?,?,?,?,?)"
+                ) VALUES (?,?,?,?,?,?,?,?,?,?,?)"
             );
             // ======= binding the parameters here ========= //
             $sqlCommand->bind_param(
-                "ssssssssss",
+                "sssssssssss",
                 $this->first_name, $this->last_name, $this->age,
                 $this->gender, $this->phone_number, $this->email,
-                $this->marital_status, $this->home_address, $this->cv, $this->cover_letter
+                $this->marital_status, $this->home_address, $this->job_title, $this->cv, $this->cover_letter
             );
             // ======= running the query here ======= //
             $sqlCommand->execute();

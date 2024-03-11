@@ -159,6 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
 
                 // ========= creating an object for the applicant class here ======= //
+                $job_title = isset($conn, $_POST["job_title"]) ? mysqli_real_escape_string($conn, $_POST["job_title"]) : "";
                 $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
                 $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
                 $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
@@ -170,7 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // calling the function here =====//
                 $applicant = new Applicant(
                     $first_name, $last_name, $age, $gender, $phone_number, $email,
-                    $marital_status, $home_address, $cvFilePath, $coverLetterFilePath
+                    $marital_status, $home_address, $job_title, $cvFilePath, $coverLetterFilePath
                 );
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //
