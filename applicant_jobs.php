@@ -39,24 +39,6 @@ $all_results = getAllAvailableJobs($conn);
         <?php include("templates/header.php"); ?>
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            Modal Content
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-        </div>
-    </div>
-    </div>
 
     <!-- the main content for the applicant page will be here ======= -->
     <div class="container-xxl">
@@ -162,8 +144,28 @@ $all_results = getAllAvailableJobs($conn);
                                         <p><i class="bi bi-calendar-week me-2 ms-2"></i><?php echo($single_result["application_deadline"]); ?></p>
                                     </div>
 
-                                    <div class="job-application-redirect-button">
-                                        <input type="text" id="openModalBtn" class="btn btn-lg btn-warning" value="apply for job">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        Launch static backdrop modal
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Apply For Job</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             <?php }?>
@@ -181,15 +183,5 @@ $all_results = getAllAvailableJobs($conn);
             </div>
         </div>
     </div>
-
-    <script>
-        $(document).ready(function(){
-            // Handle button click
-            $("#openModalBtn").click(function(){
-                // Show modal
-                $("#exampleModal").modal('show');
-            });
-        });
-    </script>
 </body>
 </html>
