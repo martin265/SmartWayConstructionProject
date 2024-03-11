@@ -364,3 +364,9 @@
     font-weight: bold;
     
 }
+
+.main-content-container .content-area .administrator-preview-documents .all-available-applications {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
