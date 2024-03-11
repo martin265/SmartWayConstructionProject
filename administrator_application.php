@@ -21,7 +21,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="administrator-preview-documents">
-                            
+                            <div class="administrator-preview-documents-title">
+                                <h1>preview application documents</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
