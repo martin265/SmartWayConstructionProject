@@ -12,7 +12,6 @@ function validateInputFields($data) {
     return $data;
 }
 
-
 function getSingleRecord($conn) {
     // =========== getting the current id to apply for the job here ============= //
     if (isset($_GET["id"])) {

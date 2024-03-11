@@ -1,12 +1,4 @@
 <?php
-if (!isset($_SESSION["success"]) || $_SESSION["success"] !== true) {
-    // Redirect the user to the login page if they are not logged in
-    header("location: applicant_apply_job.php");
-    exit;
-}
-else {
-
-}
 
 // Continue to display the content of the restricted page
 // =========== getting the connection here ========= //

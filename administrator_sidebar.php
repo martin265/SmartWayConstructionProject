@@ -67,6 +67,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- the navigation item for the jobs section -->
             <div class="navigation-item">
+                <i class="bi bi-file-pdf"></i>
+                <a href="administrator_interview_questions.php">applications</a>
+            </div>
+
+            <!-- the navigation item for the jobs section -->
+            <div class="navigation-item">
                 <i class="bi bi-file-earmark-bar-graph"></i>
                 <a href="records.php">records</a>
             </div>
