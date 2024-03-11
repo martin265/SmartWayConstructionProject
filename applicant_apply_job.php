@@ -123,7 +123,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
             
-            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
+            if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"]) && isset($_GET["id"])) {
+                
+                $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
+                // ======== selecting records from the job details table here ========= //
+                $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
+                $result = mysqli_query($conn, $sqlCommand);
+
+                // ========= getting all the results here ========== //
+                $singl_record = mysqli_fetch_assoc($result);
+
+
                 // File upload directory
                 $uploadDirectory = "uploads/";
                 // Extract first name and last name
@@ -173,7 +183,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 );
                 $applicant->saveApplicantDetails($conn);
                 // showing the success message here //
-                $success_message = "details saved successfully";
+                $success_message = "job application sent successfully successfully";
             }
 
         }
