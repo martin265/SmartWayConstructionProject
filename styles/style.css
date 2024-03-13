@@ -414,3 +414,19 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions {
+    width: 300px;
+    height: auto;
+    border: 2px solid #0050C1;
+    margin: 10px;
+    border-radius: 9px;
+}
+
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
+    width: 30px;
+    height: auto;
+    border: 2px solid #0050C1;
+    margin: 10px;
+    border-radius: 9px;
+}
