@@ -400,3 +400,17 @@
     margin: 30px;
     text-align: center;
 }
+
+
+/* ================== CSS FOR THE MAIN DASHBOARD WILL BE HERE ============ */
+.main-content-container .content-area .main-dashboard {
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.main-content-container .content-area .main-dashboard .main-dashboard-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
