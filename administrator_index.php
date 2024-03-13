@@ -23,11 +23,16 @@
                         <div class="main-dashboard shadow-sm">
                             <div class="main-dashboard-cards">
                                 <div class="main-dashboard-questions">
-
+                                    <div class="main-dashboard-questions-title">
+                                        <h1>questions</h1>
+                                    </div>
+                                    <div class="main-dashboard-question-icon">
+                                        <i class="bi bi-patch-question-fill"></i>
+                                    </div>
                                 </div>
-                                #  =============== // =============== //
+                                
                                 <div class="main-dashboard-jobs">2</div>
-                                #  ================= // ============= //
+                               
                                 <div class="main-dashboard-applicants">3</div>
                             </div>
                         </div>
