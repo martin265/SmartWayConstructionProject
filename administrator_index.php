@@ -17,7 +17,15 @@
 
         <!-- =============== the main content will be here for administrator dashboard ====== -->
         <div class="content-area">
-            
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-dashboard">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
