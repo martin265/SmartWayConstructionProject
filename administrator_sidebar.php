@@ -50,7 +50,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <div class="side-navigation-panel">
             <!-- the navigation items for the navigation will be here -->
-            <div class="sidebar-navigation-logo">
+            <div class="sidebar-navigation-logo shadow-lg">
                 <i class="fi fi-sr-apartment"></i>
             </div>
             
