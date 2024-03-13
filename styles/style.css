@@ -48,6 +48,9 @@
     text-align: center;
     background: linear-gradient(to left, #CBCCFF,#CBCCFF);
     border-radius: 10px;
+    padding-top: 20px;
+    font-size: 50px;
+    color: #E52E6A;
 }
 
 .side-navigation-panel {
