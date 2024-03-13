@@ -121,50 +121,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error_message = "the form still has some errors";
         }
         else {
-            
             if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
-
                 $allowed_extensions = array('pdf', 'docx', 'txt');
-                $file_name = $_FILES['document_file']['name'];
-                $file_tmp = $_FILES['document_file']['tmp_name'];
-                $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
-
-                // Check if the file extension is allowed
-                if (in_array(strtolower($file_extension), $allowed_extensions)) {
+            
+                $cv_file_name = $_FILES['cv']['name'];
+                $cv_file_tmp = $_FILES['cv']['tmp_name'];
+                $cv_file_extension = pathinfo($cv_file_name, PATHINFO_EXTENSION);
+            
+                $cover_letter_file_name = $_FILES['cover_letter']['name'];
+                $cover_letter_file_tmp = $_FILES['cover_letter']['tmp_name'];
+                $cover_letter_file_extension = pathinfo($cover_letter_file_name, PATHINFO_EXTENSION);
+            
+                // Check if the file extensions are allowed
+                if (in_array(strtolower($cv_file_extension), $allowed_extensions) && in_array(strtolower($cover_letter_file_extension), $allowed_extensions)) {
                     // Read file data
-                    $data = file_get_contents($file_tmp);
-
-                    // Insert file data into database
-                    $sql = "INSERT INTO document_files (name, data) VALUES ('$file_name', '$data')";
-                    if ($conn->query($sql) === TRUE) {
-                        echo "Document file uploaded successfully.";
+                    $cv_data = file_get_contents($cv_file_tmp);
+                    $cover_letter_data = file_get_contents($cover_letter_file_tmp);
+            
+                    // Other applicant details
+                    $job_title = isset($_POST["job_title"]) ? mysqli_real_escape_string($conn, $_POST["job_title"]) : "";
+                    $first_name = isset($_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
+                    $last_name = isset($_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
+                    $age = isset($_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
+                    $gender = isset($_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
+                    $phone_number = isset($_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
+                    $email = isset($_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
+                    $marital_status = isset($_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
+                    $home_address = isset($_POST["home_address"]) ? mysqli_real_escape_string($conn, $_POST["home_address"]) : "";
+            
+                    // Insert applicant details and files into the database
+                    $sql = "INSERT INTO ApplicantDetails (job_title, first_name, last_name, age, gender, phone_number, email, marital_status, home_address, cv, cover_letter)
+                            VALUES ('$job_title', '$first_name', '$last_name', '$age', '$gender', '$phone_number', '$email', '$marital_status', '$home_address', ?, ?)";
+                    
+                    // Prepare the SQL statement
+                    $stmt = $conn->prepare($sql);
+                    
+                    // Bind parameters and execute the statement
+                    $stmt->bind_param("ss", $cv_data, $cover_letter_data);
+                    if ($stmt->execute()) {
+                        $success_message = "Job application sent successfully.";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
+                    // Close statement
+                    $stmt->close();
                 } else {
                     echo "Error: Unsupported file type. Only PDF, DOCX, and TXT files are allowed.";
                 }
-                // ========= creating an object for the applicant class here ======= //
-                $job_title = isset($conn, $_POST["job_title"]) ? mysqli_real_escape_string($conn, $_POST["job_title"]) : "";
-                $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
-                $last_name = isset($conn, $_POST["last_name"]) ? mysqli_real_escape_string($conn, $_POST["last_name"]) : "";
-                $age = isset($conn, $_POST["age"]) ? mysqli_real_escape_string($conn, $_POST["age"]) : "";
-                $gender = isset($conn, $_POST["gender"]) ? mysqli_real_escape_string($conn, $_POST["gender"]) : "";
-                $phone_number = isset($conn, $_POST["phone_number"]) ? mysqli_real_escape_string($conn, $_POST["phone_number"]) : "";
-                $email = isset($conn, $_POST["email"]) ? mysqli_real_escape_string($conn, $_POST["email"]) : "";
-                $marital_status = isset($conn, $_POST["marital_status"]) ? mysqli_real_escape_string($conn, $_POST["marital_status"]) : "";
-
-                // calling the function here =====//
-                $applicant = new Applicant(
-                    $first_name, $last_name, $age, $gender, $phone_number, $email,
-                    $marital_status, $home_address, $job_title, $cvFilePath, $coverLetterFilePath
-                );
-                $applicant->saveApplicantDetails($conn);
-                // showing the success message here //
-                $success_message = "job application sent successfully successfully";
-                $_SESSION["success"] = true;
             }
-
         }
 
         
