@@ -416,17 +416,17 @@
 }
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions {
-    width: 300px;
+    width: 350px;
     height: auto;
-    border: 2px solid #0050C1;
+    border: 2px solid #212121;
     margin: 10px;
     border-radius: 9px;
 }
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
-    width: 30px;
+    width: 350px;
     height: auto;
-    border: 2px solid #0050C1;
+    border: 2px solid #FF7451;
     margin: 10px;
     border-radius: 9px;
 }

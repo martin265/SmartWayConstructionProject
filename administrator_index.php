@@ -22,8 +22,12 @@
                     <div class="col-lg-12">
                         <div class="main-dashboard shadow-sm">
                             <div class="main-dashboard-cards">
-                                <div class="main-dashboard-questions">1</div>
+                                <div class="main-dashboard-questions">
+
+                                </div>
+                                #  =============== // =============== //
                                 <div class="main-dashboard-jobs">2</div>
+                                #  ================= // ============= //
                                 <div class="main-dashboard-applicants">3</div>
                             </div>
                         </div>
