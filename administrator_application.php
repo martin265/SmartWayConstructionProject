@@ -54,6 +54,7 @@ $all_results = fetchAllApplicants($conn);
                                                 <th scope="col" class="text-capitalize">gender</th>
                                                 <th scope="col" class="text-capitalize">phone_number</th>
                                                 <th scope="col" class="text-capitalize">home address</th>
+                                                <th scope="col" class="text-capitalize">operations</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -68,7 +69,13 @@ $all_results = fetchAllApplicants($conn);
                                                         <td><?php echo($single_record["phone_number"]); ?></td>
                                                         <td><?php echo($single_record["home_address"]); ?></td>
                                                         <!-- ============ for the button here -->
+                                                        <td>
+                                                            <a href="" class="btn btn-sm btn-primary">
+                                                                <span>View Cover Letter</span>
+                                                            </a>
+                                                        </td>
                                                     </tr>
+
                                                 <?php }?>
                                             <?php else: ?>
 
