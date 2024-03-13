@@ -111,8 +111,8 @@ function createApplicantDetailsTable($connection) {
             marital_status VARCHAR(100) NOT NULL,
             home_address VARCHAR(100) NOT NULL,
             job_title VARCHAR(100) NOT NULL,
-            cv LONGBLOB,
-            cover_letter LONGBLOB
+            cv VARCHAR(100) NOT NULL,
+            cover_letter VARCHAR(100) NOT NULL
         )"
     );
 
