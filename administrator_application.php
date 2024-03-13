@@ -64,6 +64,30 @@ if (isset($_POST["delete_record"])) {
                                 <h1>preview application documents</h1>
                             </div>
 
+                            <div class="success-message-panel">
+                                <?php if (isset($success_message)) : ?>
+                                    <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                        <?php echo $success_message; ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("successAlert").style.display = "none";
+                                        }, 60000);
+                                    </script>
+                                    <?php elseif (isset($error_message)) : ?>
+                                        <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                            <?php echo($error_message); ?>
+                                        </div>
+                                        <script>
+                                            // Automatically dismiss the success alert after 5 seconds
+                                            setTimeout(function() {
+                                                document.getElementById("errorAlert").style.display = "none";
+                                            }, 60000);
+                                        </script>
+                                <?php endif; ?>
+                            </div>
+
                             <div class="all-available-applications">
                                 <div class="all-available-applicants-table">
                                     <table id="applicant-details" class="table table-striped">

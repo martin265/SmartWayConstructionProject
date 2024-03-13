@@ -380,3 +380,9 @@
     margin: 10px;
     border-radius: 10px;
 }
+
+.main-content-container .content-area .administrator-preview-documents .success-message-panel {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
