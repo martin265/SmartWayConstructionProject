@@ -73,7 +73,7 @@ if (isset($_POST["delete_record"])) {
                                         // Automatically dismiss the success alert after 5 seconds
                                         setTimeout(function() {
                                             document.getElementById("successAlert").style.display = "none";
-                                        }, 60000);
+                                        }, 2000);
                                     </script>
                                     <?php elseif (isset($error_message)) : ?>
                                         <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
@@ -83,7 +83,7 @@ if (isset($_POST["delete_record"])) {
                                             // Automatically dismiss the success alert after 5 seconds
                                             setTimeout(function() {
                                                 document.getElementById("errorAlert").style.display = "none";
-                                            }, 60000);
+                                            }, 2000);
                                         </script>
                                 <?php endif; ?>
                             </div>
