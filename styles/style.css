@@ -370,3 +370,7 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.main-content-container .content-area .administrator-preview-documents .all-available-applications {
+    width: 90px;
+}

@@ -5,3 +5,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#all-records-table").DataTable();
 });
+// ============= the section for the all records table here =========== //
+$(document).ready(function() {
+    $("#applicant-details").DataTable();
+});

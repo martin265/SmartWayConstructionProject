@@ -44,7 +44,7 @@ $all_results = fetchAllApplicants($conn);
                             </div>
 
                             <div class="all-available-applications">
-                                <table id="applicant_details" class="table table-striped">
+                                <table id="applicant-details" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col" class="text-capitalize">first name</th>
@@ -67,9 +67,6 @@ $all_results = fetchAllApplicants($conn);
                                                     <td><?php echo($single_record["phone_number"]); ?></td>
                                                     <td><?php echo($single_record["home_address"]); ?></td>
                                                     <!-- ============ for the button here -->
-                                                    <td>
-                                                        
-                                                    </td>
                                                 </tr>
                                             <?php }?>
                                         <?php else: ?>
