@@ -22,15 +22,16 @@
                     <div class="col-lg-12">
                         <div class="main-dashboard shadow-sm">
                             <div class="main-dashboard-cards">
+                                <!-- =========== the cards for the main dashboard -->
                                 <div class="main-dashboard-questions">
                                     <div class="main-dashboard-questions-title">
                                         <h1>questions</h1>
                                     </div>
-                                    <div class="main-dashboard-question-icon">
+                                    <div class="main-dashboard-questions-icon">
                                         <i class="bi bi-patch-question-fill"></i>
                                     </div>
                                 </div>
-                                
+                                <!-- ================ // ================= // -->
                                 <div class="main-dashboard-jobs">2</div>
                                
                                 <div class="main-dashboard-applicants">3</div>

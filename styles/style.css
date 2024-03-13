@@ -419,9 +419,17 @@
     width: 350px;
     height: auto;
     border: 2px solid #212121;
-    margin: 10px;
+    margin-top: 30px;
     border-radius: 9px;
 }
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions .main-dashboard-questions-title h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    padding-top: 20px;
+    color: #311B92;
+}
+
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
     width: 350px;
