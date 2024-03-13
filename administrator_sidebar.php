@@ -46,8 +46,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </head>
 <body>
     <section>
+        
+
         <div class="side-navigation-panel">
             <!-- the navigation items for the navigation will be here -->
+            <div class="sidebar-navigation-logo">
+                <i class="fi fi-sr-apartment"></i>
+            </div>
+            
             <div class="navigation-item">
                 <i class="bi bi-ui-checks-grid"></i>
                 <a href="administrator_index.php">home</a>

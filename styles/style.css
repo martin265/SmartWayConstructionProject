@@ -41,6 +41,12 @@
 }
 
 /* ================ css for the sidebar navigation links */
+.side-navigation-panel .sidebar-navigation-logo {
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
+}
+
 .side-navigation-panel {
     margin-left: 30px;
     margin-top: 30px;
