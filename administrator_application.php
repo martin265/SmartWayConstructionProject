@@ -20,6 +20,26 @@ function fetchAllApplicants($conn) {
 
 $all_results = fetchAllApplicants($conn);
 
+// ================ checking if the job ID is set here =========== //
+if (isset($_POST["delete_record"])) {
+    $id_to_delete = mysqli_real_escape_string($conn, $_POST["id_to_delete"]);
+    // calling the function to delete the record here ======= //
+    // getting the connection with the databse here ============= //
+    // ================ getting the sql command here ================ //
+    $sqlCommand = $conn->prepare(
+        "DELETE FROM JobDetails WHERE job_id = ?"
+    );
+
+    // ============== binding the query here ================= //
+    $sqlCommand->bind_param(
+        "s",
+        $id_to_delete
+    );
+    $sqlCommand->execute();
+    $success_message = "record deleted successfully";
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,9 +93,10 @@ $all_results = fetchAllApplicants($conn);
                                                         <td><?php echo($single_record["job_title"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                         <td>
-                                                            <a href="" class="btn btn-sm btn-primary">
-                                                                <span>View Cover Letter</span>
-                                                            </a>
+                                                            <form action="administrator_application.php" method="POST">
+                                                                <input type="hidden" name="id_to_delete" value="<?php echo($single_record["applicant_id"]); ?>">
+                                                                <input type="submit" name="delete_record" value="Delete Record" class="btn btn-sm btn-danger">
+                                                            </form>
                                                         </td>
                                                     </tr>
 
@@ -93,5 +114,6 @@ $all_results = fetchAllApplicants($conn);
             </div>
         </div>
     </div>
+
 </body>
 </html>
