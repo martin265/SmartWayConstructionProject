@@ -44,16 +44,15 @@ $all_results = fetchAllApplicants($conn);
                             </div>
 
                             <div class="all-available-applications">
-                                <table id="recent-table" class="table table-striped">
+                                <table id="applicant_details" class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="text-capitalize">job title</th>
-                                            <th scope="col" class="text-capitalize">job type</th>
-                                            <th scope="col" class="text-capitalize">job email</th>
-                                            <th scope="col" class="text-capitalize">job phone number</th>
-                                            <th scope="col" class="text-capitalize">qualification</th>
-                                            <th scope="col" class="text-capitalize">technical skills</th>
-                                            <th scope="col" class="text-capitalize">actions</th>
+                                            <th scope="col" class="text-capitalize">first name</th>
+                                            <th scope="col" class="text-capitalize">last name</th>
+                                            <th scope="col" class="text-capitalize">age</th>
+                                            <th scope="col" class="text-capitalize">gender</th>
+                                            <th scope="col" class="text-capitalize">phone_number</th>
+                                            <th scope="col" class="text-capitalize">home address</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -61,18 +60,15 @@ $all_results = fetchAllApplicants($conn);
                                         <?php if ($all_results): ?>
                                             <?php foreach($all_results as $single_record) {?>
                                                 <tr>
-                                                    <td><?php echo($single_record["job_title"]); ?></td>
-                                                    <td><?php echo($single_record["job_type"]); ?></td>
-                                                    <td><?php echo($single_record["job_email"]); ?></td>
-                                                    <td><?php echo($single_record["job_phone_number"]); ?></td>
-                                                    <td><?php echo($single_record["qualification"]); ?></td>
-                                                    <td><?php echo($single_record["technical_skills"]); ?></td>
+                                                    <td><?php echo($single_record["first_name"]); ?></td>
+                                                    <td><?php echo($single_record["last_name"]); ?></td>
+                                                    <td><?php echo($single_record["age"]); ?></td>
+                                                    <td><?php echo($single_record["gender"]); ?></td>
+                                                    <td><?php echo($single_record["phone_number"]); ?></td>
+                                                    <td><?php echo($single_record["home_address"]); ?></td>
                                                     <!-- ============ for the button here -->
                                                     <td>
-                                                        <form action="administrator_job_records.php" method="POST">
-                                                            <input type="hidden" name="id_to_delete" value="<?php echo($single_record["job_id"]); ?>">
-                                                            <input type="submit" name="delete_record" value="Delete Record" class="btn btn-sm btn-danger">
-                                                        </form>
+                                                        
                                                     </td>
                                                 </tr>
                                             <?php }?>
