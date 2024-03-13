@@ -27,7 +27,7 @@ if (isset($_POST["delete_record"])) {
     // getting the connection with the databse here ============= //
     // ================ getting the sql command here ================ //
     $sqlCommand = $conn->prepare(
-        "DELETE FROM JobDetails WHERE job_id = ?"
+        "DELETE FROM ApplicantDetails WHERE applicant_id = ?"
     );
 
     // ============== binding the query here ================= //
