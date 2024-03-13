@@ -1,6 +1,26 @@
 <?php
+include("connection/");
+// ================== function to count the databse records here ============ //
+function countPatientRecords($conn) {
+    try {
+        $sqlCommand = "SELECT COUNT(*) AS total_records FROM JobDetails";
+        // =========== running the query here ==============//
+        $results = mysqli_query($conn, $sqlCommand);
+        // ============ checking is there available results ============ //
+        if ($results) {
+            // fetching the results as an associative array ========= //
+            $row = mysqli_fetch_assoc($results);
+            $totalRecords = $row["total_records"];
+
+            return $totalRecords;
+        }
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
 
 
+$totalRecords = countPatientRecords($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +47,13 @@
                                     <div class="main-dashboard-questions-title">
                                         <h1>questions</h1>
                                     </div>
+                                    <!-- ================ // ==================== // -->
                                     <div class="main-dashboard-questions-icon">
                                         <i class="bi bi-patch-question-fill"></i>
+                                    </div>
+                                    <!-- =================== // ================ // -->
+                                    <div class="main-dashboard-questions-counter">
+                                        <h1></h1>
                                     </div>
                                 </div>
                                 <!-- ================ // ================= // -->
