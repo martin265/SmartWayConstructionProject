@@ -124,39 +124,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             if (isset($_FILES["cv"]) && isset($_FILES["cover_letter"])) {
 
-                // File upload directory
-                $uploadDirectory = "uploads/";
-                // Extract first name and last name
-                $firstName = validateInputFields($_POST["first_name"]);
-                $lastName = validateInputFields($_POST["last_name"]);
+                $allowed_extensions = array('pdf', 'docx', 'txt');
+                $file_name = $_FILES['document_file']['name'];
+                $file_tmp = $_FILES['document_file']['tmp_name'];
+                $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
 
-                // Create a folder for each user based on their first name
-                $userFolder = $uploadDirectory . $firstName . '/';
+                // Check if the file extension is allowed
+                if (in_array(strtolower($file_extension), $allowed_extensions)) {
+                    // Read file data
+                    $data = file_get_contents($file_tmp);
 
-                if (!file_exists($userFolder)) {
-                    mkdir($userFolder, 0755, true); // Create the user's folder if it doesn't exist
+                    // Insert file data into database
+                    $sql = "INSERT INTO document_files (name, data) VALUES ('$file_name', '$data')";
+                    if ($conn->query($sql) === TRUE) {
+                        echo "Document file uploaded successfully.";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+                } else {
+                    echo "Error: Unsupported file type. Only PDF, DOCX, and TXT files are allowed.";
                 }
-
-                // Get file names
-                $cvFileName = $_FILES['cv']['name'];
-                $coverLetterFileName = $_FILES['cover_letter']['name'];
-
-                // Append first name and last name to file names
-                $cvFileNameWithNames = $firstName . '_' . $lastName . '_' . $cvFileName;
-                $coverLetterFileNameWithNames = $firstName . '_' . $lastName . '_' . $coverLetterFileName;
-
-                // Set file paths
-                $cvFilePath = $userFolder . $cvFileNameWithNames;
-                $coverLetterFilePath = $userFolder . $coverLetterFileNameWithNames;
-
-                // Move uploaded files to the specified directory
-                move_uploaded_file($_FILES['cv']['tmp_name'], $cvFilePath);
-                move_uploaded_file($_FILES['cover_letter']['tmp_name'], $coverLetterFilePath);
-
-                // Get only the file names without the directory path
-                $cvFileNameOnly = basename($cvFileNameWithNames);
-                $coverLetterFileNameOnly = basename($coverLetterFileNameWithNames);
-
                 // ========= creating an object for the applicant class here ======= //
                 $job_title = isset($conn, $_POST["job_title"]) ? mysqli_real_escape_string($conn, $_POST["job_title"]) : "";
                 $first_name = isset($conn, $_POST["first_name"]) ? mysqli_real_escape_string($conn, $_POST["first_name"]) : "";
