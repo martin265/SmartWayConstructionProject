@@ -372,5 +372,11 @@
 }
 
 .main-content-container .content-area .administrator-preview-documents .all-available-applications {
+    margin-top: 40px;
+}
+
+.main-content-container .content-area .administrator-preview-documents .all-available-applications .all-available-applicants-table {
     width: 100%;
+    margin: 10px;
+    border-radius: 10px;
 }

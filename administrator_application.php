@@ -44,36 +44,38 @@ $all_results = fetchAllApplicants($conn);
                             </div>
 
                             <div class="all-available-applications">
-                                <table id="applicant-details" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" class="text-capitalize">first name</th>
-                                            <th scope="col" class="text-capitalize">last name</th>
-                                            <th scope="col" class="text-capitalize">age</th>
-                                            <th scope="col" class="text-capitalize">gender</th>
-                                            <th scope="col" class="text-capitalize">phone_number</th>
-                                            <th scope="col" class="text-capitalize">home address</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- ============== looping through the results here ====== -->
-                                        <?php if ($all_results): ?>
-                                            <?php foreach($all_results as $single_record) {?>
-                                                <tr>
-                                                    <td><?php echo($single_record["first_name"]); ?></td>
-                                                    <td><?php echo($single_record["last_name"]); ?></td>
-                                                    <td><?php echo($single_record["age"]); ?></td>
-                                                    <td><?php echo($single_record["gender"]); ?></td>
-                                                    <td><?php echo($single_record["phone_number"]); ?></td>
-                                                    <td><?php echo($single_record["home_address"]); ?></td>
-                                                    <!-- ============ for the button here -->
-                                                </tr>
-                                            <?php }?>
-                                        <?php else: ?>
+                                <div class="all-available-applicants-table">
+                                    <table id="applicant-details" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-capitalize">first name</th>
+                                                <th scope="col" class="text-capitalize">last name</th>
+                                                <th scope="col" class="text-capitalize">age</th>
+                                                <th scope="col" class="text-capitalize">gender</th>
+                                                <th scope="col" class="text-capitalize">phone_number</th>
+                                                <th scope="col" class="text-capitalize">home address</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- ============== looping through the results here ====== -->
+                                            <?php if ($all_results): ?>
+                                                <?php foreach($all_results as $single_record) {?>
+                                                    <tr>
+                                                        <td><?php echo($single_record["first_name"]); ?></td>
+                                                        <td><?php echo($single_record["last_name"]); ?></td>
+                                                        <td><?php echo($single_record["age"]); ?></td>
+                                                        <td><?php echo($single_record["gender"]); ?></td>
+                                                        <td><?php echo($single_record["phone_number"]); ?></td>
+                                                        <td><?php echo($single_record["home_address"]); ?></td>
+                                                        <!-- ============ for the button here -->
+                                                    </tr>
+                                                <?php }?>
+                                            <?php else: ?>
 
-                                        <?php endif; ?>
-                                    </tbody>
-                                </table>
+                                            <?php endif; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
