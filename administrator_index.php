@@ -1,18 +1,20 @@
 <?php
-include("connection/");
+include("Connection/connect.php");
+$conn = $connection;
+
 // ================== function to count the databse records here ============ //
 function countPatientRecords($conn) {
     try {
-        $sqlCommand = "SELECT COUNT(*) AS total_records FROM JobDetails";
+        $sqlCommand = "SELECT COUNT(*) AS total_records FROM InterviewQuestionsDetails";
         // =========== running the query here ==============//
         $results = mysqli_query($conn, $sqlCommand);
         // ============ checking is there available results ============ //
         if ($results) {
             // fetching the results as an associative array ========= //
             $row = mysqli_fetch_assoc($results);
-            $totalRecords = $row["total_records"];
+            $totalQuestions = $row["total_records"];
 
-            return $totalRecords;
+            return $totalQuestions;
         }
     }catch(Exception $ex) {
         print($ex);
@@ -20,7 +22,7 @@ function countPatientRecords($conn) {
 }
 
 
-$totalRecords = countPatientRecords($conn);
+$totalQuestions = countPatientRecords($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
