@@ -98,8 +98,21 @@ $totalJobs = countJobRecords($conn);
                                 </div>
                                
                                 <div class="main-dashboard-applicants">
-
+                                    <div class="main-dashboard-applicants-title">
+                                        <h1>Applicants</h1>
+                                    </div>
+                                    <!-- ================ // ==================== // -->
+                                    <div class="main-dashboard-applicants-icon">
+                                        <i class="fi fi-sr-poll-h"></i>
+                                    </div>
+                                    <!-- =================== // ================ // -->
+                                    <div class="main-dashboard-applicants-counter">
+                                        <h1>
+                                            Total Applicants <?php echo($totalJobs); ?>
+                                        </h1>
+                                    </div>
                                 </div>
+                                <!-- =============== // =============== // -->
                             </div>
                         </div>
                     </div>
