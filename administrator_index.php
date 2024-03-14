@@ -20,9 +20,28 @@ function countPatientRecords($conn) {
         print($ex);
     }
 }
-
-
 $totalQuestions = countPatientRecords($conn);
+
+// ============= function to fetching all the available jobs here ========= //
+function countPatientRecords($conn) {
+    try {
+        $sqlCommand = "SELECT COUNT(*) AS total_records FROM InterviewQuestionsDetails";
+        // =========== running the query here ==============//
+        $results = mysqli_query($conn, $sqlCommand);
+        // ============ checking is there available results ============ //
+        if ($results) {
+            // fetching the results as an associative array ========= //
+            $row = mysqli_fetch_assoc($results);
+            $totalQuestions = $row["total_records"];
+
+            return $totalQuestions;
+        }
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
+$totalQuestions = countPatientRecords($conn);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +80,21 @@ $totalQuestions = countPatientRecords($conn);
                                     </div>
                                 </div>
                                 <!-- ================ // ================= // -->
-                                <div class="main-dashboard-jobs">2</div>
+                                <div class="main-dashboard-jobs">
+                                     <div class="main-dashboard-questions-title">
+                                        <h1>jobs</h1>
+                                    </div>
+                                    <!-- ================ // ==================== // -->
+                                    <div class="main-dashboard-questions-icon">
+                                        <i class="fi fi-sr-briefcase"></i>
+                                    </div>
+                                    <!-- =================== // ================ // -->
+                                    <div class="main-dashboard-questions-counter">
+                                        <h1>
+                                            <?php echo($totalQuestions); ?>
+                                        </h1>
+                                    </div>
+                                </div>
                                
                                 <div class="main-dashboard-applicants">3</div>
                             </div>
