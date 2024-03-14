@@ -445,7 +445,26 @@
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
     width: 350px;
     height: auto;
-    border: 2px solid #FF7451;
-    margin: 10px;
+    border: 2px solid #212121;
+    margin-top: 30px;
     border-radius: 9px;
+}
+
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-title h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    padding-top: 20px;
+    color: #212121;
+}
+
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-icon{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Manrope", sans-serif;
+}
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-counter h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Manrope", sans-serif;
 }
