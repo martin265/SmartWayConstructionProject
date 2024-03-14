@@ -76,13 +76,13 @@ $totalJobs = countJobRecords($conn);
                                     <!-- =================== // ================ // -->
                                     <div class="main-dashboard-questions-counter">
                                         <h1>
-                                            <?php echo($totalQuestions); ?>
+                                            Total Questions <?php echo($totalQuestions); ?>
                                         </h1>
                                     </div>
                                 </div>
                                 <!-- ================ // ================= // -->
                                 <div class="main-dashboard-jobs">
-                                     <div class="main-dashboard-jobs-title">
+                                    <div class="main-dashboard-jobs-title">
                                         <h1>jobs</h1>
                                     </div>
                                     <!-- ================ // ==================== // -->
@@ -92,12 +92,14 @@ $totalJobs = countJobRecords($conn);
                                     <!-- =================== // ================ // -->
                                     <div class="main-dashboard-jobs-counter">
                                         <h1>
-                                            <?php echo($totalJobs); ?>
+                                            Total Jobs <?php echo($totalJobs); ?>
                                         </h1>
                                     </div>
                                 </div>
                                
-                                <div class="main-dashboard-applicants">3</div>
+                                <div class="main-dashboard-applicants">
+
+                                </div>
                             </div>
                         </div>
                     </div>

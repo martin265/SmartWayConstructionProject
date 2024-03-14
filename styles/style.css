@@ -420,7 +420,7 @@
     width: 350px;
     height: auto;
     border: 2px solid #212121;
-    margin-top: 30px;
+    margin: 20px;
     border-radius: 9px;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions .main-dashboard-questions-title h1 {
@@ -437,7 +437,7 @@
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions .main-dashboard-questions-counter h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-family: "Manrope", sans-serif;
 }
 /* ==================== // =============================== // */
@@ -446,7 +446,7 @@
     width: 350px;
     height: auto;
     border: 2px solid #212121;
-    margin-top: 30px;
+    margin: 20px;
     border-radius: 9px;
 }
 
@@ -465,6 +465,6 @@
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-counter h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     font-family: "Manrope", sans-serif;
 }
