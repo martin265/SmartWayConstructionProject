@@ -55,7 +55,9 @@ $totalQuestions = countPatientRecords($conn);
                                     </div>
                                     <!-- =================== // ================ // -->
                                     <div class="main-dashboard-questions-counter">
-                                        <h1></h1>
+                                        <h1>
+                                            <?php echo($totalQuestions); ?>
+                                        </h1>
                                     </div>
                                 </div>
                                 <!-- ================ // ================= // -->
