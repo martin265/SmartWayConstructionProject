@@ -32,15 +32,16 @@ function countJobRecords($conn) {
         if ($results) {
             // fetching the results as an associative array ========= //
             $row = mysqli_fetch_assoc($results);
-            $totalQuestions = $row["total_records"];
+            $totalJobs = $row["total_records"];
 
-            return $totalQuestions;
+            return $totalJobs;
         }
     }catch(Exception $ex) {
         print($ex);
     }
 }
-$totalQuestions = countJobRecords($conn);
+
+$totalJobs = countJobRecords($conn);
 
 ?>
 <!DOCTYPE html>
@@ -91,7 +92,7 @@ $totalQuestions = countJobRecords($conn);
                                     <!-- =================== // ================ // -->
                                     <div class="main-dashboard-questions-counter">
                                         <h1>
-                                            <?php echo($totalQuestions); ?>
+                                            <?php echo($totalJobs); ?>
                                         </h1>
                                     </div>
                                 </div>
