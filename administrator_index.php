@@ -63,6 +63,11 @@ $totalJobs = countJobRecords($conn);
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="main-dashboard shadow-sm">
+                            <div class="main-dashboard-title">
+                                <h1>
+                                    <span class="pe-2"><i class="fi fi-tr-objects-column"></i></span>dashboard
+                                </h1>
+                            </div>
                             <div class="main-dashboard-cards">
                                 <!-- =========== the cards for the main dashboard -->
                                 <div class="main-dashboard-questions">

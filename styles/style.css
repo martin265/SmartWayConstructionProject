@@ -409,6 +409,14 @@
     margin-top: 10px;
 }
 
+.main-content-container .content-area .main-dashboard .main-dashboard-title h1 {
+    padding-left: 20px;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    font-size: 30px;
+}
+
 .main-content-container .content-area .main-dashboard .main-dashboard-cards {
     display: flex;
     flex-flow: row wrap;
@@ -490,6 +498,7 @@
     padding-top: 20px;
     color: #E52E6A;
 }
+
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-applicants .main-dashboard-applicants-icon{
     text-align: center;
