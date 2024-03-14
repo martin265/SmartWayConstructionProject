@@ -419,7 +419,7 @@
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions {
     width: 350px;
     height: auto;
-    border: 2px solid #212121;
+    border: 2px solid #7F4D3E;
     margin: 10px;
     border-radius: 9px;
 }
@@ -428,24 +428,27 @@
     text-transform: capitalize;
     font-family: "Manrope", sans-serif;
     padding-top: 20px;
-    color: #212121;
+    color: #7F4D3E;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions .main-dashboard-questions-icon{
     text-align: center;
     font-size: 50px;
     font-family: "Manrope", sans-serif;
+    color: #7F4D3E;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions .main-dashboard-questions-counter h1 {
     text-align: center;
     font-size: 30px;
     font-family: "Manrope", sans-serif;
+    color: #7F4D3E;
 }
+
 /* ==================== // =============================== // */
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
     width: 350px;
     height: auto;
-    border: 2px solid #212121;
+    border: 2px solid #0050C1;
     margin: 10px;
     border-radius: 9px;
 }
@@ -455,25 +458,27 @@
     text-transform: capitalize;
     font-family: "Manrope", sans-serif;
     padding-top: 20px;
-    color: #212121;
+    color: #0050C1;
 }
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-icon{
     text-align: center;
     font-size: 50px;
     font-family: "Manrope", sans-serif;
+    color: #0050C1;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs .main-dashboard-jobs-counter h1 {
     text-align: center;
     font-size: 30px;
     font-family: "Manrope", sans-serif;
+    color: #0050C1;
 }
 
 /* =================== applicants css here ================ */
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-applicants {
     width: 350px;
     height: auto;
-    border: 2px solid #212121;
+    border: 2px solid #E52E6A;
     margin: 10px;
     border-radius: 9px;
 }
@@ -483,16 +488,18 @@
     text-transform: capitalize;
     font-family: "Manrope", sans-serif;
     padding-top: 20px;
-    color: #212121;
+    color: #E52E6A;
 }
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-applicants .main-dashboard-applicants-icon{
     text-align: center;
     font-size: 50px;
     font-family: "Manrope", sans-serif;
+    color: #E52E6A;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-applicants .main-dashboard-applicants-counter h1 {
     text-align: center;
     font-size: 30px;
     font-family: "Manrope", sans-serif;
+    color: #E52E6A;
 }
