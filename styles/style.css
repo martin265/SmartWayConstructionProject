@@ -425,7 +425,7 @@
 
 /* =========================== // =========================== // =================== // */
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-questions {
-    width: 330px;
+    width: 350px;
     height: auto;
     border: 2px solid #7F4D3E;
     margin: 10px;
@@ -454,7 +454,7 @@
 /* ==================== // =============================== // */
 
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-jobs {
-    width: 330px;
+    width: 350px;
     height: auto;
     border: 2px solid #0050C1;
     margin: 10px;
@@ -484,7 +484,7 @@
 
 /* =================== applicants css here ================ */
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .main-dashboard-applicants {
-    width: 330px;
+    width: 350px;
     height: auto;
     border: 2px solid #E52E6A;
     margin: 10px;
