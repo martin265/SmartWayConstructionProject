@@ -122,6 +122,10 @@ $totalJobs = countJobRecords($conn);
                                 <div class="recent-activity">
                                     <h1>recent activity</h1>
                                 </div>
+
+                                <div class="recent-activity-table">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>

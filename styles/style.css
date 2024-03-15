@@ -409,7 +409,12 @@
     margin-top: 10px;
 }
 .main-content-container .content-area .main-dashboard .main-dashboard-cards .recent-activity h1 {
-    padding-top: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+    padding-top: 20px;
+    color: #0050C1;
+    font-size: 30px;
 }
 
 .main-content-container .content-area .main-dashboard .main-dashboard-title h1 {
