@@ -417,6 +417,12 @@
     font-size: 30px;
 }
 
+.main-content-container .content-area .main-dashboard .all-available-applications {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
 .main-content-container .content-area .main-dashboard .main-dashboard-title h1 {
     padding-left: 40px;
     padding-top: 30px;
