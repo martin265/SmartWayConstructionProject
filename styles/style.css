@@ -408,6 +408,9 @@
     border-radius: 8px;
     margin-top: 10px;
 }
+.main-content-container .content-area .main-dashboard .main-dashboard-cards .recent-activity h1 {
+    padding-top: 30px;
+}
 
 .main-content-container .content-area .main-dashboard .main-dashboard-title h1 {
     padding-left: 40px;
