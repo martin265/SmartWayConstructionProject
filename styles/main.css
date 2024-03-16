@@ -22,22 +22,6 @@ body {
     background: linear-gradient(to left, #0078D9, #0050C1);
 }
 
-.top-navigation-bar ul {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row wrap;
-}
-.top-navigation-bar ul li {
-    padding: 25px 10px;
-}
-.top-navigation-bar ul li a{
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    text-transform: capitalize;
-    font-family: 'Manrope', sans-serif;
-    font-family: 'Roboto', sans-serif;
-}
 
 
 /* ============== css for the jobs page will be here ========= */
