@@ -85,7 +85,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
             <!-- the navigation item for the jobs section -->
             <div class="navigation-item">
-                <i class="bi bi-file-earmark-bar-graph"></i>
+                <i class="bi bi-filetype-doc"></i>
                 <a href="administrator_report.php">reports</a>
             </div>
             
