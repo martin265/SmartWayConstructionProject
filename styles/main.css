@@ -35,6 +35,12 @@ body {
 }
 
 
+/* ============== css for the landing card */
+.main-landing-page-card {
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to left, "", "");
+}
 
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {

@@ -80,7 +80,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
-                    
+                    <div class="main-landing-page-card">
+                        
+                    </div>
                 </div>
             </div>
         </div>
