@@ -24,6 +24,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <!-- ============= css link here ========== -->
     <link rel="stylesheet" href="Styles/style.css">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <!-- other links will be here -->
     <!-- Include Bootstrap DateTimePicker CSS and JavaScript -->
     <!-- Bootstrap CSS -->
