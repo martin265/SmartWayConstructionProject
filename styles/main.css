@@ -17,7 +17,16 @@ body {
 }
 
 /* ========== css for the navigation bar */
+.top-navigation-bar .navbar a img {
+    width: 50px;
+    height: 50px;
+}
 
+.top-navigation-bar .navbar .collapse ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Manrope', sans-serif;
+}
 
 
 /* ============== css for the jobs page will be here ========= */
