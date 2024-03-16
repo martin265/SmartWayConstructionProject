@@ -46,11 +46,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </head>
 <body>
     <div class="top-navigation-bar">
-        <ul>
-            <li><a href="applicant_index.php">home</a></li>
-            <li><a href="applicant_jobs.php">jobs</a></li>
-            <li><a href="applicant_interviews.php">interviews</a></li>
-        </ul>
+        <div class="navigation-logo">
+            <i class="fi fi-sr-tools"></i>
+        </div>
+        <!-- ============ the navigation logo for the system will be here -->
+        <div class="site-links">
+            <ul>
+                <li><a href="applicant_index.php">home</a></li>
+                <li><a href="applicant_jobs.php">jobs</a></li>
+                <li><a href="applicant_interviews.php">interviews</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

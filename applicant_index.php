@@ -15,7 +15,7 @@
 
     <!-- ============ the backgrounf image for the website will be here ======== -->
     <div class="landing-page">
-        <img src="assets/landing/pexels-engin-akyurt-2036686.jpg" alt="">
+        
     </div>
     
 </body>
