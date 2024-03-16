@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 /* ================ css for the side navigation will be here =========== */
@@ -450,9 +450,10 @@ body {
 
 /* ============== CSS FOR THE LANDING PAGE HERE =============== */
 .landing-page {
-    background: url("styles/pexels-anamul-rezwan-1078884.jpg");
-    height: 100vh;
+    background: url("https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg?auto=compress&cs=tinysrgb&w=600");
     width: 100%;
-    background-position: center;
-    background-size: cover;
+    height: 100vh;
+    /* You can adjust background properties as needed */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire container */
+    background-position: center; /* Centers the background image within the container */
 }
