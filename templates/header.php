@@ -78,7 +78,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         <!-- ============ the landing image for the system will be here -->
         <div class="landing-page-img">
-            <img src="https://images.pexels.com/photos/2138126/pexels-photo-2138126.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+            <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
         </div>
     </div>
 </body>
