@@ -447,3 +447,8 @@ body {
     color: #FFB84A;
     text-transform: capitalize;
 }
+
+/* ============== CSS FOR THE LANDING PAGE HERE =============== */
+.landing-page {
+    background: url("assets/landing/pexels-anamul-rezwan-1078884.jpg");
+}
