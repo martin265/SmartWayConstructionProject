@@ -46,7 +46,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <body>
     <div class="top-navigation-bar">
         <ul>
-            <li><a href="">home</a></li>
+            <li><a href="applicant_index.php">home</a></li>
             <li><a href="applicant_jobs.php">jobs</a></li>
             <li><a href="applicant_interviews.php">interviews</a></li>
         </ul>

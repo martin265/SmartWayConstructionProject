@@ -450,5 +450,9 @@ body {
 
 /* ============== CSS FOR THE LANDING PAGE HERE =============== */
 .landing-page {
-    background: url("assets/landing/pexels-anamul-rezwan-1078884.jpg");
+    background: url("styles/pexels-anamul-rezwan-1078884.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
