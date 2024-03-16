@@ -24,6 +24,12 @@ body {
 
 .top-navigation-bar .navbar .collapse ul li a{
     font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+}
+
+.top-navigation-bar .navbar .collapse span {
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Manrope', sans-serif;
 }

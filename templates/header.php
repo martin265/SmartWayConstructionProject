@@ -75,6 +75,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </div>
         </nav>
+
+        <!-- ============ the landing image for the system will be here -->
+        <div class="landing-page-img">
+            
+        </div>
     </div>
 </body>
 </html>
