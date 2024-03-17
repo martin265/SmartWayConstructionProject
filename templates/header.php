@@ -58,15 +58,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!-- ================= // ================= // -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="applicant_index.php">Home</a>
                         </li>
                         <!-- ================ the other navigation element will be here =====  -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="applicant_jobs.php">Jobs</a>
                         </li>
                         <!-- =================== // ================== // -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="applicant_interviews.php">Interviews.</a>
                         </li>
                     </ul>
                     <span class="navbar-text text-bold">
@@ -80,8 +80,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="main-landing-page-card">
-                        
+                    <div class="main-landing-page">
+                        <div class="landing-page-title">
+                            <h1></h1>
+                        </div>
                     </div>
                 </div>
             </div>
