@@ -38,10 +38,10 @@ body {
 /* ============== css for the landing card */
 .main-landing-page .landing-page-title h1{
     text-align: center;
-    font-family: 'Manrope', sans-serif;
-    text-transform: capitalize;
     padding-top: 50px;
-    font-weight: bolder;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
 }
 
 .main-landing-page .landing-page-info {
@@ -54,6 +54,10 @@ body {
 .main-landing-page .landing-page-info .side-bar-information {
     width: 400px;
     height: auto;
+}
+
+.main-landing-page .landing-page-info .side-bar-information img {
+    width: 300px;
 }
 
 .main-landing-page .landing-page-info .side-bar-icon {
