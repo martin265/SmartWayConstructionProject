@@ -84,10 +84,15 @@ body {
     font-size: 20px;
     padding: 20px;
     line-height: 30px;
+    font-weight: bold;
 }
 
 .main-landing-page .key-features-panel h1 {
     text-align: center;
+    padding-top: 50px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
 }
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
