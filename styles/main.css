@@ -76,8 +76,10 @@ body {
 
 .main-landing-page .landing-page-info .side-bar-icon .side-bar-introduction p {
     text-align: center;
-    padding-top: 20px;
     color: #212121;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 30px;
 }
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
