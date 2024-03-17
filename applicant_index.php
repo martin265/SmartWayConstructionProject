@@ -27,8 +27,19 @@
                         <div class="side-bar-information">
                             <h1>hello</h1>
                         </div>
-                        <div class="side-bar-icon">
-                            <h1>hello world</h1>
+
+                        <div class="side-bar-icon shadow-sm">
+
+                            <div class="side-bar-icon-intro">
+                                <h1>background</h1>
+                            </div>
+
+                            <div class="side-bar-introduction">
+                                <p>
+                                    
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
