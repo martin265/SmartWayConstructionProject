@@ -76,25 +76,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             </div>
         </nav>
 
-        <!-- ============ the landing image for the system will be here -->
-        <div class="container-xxl">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="main-landing-page">
-                        <div class="landing-page-title">
-                            <h1>welcome to Smartway Construction</h1>
-                        </div>
-
-                        <div class="landing-page-info">
-                            <div class="side-bar-information">
-                                
-                            </div>
-                            <div class="side-bar-icon"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </div>
 </body>
 </html>
