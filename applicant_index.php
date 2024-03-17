@@ -25,7 +25,7 @@
 
                     <div class="landing-page-info">
                         <div class="side-bar-information mt-3">
-                            <img src="https://cdn-icons-png.flaticon.com/256/9818/9818536.png" alt="">
+                            <img src="https://cdn-icons-png.flaticon.com/256/9818/9818555.png" alt="">
                         </div>
 
                         <div class="side-bar-icon shadow-sm">
