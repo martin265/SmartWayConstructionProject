@@ -57,13 +57,13 @@
 
                             <div class="key-features-panel-card-jobs-2">
                                 <div class="key-features-image">
-                                    <i class="fi fi-sr-briefcase"></i>
+                                    <i class="fi fi-sr-messages-question"></i>
                                 </div>
                             </div>
 
                             <div class="key-features-panel-card-jobs-3">
                                 <div class="key-features-image">
-                                    <i class="fi fi-sr-briefcase"></i>
+                                    <i class="fi fi-sr-feedback-review"></i>
                                 </div>
                             </div>
                         </div>

@@ -108,7 +108,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #212121, #212121);
+    background: linear-gradient(to right, #0D47A1, #0D47A1);
     margin: 10px;
 }
 
@@ -116,7 +116,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #212121, #212121);
+    background: linear-gradient(to right, #7279AD, #7279AD);
     margin: 10px;
 } 
 
@@ -124,7 +124,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #212121, #212121);
+    background: linear-gradient(to right, #835CAF, #835CAF);
     margin: 10px;
 }
 
