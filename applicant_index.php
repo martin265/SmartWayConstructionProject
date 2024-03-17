@@ -55,7 +55,7 @@
                                 </div>
 
                                 <div class="key-features-text">
-                                    <h1>job sourcing</h1>
+                                    <p>job sourcing</p>
                                 </div>
                             </div>
 

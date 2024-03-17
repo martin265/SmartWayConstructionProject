@@ -151,6 +151,14 @@ body {
     color: white;
 }
 
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-1 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
     text-align: center;
