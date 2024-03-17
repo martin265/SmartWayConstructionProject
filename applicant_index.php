@@ -28,10 +28,7 @@
                             <h1>hello</h1>
                         </div>
                         <div class="side-bar-icon">
-                            <p>
-                                We're thrilled to have you here, aspiring candidates eager to embark on a rewarding journey with us. At SmartWay Construction, we're not just about constructing buildings; we're about constructing futures, opportunities, and dreams.
-                                Whether you're a seasoned professional or just starting out in the construction industry, we're committed to providing a platform where your skills, passion, and dedication can thrive. Our projects are more than just structures; they're testaments to our commitment to excellence and innovation.
-                            </p>
+                            <h1>hello world</h1>
                         </div>
                     </div>
                 </div>

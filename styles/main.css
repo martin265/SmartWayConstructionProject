@@ -44,7 +44,7 @@ body {
     font-weight: bolder;
 }
 
-.main-landing-page .landing-page-title .landing-page-info {
+.main-landing-page .landing-page-info {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
