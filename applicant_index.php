@@ -63,11 +63,19 @@
                                 <div class="key-features-image">
                                     <i class="fi fi-sr-messages-question"></i>
                                 </div>
+
+                                <div class="key-features-text">
+                                    <p>online interviews</p>
+                                </div>
                             </div>
 
                             <div class="key-features-panel-card-jobs-3">
                                 <div class="key-features-image">
                                     <i class="fi fi-sr-feedback-review"></i>
+                                </div>
+
+                                <div class="key-features-text">
+                                    <p>job reviews</p>
                                 </div>
                             </div>
                         </div>
