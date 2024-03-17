@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="col-lg-12">
                     <div class="main-landing-page">
                         <div class="landing-page-title">
-                            <h1></h1>
+                            <h1>welcome to Smartway Construction</h1>
                         </div>
                     </div>
                 </div>
