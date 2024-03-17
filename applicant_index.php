@@ -79,6 +79,40 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- ==================== // ======================= // -->
+                        <div class="key-features-panel-cards">
+                            <div class="key-features-panel-card-jobs-4">
+                                <div class="key-features-image">
+                                    <i class="fi fi-sr-envelope-dot"></i>
+                                </div>
+
+                                <div class="key-features-text">
+                                    <p>job notifications</p>
+                                </div>
+                            </div>
+
+                            <div class="key-features-panel-card-jobs-5">
+                                <div class="key-features-image">
+                                    <i class="fi fi-sr-splotch"></i>
+                                </div>
+
+                                <div class="key-features-text">
+                                    <p>auto marker</p>
+                                </div>
+                            </div>
+
+                            <div class="key-features-panel-card-jobs-6">
+                                <div class="key-features-image">
+                                    <i class="fi fi-bs-location-alt"></i>
+                                </div>
+
+                                <div class="key-features-text">
+                                    <p>application tracking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============= // ============== // -->
                     </div>
                 </div>
             </div>

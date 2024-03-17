@@ -99,7 +99,7 @@ body {
 .main-landing-page .key-features-panel .key-features-panel-cards {
     display: flex;
     flex-flow: row wrap;
-    margin-top: 60px;
+    margin-top: 20px;
     justify-content: center;
 }
 
@@ -152,6 +152,23 @@ body {
 }
 
 .main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-1 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-2 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-3 .key-features-text p {
     text-align: center;
     text-transform: capitalize;
     color: white;
