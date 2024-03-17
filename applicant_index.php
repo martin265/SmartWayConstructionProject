@@ -53,6 +53,10 @@
                                 <div class="key-features-image">
                                     <i class="fi fi-sr-briefcase"></i>
                                 </div>
+
+                                <div class="key-features-text">
+                                    <h1>job sourcing</h1>
+                                </div>
                             </div>
 
                             <div class="key-features-panel-card-jobs-2">
