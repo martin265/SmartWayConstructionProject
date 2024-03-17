@@ -78,10 +78,7 @@
                                     <p>job reviews</p>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- ==================== // ======================= // -->
-                        <div class="key-features-panel-cards">
                             <div class="key-features-panel-card-jobs-4">
                                 <div class="key-features-image">
                                     <i class="fi fi-sr-envelope-dot"></i>
@@ -111,7 +108,11 @@
                                     <p>application tracking</p>
                                 </div>
                             </div>
+
+
                         </div>
+
+                        <!-- ==================== // ======================= // -->
                         <!-- ============= // ============== // -->
                     </div>
                 </div>
