@@ -85,6 +85,10 @@ body {
     padding: 20px;
     line-height: 30px;
 }
+
+.main-landing-page .key-features-panel h1 {
+    text-align: center;
+}
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
     text-align: center;
