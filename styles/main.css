@@ -94,6 +94,14 @@ body {
     color: #0050C1;
     font-weight: bold;
 }
+
+/* ========== css for the available features here ======== */
+.main-landing-page .key-features-panel .key-features-panel-cards {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
     text-align: center;

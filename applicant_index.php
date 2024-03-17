@@ -47,6 +47,12 @@
                     <!-- ============ the key features panel for the website ======== -->
                     <div class="key-features-panel">
                         <h1>available features</h1>
+
+                        <div class="key-features-panel-cards">
+                            <div class="key-features-panel-card-jobs">1</div>
+                            <div class="key-features-panel-card-jobs">2</div>
+                            <div class="key-features-panel-card-jobs">3</div>
+                        </div>
                     </div>
                 </div>
             </div>
