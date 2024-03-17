@@ -129,6 +129,27 @@ body {
 }
 
 
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-1 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-2 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-3 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
 
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
