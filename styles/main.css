@@ -99,6 +99,14 @@ body {
 .main-landing-page .key-features-panel .key-features-panel-cards {
     display: flex;
     flex-flow: row wrap;
+    margin-top: 60px;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-1 {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
 
