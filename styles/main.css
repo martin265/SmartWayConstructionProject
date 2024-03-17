@@ -44,6 +44,12 @@ body {
     font-weight: bolder;
 }
 
+.main-landing-page .landing-page-title .landing-page-info p {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
     text-align: center;
