@@ -36,17 +36,11 @@ body {
 
 
 /* ============== css for the landing card */
-.main-landing-page-card {
-    width: 100%;
-    border-radius: 10px;
-    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
-    height: auto;
-    margin-top: 30px;
-}
-
-.main-landing-page-card .main-landing-page-card-img img {
-    width: 100%;
-    height: 700px;
+.main-landing-page .landing-page-title h1{
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    text-transform: capitalize;
+    padding-top: 50px;
 }
 
 /* ============== css for the jobs page will be here ========= */
