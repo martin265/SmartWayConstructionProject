@@ -145,7 +145,9 @@ $all_results = getAllAvailableJobs($conn);
                                     </div>
 
                                     <!-- Button trigger modal -->
-                                    <a href="applicant_apply_job.php?id=<?php echo($single_result["job_id"]); ?>" class="btn btn-lg btn-warning">Apply Job</a>
+                                    <div class="job mt-2 ms-2 mb-4">
+                                        <a href="applicant_apply_job.php?id=<?php echo($single_result["job_id"]); ?>" class="btn btn-lg btn-warning">Apply Job</a>
+                                    </div>
                                     <!-- ============= the modal for the -->
                                 </div>
                             <?php }?>
