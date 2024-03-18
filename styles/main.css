@@ -176,6 +176,80 @@ body {
     font-weight: bolder;
 }
 
+
+/* ========================== //  the other remaining cards will be here =============  */
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-4 {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    background: linear-gradient(to right, #0D47A1, #0D47A1);
+    margin: 10px;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-5 {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    background: linear-gradient(to right, #7279AD, #7279AD);
+    margin: 10px;
+} 
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-6 {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    background: linear-gradient(to right, #835CAF, #835CAF);
+    margin: 10px;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-4 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-5 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-6 .key-features-image {
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    color: white;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-4 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-5 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.main-landing-page .key-features-panel .key-features-panel-cards .key-features-panel-card-jobs-6 .key-features-text p {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 /* ============== css for the jobs page will be here ========= */
 .applicant-jobs-page .applicant-jobs-page-title h1 {
     text-align: center;
