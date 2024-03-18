@@ -1,6 +1,24 @@
 <?php
+include("Connection/connect.php");
+$conn = $connection;
 
+// function to fetch the records here ======= //
+function fetchAllApplicants($conn) {
+    try {
+        $sqlCommand = "SELECT * FROM ApplicantDetails";
+        // ======== getting the results here ======== //
+        $results = mysqli_query($conn, $sqlCommand);
+        // ======= converting the results into an array here ========= //
+        $all_results = mysqli_fetch_all($results, MYSQLI_ASSOC);
+        
+        return $all_results;
 
+    }catch(Exception $ex) {
+        print($ex);
+    }
+}
+
+$all_results = fetchAllApplicants($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +43,7 @@
                             </div>
                             <!-- ============ the table for the applicants here ======= // -->
                             <div class="applicants-table">
-                                
+
                             </div>
 
                         </div>
