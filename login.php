@@ -3,11 +3,11 @@ session_start();
 include('Connection/connect.php');
 $conn = $connection;
 
-createJobDetailsTable($connection);
-createInterviewQuestionsTable($connection);
-createInterviewAnswersTable($connection);
-createApplicantDetailsTable($connection);
-createRegisterTable($connection);
+createJobDetailsTable($conn);
+createInterviewQuestionsTable($conn);
+createInterviewAnswersTable($conn);
+createApplicantDetailsTable($conn);
+createRegisterTable($conn);
 
 // function to validate the fields
 function validateInputFields($data) {
@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     else {
         if (array_filter($all_errors)) {
             $error_message = "something is wrong with the form";
-            print($error_message);
         }
         else {
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
@@ -45,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                 // Check if the role is valid
                 if (!in_array($role, ["Administrator", "Applicant"])) {
                     $error_message = "Invalid role selected";
-                    print($error_message);
                     exit;
                 }
             
