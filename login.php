@@ -3,7 +3,11 @@ session_start();
 include('Connection/connect.php');
 $conn = $connection;
 
-
+createJobDetailsTable($connection);
+createInterviewQuestionsTable($connection);
+createInterviewAnswersTable($connection);
+createApplicantDetailsTable($connection);
+createRegisterTable($connection);
 
 // function to validate the fields
 function validateInputFields($data) {

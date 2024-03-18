@@ -139,9 +139,9 @@ function createRegisterTable($connection) {
         //echo("table created successfully");
     }
 }
-createJobDetailsTable($connection);
-createInterviewQuestionsTable($connection);
-createInterviewAnswersTable($connection);
-createApplicantDetailsTable($connection);
-createRegisterTable($connection);
+// createJobDetailsTable($connection);
+// createInterviewQuestionsTable($connection);
+// createInterviewAnswersTable($connection);
+// createApplicantDetailsTable($connection);
+// createRegisterTable($connection);
 ?>
