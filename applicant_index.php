@@ -101,11 +101,11 @@
 
                             <div class="key-features-panel-card-jobs-6">
                                 <div class="key-features-image">
-                                    <i class="fi fi-bs-location-alt"></i>
+                                    <i class="fi fi-sr-pen-clip"></i>
                                 </div>
 
                                 <div class="key-features-text">
-                                    <p>application tracking</p>
+                                    <p>auto marker</p>
                                 </div>
                             </div>
 

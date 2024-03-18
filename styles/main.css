@@ -182,7 +182,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #0D47A1, #0D47A1);
+    background: linear-gradient(to right, #47817F, #47817F);
     margin: 10px;
 }
 
@@ -190,7 +190,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #7279AD, #7279AD);
+    background: linear-gradient(to right, #7F4D3E, #7F4D3E);
     margin: 10px;
 } 
 
@@ -198,7 +198,7 @@ body {
     width: 400px;
     height: auto;
     border-radius: 8px;
-    background: linear-gradient(to right, #835CAF, #835CAF);
+    background: linear-gradient(to right, #E6568D, #E6568D);
     margin: 10px;
 }
 
