@@ -23,6 +23,11 @@
                             <div class="administrator-reports-page-title">
                                 <h1>send progress and notifications</h1>
                             </div>
+                            <!-- ============ the table for the applicants here ======= // -->
+                            <div class="applicants-table">
+                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
