@@ -534,3 +534,11 @@
     border-radius: 8px;
     margin-top: 10px;
 }
+
+.administrator-reports-page .administrator-reports-page-title h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-transform: capitalize;
+    color: #0050C1;
+    font-weight: bold;
+}
