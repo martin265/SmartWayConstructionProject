@@ -529,3 +529,8 @@
 
 
 /* ================ CSS FOR THE REPORTS PAGE ========== */
+.administrator-reports-page  {
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
+    border-radius: 8px;
+    margin-top: 10px;
+}
