@@ -44,7 +44,7 @@ function createJobDetailsTable($connection) {
     // ========== running the query here =========== //
     $results = mysqli_query($connection, $sqlCommand);
     if ($results) {
-        echo("table created successfully");
+        //echo("table created successfully");
     }
 }
 
@@ -69,7 +69,7 @@ function createInterviewQuestionsTable($connection) {
     // ========== running the query here =========== //
     $results = mysqli_query($connection, $sqlCommand);
     if ($results) {
-        echo("table created successfully");
+        //echo("table created successfully");
     }
 }
 
@@ -93,7 +93,7 @@ function createInterviewAnswersTable($connection) {
     // ========== running the query here =========== //
     $results = mysqli_query($connection, $sqlCommand);
     if ($results) {
-        echo("table created successfully");
+        //echo("table created successfully");
     }
 }
 
@@ -119,7 +119,7 @@ function createApplicantDetailsTable($connection) {
     // ========== running the query here =========== //
     $results = mysqli_query($connection, $sqlCommand);
     if ($results) {
-        echo("table created successfully");
+        //echo("table created successfully");
     }
 }
 
@@ -136,12 +136,12 @@ function createRegisterTable($connection) {
     // ========== running the query here =========== //
     $results = mysqli_query($connection, $sqlCommand);
     if ($results) {
-        echo("table created successfully");
+        //echo("table created successfully");
     }
 }
-// createJobDetailsTable($connection);
-//createInterviewQuestionsTable($connection);
-//createInterviewAnswersTable($connection);
-//createApplicantDetailsTable($connection);
-//createRegisterTable($connection);
+createJobDetailsTable($connection);
+createInterviewQuestionsTable($connection);
+createInterviewAnswersTable($connection);
+createApplicantDetailsTable($connection);
+createRegisterTable($connection);
 ?>

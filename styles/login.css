@@ -81,7 +81,7 @@ body {
     margin-bottom: 30px;
 }
 
-.main-register-page .success-message-panel {
+.main-register-page .center-login-panel .success-message-panel {
     display: flex;
     justify-content: center;
 }

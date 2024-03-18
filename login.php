@@ -4,6 +4,7 @@ include('Connection/connect.php');
 $conn = $connection;
 
 
+
 // function to validate the fields
 function validateInputFields($data) {
     $data = trim($data);
@@ -67,11 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                         }
                     } else {
                         $error_message = "Invalid username or password";
-                        print($error_message);
                     }
                 } else {
                     $error_message = "Invalid username or password";
-                    print($error_message);
                 }
                 
             }
@@ -129,6 +128,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 
                         <div class="center-login-panel-icon">
                             <i class="bi bi-shield-lock"></i>
+                        </div>
+
+                        <div class="success-message-panel d-flex justify-center">
+                            <?php if (isset($success_message)) : ?>
+                                <div id="successAlert" class="alert alert-success w-50 fw-bold text-uppercase" role="alert">
+                                    <?php echo $success_message; ?>
+                                </div>
+                                <script>
+                                    // Automatically dismiss the success alert after 5 seconds
+                                    setTimeout(function() {
+                                        document.getElementById("successAlert").style.display = "none";
+                                    }, 5000);
+                                </script>
+                                <?php elseif (isset($error_message)) : ?>
+                                    <div class="alert alert-danger w-50 fw-bold text-uppercase" role="alert" id="errorAlert">
+                                        <?php echo($error_message); ?>
+                                    </div>
+                                    <script>
+                                        // Automatically dismiss the success alert after 5 seconds
+                                        setTimeout(function() {
+                                            document.getElementById("errorAlert").style.display = "none";
+                                        }, 5000);
+                                    </script>
+                            <?php endif; ?>
                         </div>
 
                         <form action="login.php" method="POST">
