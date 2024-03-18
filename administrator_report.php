@@ -20,7 +20,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="administrator-reports-page">
-                            
+                            <div class="administrator-reports-page-title">
+                                <h1>send progress and notifications</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
