@@ -1,6 +1,7 @@
 <?php
 include("Connection/connect.php");
 $conn = $connection;
+require 'vendor/autoload.php';
 
 // function to fetch the records here ======= //
 function fetchAllApplicants($conn) {
@@ -30,8 +31,12 @@ if (isset($_POST["send_report"])) {
     // ========= getting all the results here ========== //
     $single_record = mysqli_fetch_assoc($result);
 
-    
+    $first_name = $single_record["first_name"];
+    $last_name = $single_record["last_name"];
+    $email = $single_record["email"];
+    $phone_number = $single_record["phone_number"];
 
+    
 }
 ?>
 <!DOCTYPE html>
