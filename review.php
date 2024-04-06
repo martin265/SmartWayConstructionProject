@@ -4,24 +4,22 @@
 include("Models/Applicant.php");
 $conn = $connection;
 
-function getSingleRecord($conn) {
-    // =========== getting the current id to apply for the job here ============= //
-    if (isset($_GET["id"])) {
-        $id_to_insert = mysqli_real_escape_string($conn, $_GET["id"]);
-        // ======== selecting records from the job details table here ========= //
-        $sqlCommand = "SELECT * FROM JobDetails WHERE job_id = '$id_to_insert'";
-        $result = mysqli_query($conn, $sqlCommand);
+$all_results = null; // Initialize $all_results variable
 
-        // ========= getting all the results here ========== //
-        $singl_record = mysqli_fetch_assoc($result);
+if (isset($_GET["id"])) {
+    $id_to_select = mysqli_real_escape_string($conn, $_GET["id_to_select"]);
 
-        return $singl_record;
-    }
+    $sql = "SELECT * FROM ApplicantDetails WHERE applicant_id = '$id_to_select'";
+    // ======== getting the results here ======== //
+    $results = mysqli_query($conn, $sql);
+    // ======= converting the results into an array here ========= //
+    $all_results = mysqli_fetch_assoc($results);
 
 }
 
-$singl_record = getSingleRecord($conn);
-
+if (isset($_POST["save_details"])) {
+    echo($_POST["first_name"]);
+}
 
 
 ?>
@@ -52,15 +50,78 @@ $singl_record = getSingleRecord($conn);
                             <!-- the reviews form for the page will be here ====== -->
                             <div class="notification-form">
                                 <form action="review.php" method="POST">
-                                    <?php if ($singl_record):?>
-                                        <div class="row mt-4">
-                                            <div class="col ms-4 me-4">
-                                                <label for="ForFirstName" class="ps-3">First name</label>
-                                                <input type="text" name="first_name" class="form-control form-control-lg">
-                                            </div>
-                                        </div>
-                                    <?php else:?>
-                                    <?php endif;?>
+                                <div class="row mt-3">
+                                    <div class="col ms-4">
+                                        <label for="ForFirstName" class="ps-3">First name</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="first_name" class="form-control form-control-lg" value="<?php echo($all_results["first_name"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="first_name" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+
+                                    <div class="col me-4">
+                                        <label for="ForFirstName" class="ps-3">Last name</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="last_name" class="form-control form-control-lg" value="<?php echo($all_results["last_name"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="last_name" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col ms-4">
+                                        <label for="ForFirstName" class="ps-3">Age</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="age" class="form-control form-control-lg" value="<?php echo($all_results["age"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="age" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+
+                                    <div class="col me-4">
+                                        <label for="ForFirstName" class="ps-3">Gender</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="gender" class="form-control form-control-lg" value="<?php echo($all_results["gender"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="gender" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col ms-4">
+                                        <label for="ForFirstName" class="ps-3">Phone number</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="phone_number" class="form-control form-control-lg" value="<?php echo($all_results["phone_number"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="phone_number" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+
+                                    <div class="col me-4">
+                                        <label for="ForFirstName" class="ps-3">Email</label>
+                                        <?php if ($all_results):?>
+                                            <input type="text" name="email" class="form-control form-control-lg" value="<?php echo($all_results["email"]); ?>" disabled>
+                                        <?php else:?>
+                                            <input type="text" name="email" class="form-control form-control-lg">
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col ms-4 me-4">
+                                        <textarea name="review_message" id="" cols="30" rows="7" class="form-control form-control-lg text-start">
+
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                                <div class="save-details ms-4 mt-4 mb-5">
+                                    <input type="hidden" name="id_to_select" value="<?php echo($all_results["applicant_id"]); ?>">
+                                    <input type="submit" name="save_details" class="btn btn-lg btn-primary mb-5" value="send a review and notification">
+                                </div>
                                 </form>
                             </div>
                         </div>

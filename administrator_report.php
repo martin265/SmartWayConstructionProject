@@ -19,6 +19,20 @@ function fetchAllApplicants($conn) {
 }
 
 $all_results = fetchAllApplicants($conn);
+
+
+if (isset($_POST["send_report"])) {
+    $id_to_insert = mysqli_real_escape_string($conn, $_POST["id_to_insert"]);
+    // ======== selecting records from the job details table here ========= //
+    $sqlCommand = "SELECT * FROM ApplicantDetails WHERE applicant_id = '$id_to_insert'";
+    $result = mysqli_query($conn, $sqlCommand);
+
+    // ========= getting all the results here ========== //
+    $single_record = mysqli_fetch_assoc($result);
+
+    
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,9 +85,10 @@ $all_results = fetchAllApplicants($conn);
                                                         <td><?php echo($single_record["job_title"]); ?></td>
                                                         <!-- ============ for the button here -->
                                                         <td>
-                                                            <a href="review.php?id=<?php echo($single_record["applicant_id"]); ?>" class="btn btn-sm btn-primary">
-                                                                send review
-                                                            </a>
+                                                            <form action="administrator_report.php" method="POST">
+                                                                <input type="hidden" name="id_to_insert" value="<?php echo($single_record["applicant_id"]); ?>">
+                                                                <input type="submit" name="send_report" value="Send Review" class="btn btn-sm btn-primary">
+                                                            </form>
                                                         </td>
                                                     </tr>
 
