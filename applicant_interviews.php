@@ -7,7 +7,7 @@ $conn = $connection;
 // ============ function to fetch the questions in the databse here =========== //
 function fecthQuestions($conn) {
     try {
-        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails WHERE interview_question_id = 2";
+        $sqlCommand = "SELECT * FROM InterviewQuestionsDetails";
         // =========== running the sql command here ============ //
         $results = mysqli_query($conn, $sqlCommand);
         // ============ showing the results here =============== //

@@ -66,7 +66,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </li>
                         <!-- =================== // ================== // -->
                         <li class="nav-item">
-                            <a class="nav-link" href="applicant_interviews.php">Interviews.</a>
+                            <a class="nav-link" href="applicant_interviews.php">Interviews</a>
+                        </li>
+
+                        <!-- =================== // ================== // -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Application</a>
                         </li>
                     </ul>
                     <span class="navbar-text text-bold">
