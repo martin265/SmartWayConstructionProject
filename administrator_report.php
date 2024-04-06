@@ -54,7 +54,7 @@ $all_results = fetchAllApplicants($conn);
                                                 <th scope="col" class="text-capitalize">phone_number</th>
                                                 <th scope="col" class="text-capitalize">home address</th>
                                                 <th scope="col" class="text-capitalize">job title</th>
-                                                <th scope="col" class="text-capitalize">job title</th>
+                                                <th scope="col" class="text-capitalize">notification</th>
                                             </tr>
                                         </thead>
                                         <tbody>
