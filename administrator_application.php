@@ -122,6 +122,10 @@ if (isset($_POST["delete_record"])) {
                                                                 <input type="submit" name="delete_record" value="Delete Record" class="btn btn-sm btn-danger">
                                                             </form>
                                                         </td>
+
+                                                        <td>
+                                                            <a href=""></a>
+                                                        </td>
                                                     </tr>
 
                                                 <?php }?>
