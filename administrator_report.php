@@ -54,6 +54,7 @@ $all_results = fetchAllApplicants($conn);
                                                 <th scope="col" class="text-capitalize">phone_number</th>
                                                 <th scope="col" class="text-capitalize">home address</th>
                                                 <th scope="col" class="text-capitalize">job title</th>
+                                                <th scope="col" class="text-capitalize">job title</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -69,6 +70,11 @@ $all_results = fetchAllApplicants($conn);
                                                         <td><?php echo($single_record["home_address"]); ?></td>
                                                         <td><?php echo($single_record["job_title"]); ?></td>
                                                         <!-- ============ for the button here -->
+                                                        <td>
+                                                            <a href="review.php?id=<?php echo($single_record["applicant_id"]); ?>" class="btn btn-sm btn-primary">
+                                                                send review
+                                                            </a>
+                                                        </td>
                                                     </tr>
 
                                                 <?php }?>

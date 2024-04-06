@@ -123,9 +123,7 @@ if (isset($_POST["delete_record"])) {
                                                             </form>
                                                         </td>
 
-                                                        <td>
-                                                            <a href=""></a>
-                                                        </td>
+                                                        
                                                     </tr>
 
                                                 <?php }?>
