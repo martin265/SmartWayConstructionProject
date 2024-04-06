@@ -71,7 +71,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                         <!-- =================== // ================== // -->
                         <li class="nav-item">
-                            <a class="nav-link" href="">Application</a>
+                            <a class="nav-link" href="application_tracker.php">Review</a>
                         </li>
                     </ul>
                     <span class="navbar-text text-bold">

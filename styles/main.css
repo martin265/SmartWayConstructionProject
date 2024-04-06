@@ -665,3 +665,20 @@ body {
     background-position: center;
     background-size: contain;
 }
+
+
+.track-application {
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
+    border-radius: 10px;
+}
+
+.track-application .track-application-title {
+    margin-top: 40px;
+}
+
+.track-application .track-application-title h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #212121;
+    text-transform: capitalize;
+}
