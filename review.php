@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="notification-panel">
-                            <div class="nitification-title">
+                            <div class="notification-title">
                                 <h1>send report</h1>
                             </div>
                         </div>

@@ -548,3 +548,17 @@
     margin-left: 10px;
     margin-top: 40px;
 }
+
+
+.main-content-container .notification-panel {
+    background: linear-gradient(to left, #CBCCFF,#CBCCFF);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.main-content-container .notification-panel .notification-title h1 {
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    color: #0050C1;
+}
